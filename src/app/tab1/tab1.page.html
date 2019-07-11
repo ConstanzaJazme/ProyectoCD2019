@@ -1,0 +1,23 @@
+<ion-header text-center>
+      <ion-toolbar>
+            <ion-title>
+                  Reconocimiento
+            </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content text-center>
+      <ion-img src="assets/Img/mic.png"></ion-img>
+      <ion-button (click)="captureAudio">Iniciar Reconocimiento</ion-button>
+
+
+      <ion-list>
+            <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
+                  {{ file.name }}
+                  <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+            </ion-item>
+      </ion-list>
+
+      <!-- <video controls autoplay #myvideo>
+      </video> -->
+</ion-content>
