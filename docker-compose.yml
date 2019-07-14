@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: python3 API/manage.py runserver 0.0.0.0:8000
+    command: python gender_ageAPI/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
