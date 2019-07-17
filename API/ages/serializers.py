@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from genders.models import Ages
+from ages.models import Age
 
 class AgeSerializer(serializers.ModelSerializer):
     class Meta:
         model=Age
-        fiels= ('group_name')
+        fields = '__all__'

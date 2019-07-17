@@ -1,2 +1,7 @@
-Django==1.11.22
+Django==2.2
 djangorestframework==3.9.4
+python_speech_features==0.6
+scikit-learn
+numpy
+scipy
+django-audiotracks
