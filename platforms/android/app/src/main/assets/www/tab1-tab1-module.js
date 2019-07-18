@@ -52,7 +52,7 @@ var Tab1PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n      <ion-title>\n            Ionic Media Capture\n      </ion-title>\n</ion-header>\n\n<ion-content>\n      <ion-row>\n            <ion-col>\n                  <button ion-button full (click)=\"captureAudio()\">Capture Audio</button>\n            </ion-col>\n            <ion-col>\n                  <button ion-button full (click)=\"captureVideo()\">Capture Video</button>\n            </ion-col>\n      </ion-row>\n\n      <ion-list>\n            <ion-item *ngFor=\"let file of mediaFiles\" tappable (click)=\"play(file)\" text-wrap>\n                  {{ file.name }}\n                  <p>{{ file.size / 1000 / 1000 | number }} MB</p>\n            </ion-item>\n      </ion-list>\n\n      <video controls autoplay #myvideo>\n      </video>\n</ion-content>"
+module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Reconocimiento\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content text-center>\n      <ion-img src=\"assets/Img/mic.png\"></ion-img>\n      <ion-button (click)=\"captureAudio()\">Iniciar Reconocimiento</ion-button>\n      <!-- <p>{{ mediaFiles[mediaFiles.length - 1].name }}</p> -->\n      <!-- <p>{{lastAudio.name}}</p> -->\n\n      <!-- <ion-list>\n            <ion-item *ngFor=\"let file of mediaFiles\" tappable (click)=\"play(file)\" text-wrap>\n                  {{ file.name }}\n                  <p> {{ file.size / 1000 / 1000 | number }} MB</p>\n            </ion-item>\n      </ion-list> -->\n\n</ion-content>"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<ion-header>\n      <ion-title>\n            Ionic Media Captu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".welcome-card ion-img {\n  max-height: 35vh;\n  overflow: hidden; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9Jb25pYzQvUHJ1ZWJhL3NyYy9hcHAvdGFiMS90YWIxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGdCQUFnQjtFQUNoQixnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud2VsY29tZS1jYXJkIGlvbi1pbWcge1xuICBtYXgtaGVpZ2h0OiAzNXZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuIl19 */"
+module.exports = "ion-img {\n  height: 60vh;\n  width: 70vw;\n  margin: auto;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9VVEVNL1Byb3llY3RvQ0QyMDE5L3NyYy9hcHAvdGFiMS90YWIxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsWUFBWTtFQUNaLGNBQWMsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3RhYjEvdGFiMS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbmlvbi1pbWd7XG4gIGhlaWdodDogNjB2aDtcbiAgd2lkdGg6IDcwdnc7XG4gIG1hcmdpbjogYXV0bztcbiAgZGlzcGxheTogYmxvY2s7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -87,6 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { mediaPlugin } from 'ionic-native';
 
 
 
@@ -111,26 +112,6 @@ var Tab1Page = /** @class */ (function () {
         var _this = this;
         this.mediaCapture.captureAudio().then(function (res) {
             _this.storeMediaFiles(res);
-        }, function (err) { return console.error(err); });
-    };
-    Tab1Page.prototype.captureVideo = function () {
-        var _this = this;
-        var options = {
-            limit: 1,
-            duration: 30
-        };
-        this.mediaCapture.captureVideo(options).then(function (res) {
-            var capturedFile = res[0];
-            var fileName = capturedFile.name;
-            var dir = capturedFile['localURL'].split('/');
-            dir.pop();
-            var fromDirectory = dir.join('/');
-            var toDirectory = _this.file.dataDirectory;
-            _this.file.copyFile(fromDirectory, fileName, toDirectory, fileName).then(function (res) {
-                _this.storeMediaFiles([{ name: fileName, size: capturedFile.size }]);
-            }, function (err) {
-                console.log('err: ', err);
-            });
         }, function (err) { return console.error(err); });
     };
     Tab1Page.prototype.play = function (myFile) {

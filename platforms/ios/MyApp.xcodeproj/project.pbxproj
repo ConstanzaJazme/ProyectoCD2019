@@ -29,6 +29,7 @@
 		0A14C5BB9D314A5B86353FA0 /* IONAssetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6909219AD29243C194FB184A /* IONAssetHandler.m */; };
 		19F541F959724A56A2547458 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03CD7EAFED2427ABE9DA973 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A3C96AF8C7DE4237ACC1F12A /* CDVIonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A26C08289A144DDAAFE070C8 /* CDVIonicKeyboard.m */; };
+		A2D22D7CBABF496FAB3785BE /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = E659F130676B43B3878DAB74 /* CDVFileTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		B03CD7EAFED2427ABE9DA973 /* WebKit.framework */ = {isa = PBXFileReference; name = "WebKit.framework"; path = "System/Library/Frameworks/WebKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A26C08289A144DDAAFE070C8 /* CDVIonicKeyboard.m */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.m"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		40D5A046253246C79322D9C8 /* CDVIonicKeyboard.h */ = {isa = PBXFileReference; name = "CDVIonicKeyboard.h"; path = "cordova-plugin-ionic-keyboard/CDVIonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E659F130676B43B3878DAB74 /* CDVFileTransfer.m */ = {isa = PBXFileReference; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1F0C0AB25CBE41B3A083FB1C /* CDVFileTransfer.h */ = {isa = PBXFileReference; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +244,8 @@
 				22425F5E84DB489495438511 /* IONAssetHandler.h */,
 				A26C08289A144DDAAFE070C8 /* CDVIonicKeyboard.m */,
 				40D5A046253246C79322D9C8 /* CDVIonicKeyboard.h */,
+				E659F130676B43B3878DAB74 /* CDVFileTransfer.m */,
+				1F0C0AB25CBE41B3A083FB1C /* CDVFileTransfer.h */,
 			);
 			name = Plugins;
 			path = "MyApp/Plugins";
@@ -380,6 +385,7 @@
 				245A7E7794814A7894BA0ED3 /* CDVWKProcessPoolFactory.m in Sources */,
 				0A14C5BB9D314A5B86353FA0 /* IONAssetHandler.m in Sources */,
 				A3C96AF8C7DE4237ACC1F12A /* CDVIonicKeyboard.m in Sources */,
+				A2D22D7CBABF496FAB3785BE /* CDVFileTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

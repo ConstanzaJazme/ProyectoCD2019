@@ -1,9 +1,13 @@
 import { File } from '@ionic-native/file/ngx';
 import { Storage } from '@ionic/storage';
+// import { mediaPlugin } from 'ionic-native';
 import { MediaCapture, MediaFile, CaptureVideoOptions, CaptureError } from '@ionic-native/media-capture/ngx';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from '@ionic/angular';
+
+import { Router } from '@angular/router';
+
 
 const MEDIA_FILES_KEY = 'mediaFiles';
 
@@ -15,9 +19,17 @@ const MEDIA_FILES_KEY = 'mediaFiles';
 })
 export class Tab1Page {
     mediaFiles = [];
+    lastAudio: string;
     @ViewChild('myvideo') myVideo: any;
 
-    constructor(public navCtrl: NavController, private mediaCapture: MediaCapture, private storage: Storage, private file: File, private media: Media) { }
+    constructor(
+        public navCtrl: NavController,
+        private mediaCapture: MediaCapture,
+        private storage: Storage,
+        private file: File,
+        private media: Media,
+        private router: Router
+    ) { }
 
     ionViewDidLoad() {
         this.storage.get(MEDIA_FILES_KEY).then(res => {
@@ -29,30 +41,9 @@ export class Tab1Page {
         this.mediaCapture.captureAudio().then(res => {
             this.storeMediaFiles(res);
         }, (err: CaptureError) => console.error(err));
+
+        this.router.navigate(['/tabs/tab2', { consulta: 1 }]);
     }
-
-    captureVideo() {
-        let options: CaptureVideoOptions = {
-            limit: 1,
-            duration: 30
-        }
-        this.mediaCapture.captureVideo(options).then((res: MediaFile[]) => {
-            let capturedFile = res[0];
-            let fileName = capturedFile.name;
-            let dir = capturedFile['localURL'].split('/');
-            dir.pop();
-            let fromDirectory = dir.join('/');
-            var toDirectory = this.file.dataDirectory;
-
-            this.file.copyFile(fromDirectory, fileName, toDirectory, fileName).then((res) => {
-                this.storeMediaFiles([{ name: fileName, size: capturedFile.size }]);
-            }, err => {
-                console.log('err: ', err);
-            });
-        },
-            (err: CaptureError) => console.error(err));
-    }
-
     play(myFile) {
         if (myFile.name.indexOf('.wav') > -1) {
             const audioFile: MediaObject = this.media.create(myFile.localURL);

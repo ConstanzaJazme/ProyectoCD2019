@@ -52,7 +52,7 @@ var Tab2PageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Tab Two\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content></ion-content>\n"
+module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Trabajando\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content text-center justify-content-center align-items-center style='height: 100%'>\n      <ion-img src=\"assets/Img/gif3.gif\"></ion-img>\n      <h1>Procesando Información</h1>\n      <h3>Espere un momento ...</h3>\n</ion-content>"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<ion-header>\n  <ion-toolbar>\n    <ion-title>\n      Tab Two\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYjIvdGFiMi5wYWdlLnNjc3MifQ== */"
+module.exports = "h1 {\n  font-family: 'Montserrat','Verdana','Monaco',sans-serif;\n  font-size: 20px; }\n\nh3 {\n  font-family: 'Montserrat','Verdana','Monaco',sans-serif;\n  font-size: 10px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9VVEVNL1Byb3llY3RvQ0QyMDE5L3NyYy9hcHAvdGFiMi90YWIyLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHVEQUFzRDtFQUN0RCxlQUFlLEVBQUE7O0FBR2pCO0VBQ0UsdURBQXNEO0VBQ3RELGVBQWUsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3RhYjIvdGFiMi5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XG4gIGZvbnQtZmFtaWx5OidNb250c2VycmF0JywnVmVyZGFuYScsJ01vbmFjbycsc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiAyMHB4O1xufVxuXG5oMyB7XG4gIGZvbnQtZmFtaWx5OidNb250c2VycmF0JywnVmVyZGFuYScsJ01vbmFjbycsc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiAxMHB4O1xufVxuIl19 */"
 
 /***/ }),
 

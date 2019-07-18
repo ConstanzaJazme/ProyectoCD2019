@@ -594,6 +594,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
 /* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _post_service_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./post-service.service */ "./src/app/post-service.service.ts");
+
+
 
 
 
@@ -614,7 +618,13 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
             entryComponents: [],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_12__["IonicStorageModule"].forRoot()],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_12__["IonicStorageModule"].forRoot(),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"]
+            ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"],
                 _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_4__["SplashScreen"],
@@ -622,11 +632,54 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_10__["Media"],
                 _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_11__["File"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] },
+                _post_service_service__WEBPACK_IMPORTED_MODULE_14__["PostServiceProvider"],
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/post-service.service.ts":
+/*!*****************************************!*\
+  !*** ./src/app/post-service.service.ts ***!
+  \*****************************************/
+/*! exports provided: PostServiceProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostServiceProvider", function() { return PostServiceProvider; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var PostServiceProvider = /** @class */ (function () {
+    function PostServiceProvider(http) {
+        this.http = http;
+        this.api = 'https://jsonplaceholder.typicode.com';
+    }
+    PostServiceProvider.prototype.getAllTasks = function () {
+        var path = this.api + "/todos/";
+        return this.http.get(path);
+    };
+    PostServiceProvider.prototype.getTask = function (id) {
+        var path = this.api + "/todos/" + id;
+        return this.http.get(path);
+    };
+    PostServiceProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], PostServiceProvider);
+    return PostServiceProvider;
 }());
 
 
@@ -694,7 +747,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fabian/Ionic4/Prueba/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/fabian/UTEM/ProyectoCD2019/src/main.ts */"./src/main.ts");
 
 
 /***/ })
