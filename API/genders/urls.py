@@ -6,6 +6,7 @@ urlpatterns =[
     url(r'^gender/$',views.GendersList.as_view()),
     url(r'^audio/$',views.prueba1),
     url(r'^prueba/(?P<value>\w+)/$',views.GenderURL, name='name'),
+     url(r'^audio/ingresar$', views.upload_recording, name='upload_recording'),
 
 
 ]

@@ -5,3 +5,6 @@ class Gender(models.Model):     #femenino o masculino
 
 class Meta:
     ordering=('gender_name',)
+
+class Recording(models.Model):
+    audio_file = models.FileField(default='')

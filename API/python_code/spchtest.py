@@ -65,7 +65,7 @@ def recognize_gender(audio_name):
     modelpath  = "API/python_code/trained_models/"
 
     #path to testing data
-    sourcepath = "API/python_code/testing_file/"
+    sourcepath = "API/media/"
 
     gmm_files = [os.path.join(modelpath,fname) for fname in
                   os.listdir(modelpath) if fname.endswith('.gmm')]
