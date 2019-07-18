@@ -5,5 +5,3 @@ scikit-learn
 numpy
 scipy
 django-audiotracks
-cPickle
-os3

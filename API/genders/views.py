@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from genders.models import Gender
 from genders.serializers import GenderSerializer
-from algoritmo import spchtest
+from python_code import spchtest
 
 from rest_framework import generics
 import base64
