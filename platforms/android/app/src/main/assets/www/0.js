@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js":
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js ***!
   \********************************************************************/
 /*! exports provided: GESTURE_CONTROLLER, createGesture */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GESTURE_CONTROLLER", function() { return GESTURE_CONTROLLER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createGesture", function() { return createGesture; });
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
 
 
@@ -210,7 +210,7 @@ var BlockerDelegate = /** @class */ (function () {
 }());
 var BACKDROP_NO_SCROLL = 'backdrop-no-scroll';
 var GESTURE_CONTROLLER = new GestureController();
-function addEventListener(el, eventName, callback, opts) {
+var addEventListener = function (el, eventName, callback, opts) {
     // use event listener options when supported
     // otherwise it's just a boolean for the "capture" arg
     var listenerOpts = supportsPassive(el) ? {
@@ -231,9 +231,8 @@ function addEventListener(el, eventName, callback, opts) {
     return function () {
         el[remove](eventName, callback, listenerOpts);
     };
-}
-var _sPassive;
-function supportsPassive(node) {
+};
+var supportsPassive = function (node) {
     if (_sPassive === undefined) {
         try {
             var opts = Object.defineProperty({}, 'passive', {
@@ -248,9 +247,10 @@ function supportsPassive(node) {
         }
     }
     return !!_sPassive;
-}
+};
+var _sPassive;
 var MOUSE_WAIT = 2000;
-function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
+var createPointerEvents = function (el, pointerDown, pointerMove, pointerUp, options) {
     var rmTouchStart;
     var rmTouchMove;
     var rmTouchEnd;
@@ -259,7 +259,7 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
     var rmMouseMove;
     var rmMouseUp;
     var lastTouchEvent = 0;
-    function handleTouchStart(ev) {
+    var handleTouchStart = function (ev) {
         lastTouchEvent = Date.now() + MOUSE_WAIT;
         if (!pointerDown(ev)) {
             return;
@@ -273,8 +273,8 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
         if (!rmTouchCancel) {
             rmTouchCancel = addEventListener(el, 'touchcancel', handleTouchEnd, options);
         }
-    }
-    function handleMouseDown(ev) {
+    };
+    var handleMouseDown = function (ev) {
         if (lastTouchEvent > Date.now()) {
             return;
         }
@@ -287,20 +287,20 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
         if (!rmMouseUp) {
             rmMouseUp = addEventListener(getDocument(el), 'mouseup', handleMouseUp, options);
         }
-    }
-    function handleTouchEnd(ev) {
+    };
+    var handleTouchEnd = function (ev) {
         stopTouch();
         if (pointerUp) {
             pointerUp(ev);
         }
-    }
-    function handleMouseUp(ev) {
+    };
+    var handleMouseUp = function (ev) {
         stopMouse();
         if (pointerUp) {
             pointerUp(ev);
         }
-    }
-    function stopTouch() {
+    };
+    var stopTouch = function () {
         if (rmTouchMove) {
             rmTouchMove();
         }
@@ -311,8 +311,8 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
             rmTouchCancel();
         }
         rmTouchMove = rmTouchEnd = rmTouchCancel = undefined;
-    }
-    function stopMouse() {
+    };
+    var stopMouse = function () {
         if (rmMouseMove) {
             rmMouseMove();
         }
@@ -320,12 +320,12 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
             rmMouseUp();
         }
         rmMouseMove = rmMouseUp = undefined;
-    }
-    function stop() {
+    };
+    var stop = function () {
         stopTouch();
         stopMouse();
-    }
-    function setDisabled(disabled) {
+    };
+    var setDisabled = function (disabled) {
         if (disabled) {
             if (rmTouchStart) {
                 rmTouchStart();
@@ -344,21 +344,21 @@ function createPointerEvents(el, pointerDown, pointerMove, pointerUp, options) {
                 rmMouseStart = addEventListener(el, 'mousedown', handleMouseDown, options);
             }
         }
-    }
-    function destroy() {
+    };
+    var destroy = function () {
         setDisabled(true);
         pointerUp = pointerMove = pointerDown = undefined;
-    }
+    };
     return {
         setDisabled: setDisabled,
         stop: stop,
         destroy: destroy
     };
-}
-function getDocument(node) {
+};
+var getDocument = function (node) {
     return node instanceof Document ? node : node.ownerDocument;
-}
-function createPanRecognizer(direction, thresh, maxAngle) {
+};
+var createPanRecognizer = function (direction, thresh, maxAngle) {
     var radians = maxAngle * (Math.PI / 180);
     var isDirX = direction === 'x';
     var maxCosine = Math.cos(radians);
@@ -405,8 +405,12 @@ function createPanRecognizer(direction, thresh, maxAngle) {
             return isPan;
         }
     };
-}
-function createGesture(config) {
+};
+var createGesture = function (config) {
+    var hasCapturedPan = false;
+    var hasStartedPan = false;
+    var hasFiredStart = true;
+    var isMoveQueued = false;
     var finalConfig = Object.assign({ disableScroll: false, direction: 'x', gesturePriority: 0, passive: true, maxAngle: 40, threshold: 10 }, config);
     var canStart = finalConfig.canStart;
     var onWillStart = finalConfig.onWillStart;
@@ -430,20 +434,13 @@ function createGesture(config) {
         event: undefined,
         data: undefined
     };
-    var pointerEvents = createPointerEvents(finalConfig.el, pointerDown, pointerMove, pointerUp, {
-        capture: false,
-    });
     var pan = createPanRecognizer(finalConfig.direction, finalConfig.threshold, finalConfig.maxAngle);
     var gesture = GESTURE_CONTROLLER.createGesture({
         name: config.gestureName,
         priority: config.gesturePriority,
         disableScroll: config.disableScroll
     });
-    var hasCapturedPan = false;
-    var hasStartedPan = false;
-    var hasFiredStart = true;
-    var isMoveQueued = false;
-    function pointerDown(ev) {
+    var pointerDown = function (ev) {
         var timeStamp = now(ev);
         if (hasStartedPan || !hasFiredStart) {
             return false;
@@ -470,15 +467,15 @@ function createGesture(config) {
         }
         pan.start(detail.startX, detail.startY);
         return true;
-    }
-    function pointerMove(ev) {
+    };
+    var pointerMove = function (ev) {
         // fast path, if gesture is currently captured
         // do minimum job to get user-land even dispatched
         if (hasCapturedPan) {
             if (!isMoveQueued && hasFiredStart) {
                 isMoveQueued = true;
                 calcGestureData(detail, ev);
-                Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["w"])(fireOnMove);
+                Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["w"])(fireOnMove);
             }
             return;
         }
@@ -489,8 +486,8 @@ function createGesture(config) {
                 abortGesture();
             }
         }
-    }
-    function fireOnMove() {
+    };
+    var fireOnMove = function () {
         // Since fireOnMove is called inside a RAF, onEnd() might be called,
         // we must double check hasCapturedPan
         if (!hasCapturedPan) {
@@ -500,8 +497,8 @@ function createGesture(config) {
         if (onMove) {
             onMove(detail);
         }
-    }
-    function tryToCapturePan() {
+    };
+    var tryToCapturePan = function () {
         if (gesture && !gesture.capture()) {
             return false;
         }
@@ -523,29 +520,22 @@ function createGesture(config) {
             fireOnStart();
         }
         return true;
-    }
-    function fireOnStart() {
+    };
+    var fireOnStart = function () {
         if (onStart) {
             onStart(detail);
         }
         hasFiredStart = true;
-    }
-    function abortGesture() {
-        reset();
-        pointerEvents.stop();
-        if (notCaptured) {
-            notCaptured(detail);
-        }
-    }
-    function reset() {
+    };
+    var reset = function () {
         hasCapturedPan = false;
         hasStartedPan = false;
         isMoveQueued = false;
         hasFiredStart = true;
         gesture.release();
-    }
+    };
     // END *************************
-    function pointerUp(ev) {
+    var pointerUp = function (ev) {
         var tmpHasCaptured = hasCapturedPan;
         var tmpHasFiredStart = hasFiredStart;
         reset();
@@ -564,7 +554,17 @@ function createGesture(config) {
         if (notCaptured) {
             notCaptured(detail);
         }
-    }
+    };
+    var pointerEvents = createPointerEvents(finalConfig.el, pointerDown, pointerMove, pointerUp, {
+        capture: false,
+    });
+    var abortGesture = function () {
+        reset();
+        pointerEvents.stop();
+        if (notCaptured) {
+            notCaptured(detail);
+        }
+    };
     return {
         setDisabled: function (disabled) {
             if (disabled && hasCapturedPan) {
@@ -577,8 +577,8 @@ function createGesture(config) {
             pointerEvents.destroy();
         }
     };
-}
-function calcGestureData(detail, ev) {
+};
+var calcGestureData = function (detail, ev) {
     if (!ev) {
         return;
     }
@@ -599,8 +599,8 @@ function calcGestureData(detail, ev) {
     detail.deltaX = currentX - detail.startX;
     detail.deltaY = currentY - detail.startY;
     detail.event = ev;
-}
-function updateDetail(ev, detail) {
+};
+var updateDetail = function (ev, detail) {
     // get X coordinates for either a mouse click
     // or a touch depending on the given event
     var x = 0;
@@ -619,10 +619,10 @@ function updateDetail(ev, detail) {
     }
     detail.currentX = x;
     detail.currentY = y;
-}
-function now(ev) {
+};
+var now = function (ev) {
     return ev.timeStamp || Date.now();
-}
+};
 
 
 

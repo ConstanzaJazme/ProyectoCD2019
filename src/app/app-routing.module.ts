@@ -3,8 +3,10 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-    { path: 'tab2/:consulta', loadChildren: './tabs/tab2.module#Tab2PageModule' },
-    { path: 'tab3/:title/:id/:userId/:completed', loadChildren: './tabs/tab3.module#Tab3PageModule' }
+    { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+    { path: 'work/:consulta', loadChildren: './work/work.module#WorkPageModule' },
+    { path: 'resp/:title/:id/:userId/:completed', loadChildren: './resp/resp.module#RespPageModule' },
+    // { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
     imports: [

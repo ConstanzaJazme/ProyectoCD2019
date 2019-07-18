@@ -1,28 +1,28 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-ios.entry.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-ios.entry.js ***!
-  \****************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-md.entry.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-md.entry.js ***!
+  \***************************************************************************/
 /*! exports provided: ion_backdrop */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_backdrop", function() { return Backdrop; });
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-d102c9d1.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js");
-/* harmony import */ var _index_08fb19dc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index-08fb19dc.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js");
+/* harmony import */ var _index_3a9dcfed_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index-3a9dcfed.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js");
+/* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js");
 
 
 
 
 var Backdrop = /** @class */ (function () {
     function Backdrop(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.lastClick = -10000;
-        this.blocker = _index_08fb19dc_js__WEBPACK_IMPORTED_MODULE_3__["GESTURE_CONTROLLER"].createBlocker({
+        this.blocker = _index_3a9dcfed_js__WEBPACK_IMPORTED_MODULE_2__["GESTURE_CONTROLLER"].createBlocker({
             disableScroll: true
         });
         /**
@@ -37,7 +37,7 @@ var Backdrop = /** @class */ (function () {
          * If `true`, the backdrop will stop propagation on tap.
          */
         this.stopPropagation = true;
-        this.ionBackdropTap = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionBackdropTap", 7);
+        this.ionBackdropTap = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionBackdropTap", 7);
     }
     Backdrop.prototype.componentDidLoad = function () {
         if (this.stopPropagation) {
@@ -48,11 +48,11 @@ var Backdrop = /** @class */ (function () {
         this.blocker.destroy();
     };
     Backdrop.prototype.onTouchStart = function (ev) {
-        this.lastClick = Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_2__["n"])(ev);
+        this.lastClick = Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_3__["n"])(ev);
         this.emitTap(ev);
     };
     Backdrop.prototype.onMouseDown = function (ev) {
-        if (this.lastClick < Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_2__["n"])(ev) - 2500) {
+        if (this.lastClick < Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_3__["n"])(ev) - 2500) {
             this.emitTap(ev);
         }
     };
@@ -67,7 +67,7 @@ var Backdrop = /** @class */ (function () {
     };
     Backdrop.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this);
         return {
             tabindex: '-1',
             class: (_a = {},
@@ -77,7 +77,7 @@ var Backdrop = /** @class */ (function () {
                 _a)
         };
     };
-    Backdrop.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["H"], this.hostData()); };
+    Backdrop.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["H"], this.hostData()); };
     Object.defineProperty(Backdrop, "style", {
         get: function () { return ":host{left:0;right:0;top:0;bottom:0;display:block;position:absolute;-webkit-transform:translateZ(0);transform:translateZ(0);contain:strict;cursor:pointer;opacity:.01;-ms-touch-action:none;touch-action:none;z-index:2}:host(.backdrop-hide){background:transparent}:host(.backdrop-no-tappable){cursor:auto}:host{background-color:var(--ion-backdrop-color,#000)}"; },
         enumerable: true,

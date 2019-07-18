@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[65],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-ios.entry.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-ios.entry.js ***!
-  \*****************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-md.entry.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-md.entry.js ***!
+  \****************************************************************************/
 /*! exports provided: ion_reorder, ion_reorder_group */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -12,16 +12,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_reorder", function() { return Reorder; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_reorder_group", function() { return ReorderGroup; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_6c3d2f60_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-6c3d2f60.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-6c3d2f60.js");
+/* harmony import */ var _chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-4e92c885.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-4e92c885.js");
 
 
 
 
 var Reorder = /** @class */ (function () {
     function Reorder(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
     }
     Reorder.prototype.onClick = function (ev) {
         ev.preventDefault();
@@ -29,7 +29,7 @@ var Reorder = /** @class */ (function () {
     };
     Reorder.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         return {
             class: (_a = {},
                 _a[mode] = true,
@@ -37,11 +37,11 @@ var Reorder = /** @class */ (function () {
         };
     };
     Reorder.prototype.__stencil_render = function () {
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { name: "reorder", lazy: false, class: "reorder-icon" })));
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { name: "reorder", lazy: false, class: "reorder-icon" })));
     };
-    Reorder.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
+    Reorder.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(Reorder, "style", {
-        get: function () { return ":host([slot]){display:none;line-height:0;z-index:100}.reorder-icon{display:block;font-size:22px;font-size:34px;opacity:.4}"; },
+        get: function () { return ":host([slot]){display:none;line-height:0;z-index:100}.reorder-icon{display:block;font-size:22px;font-size:31px;opacity:.3}"; },
         enumerable: true,
         configurable: true
     });
@@ -49,7 +49,7 @@ var Reorder = /** @class */ (function () {
 }());
 var ReorderGroup = /** @class */ (function () {
     function ReorderGroup(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.lastToIndex = -1;
         this.cachedHeights = [];
         this.scrollElTop = 0;
@@ -62,7 +62,7 @@ var ReorderGroup = /** @class */ (function () {
          * If `true`, the reorder will be hidden.
          */
         this.disabled = true;
-        this.ionItemReorder = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionItemReorder", 7);
+        this.ionItemReorder = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionItemReorder", 7);
     }
     ReorderGroup.prototype.disabledChanged = function () {
         if (this.gesture) {
@@ -88,7 +88,7 @@ var ReorderGroup = /** @class */ (function () {
                         _c.label = 3;
                     case 3:
                         _b = this;
-                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-08fb19dc.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js"))];
+                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-3a9dcfed.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js"))];
                     case 4:
                         _b.gesture = (_c.sent()).createGesture({
                             el: this.el,
@@ -182,7 +182,7 @@ var ReorderGroup = /** @class */ (function () {
         this.selectedItemHeight = item.offsetHeight;
         this.state = 1 /* Active */;
         item.classList.add(ITEM_REORDER_SELECTED);
-        Object(_chunk_6c3d2f60_js__WEBPACK_IMPORTED_MODULE_3__["a"])();
+        Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["a"])();
     };
     ReorderGroup.prototype.onMove = function (ev) {
         var selectedItem = this.selectedItemEl;
@@ -201,7 +201,7 @@ var ReorderGroup = /** @class */ (function () {
         if (toIndex !== this.lastToIndex) {
             var fromIndex = indexForItem(selectedItem);
             this.lastToIndex = toIndex;
-            Object(_chunk_6c3d2f60_js__WEBPACK_IMPORTED_MODULE_3__["b"])();
+            Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["b"])();
             this.reorderMove(fromIndex, toIndex);
         }
         // Update selected item position
@@ -228,7 +228,7 @@ var ReorderGroup = /** @class */ (function () {
                 complete: this.completeSync.bind(this)
             });
         }
-        Object(_chunk_6c3d2f60_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+        Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
     };
     ReorderGroup.prototype.completeSync = function (listOrReorder) {
         var selectedItemEl = this.selectedItemEl;
@@ -303,7 +303,7 @@ var ReorderGroup = /** @class */ (function () {
     };
     ReorderGroup.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         return {
             class: (_a = {},
                 _a[mode] = true,
@@ -313,7 +313,7 @@ var ReorderGroup = /** @class */ (function () {
         };
     };
     Object.defineProperty(ReorderGroup.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -326,7 +326,7 @@ var ReorderGroup = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    ReorderGroup.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    ReorderGroup.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
     Object.defineProperty(ReorderGroup, "style", {
         get: function () { return ".reorder-list-active>*{-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;will-change:transform}.reorder-enabled{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.reorder-enabled ion-reorder{display:block;cursor:-webkit-grab;cursor:grab;pointer-events:all;-ms-touch-action:none;touch-action:none}.reorder-selected,.reorder-selected ion-reorder{cursor:-webkit-grabbing;cursor:grabbing}.reorder-selected{position:relative;-webkit-transition:none!important;transition:none!important;-webkit-box-shadow:0 0 10px rgba(0,0,0,.4);box-shadow:0 0 10px rgba(0,0,0,.4);opacity:.8;z-index:100}.reorder-visible ion-reorder .reorder-icon{-webkit-transform:translateZ(0);transform:translateZ(0)}"; },
         enumerable: true,
@@ -334,10 +334,10 @@ var ReorderGroup = /** @class */ (function () {
     });
     return ReorderGroup;
 }());
-function indexForItem(element) {
+var indexForItem = function (element) {
     return element['$ionIndex'];
-}
-function findReorderItem(node, container) {
+};
+var findReorderItem = function (node, container) {
     var parent;
     while (node) {
         parent = node.parentElement;
@@ -347,16 +347,16 @@ function findReorderItem(node, container) {
         node = parent;
     }
     return undefined;
-}
+};
 var AUTO_SCROLL_MARGIN = 60;
 var SCROLL_JUMP = 10;
 var ITEM_REORDER_SELECTED = 'reorder-selected';
-function reorderArray(array, from, to) {
+var reorderArray = function (array, from, to) {
     var element = array[from];
     array.splice(from, 1);
     array.splice(to, 0, element);
     return array.slice();
-}
+};
 
 
 

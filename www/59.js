@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[59],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-ios.entry.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-ios.entry.js ***!
-  \***************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-md.entry.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-md.entry.js ***!
+  \**************************************************************************/
 /*! exports provided: ion_radio, ion_radio_group */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -11,10 +11,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_radio", function() { return Radio; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_radio_group", function() { return RadioGroup; });
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-9d21e8e5.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js");
-/* harmony import */ var _chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-d102c9d1.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js");
+/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js");
+/* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js");
 
 
 
@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 var Radio = /** @class */ (function () {
     function Radio(hostRef) {
         var _this = this;
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.inputId = "ion-rb-" + radioButtonIds++;
         /**
          * The name of the control, which is submitted with the form data.
@@ -53,13 +53,13 @@ var Radio = /** @class */ (function () {
                 _this.checked = true;
             }
         };
-        this.ionRadioDidLoad = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionRadioDidLoad", 7);
-        this.ionRadioDidUnload = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionRadioDidUnload", 7);
-        this.ionStyle = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionStyle", 7);
-        this.ionSelect = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionSelect", 7);
-        this.ionDeselect = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionDeselect", 7);
-        this.ionFocus = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionFocus", 7);
-        this.ionBlur = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionBlur", 7);
+        this.ionRadioDidLoad = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionRadioDidLoad", 7);
+        this.ionRadioDidUnload = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionRadioDidUnload", 7);
+        this.ionStyle = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionStyle", 7);
+        this.ionSelect = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionSelect", 7);
+        this.ionDeselect = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionDeselect", 7);
+        this.ionFocus = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionFocus", 7);
+        this.ionBlur = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionBlur", 7);
     }
     Radio.prototype.colorChanged = function () {
         this.emitStyle();
@@ -97,16 +97,16 @@ var Radio = /** @class */ (function () {
     Radio.prototype.render = function () {
         var _a;
         var _b = this, inputId = _b.inputId, disabled = _b.disabled, checked = _b.checked, color = _b.color, el = _b.el;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this);
         var labelId = inputId + '-lbl';
-        var label = Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_3__["f"])(el);
+        var label = Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_3__["f"])(el);
         if (label) {
             label.id = labelId;
         }
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.onClick, role: "radio", "aria-disabled": disabled ? 'true' : null, "aria-checked": "" + checked, "aria-labelledby": labelId, class: Object.assign({}, Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_2__["c"])(color), (_a = {}, _a[mode] = true, _a['in-item'] = Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-item', el), _a['interactive'] = true, _a['radio-checked'] = checked, _a['radio-disabled'] = disabled, _a)) }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "radio-icon" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "radio-inner" })), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: disabled })));
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["H"], { onClick: this.onClick, role: "radio", "aria-disabled": disabled ? 'true' : null, "aria-checked": "" + checked, "aria-labelledby": labelId, class: Object.assign({}, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_2__["c"])(color), (_a = {}, _a[mode] = true, _a['in-item'] = Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-item', el), _a['interactive'] = true, _a['radio-checked'] = checked, _a['radio-disabled'] = disabled, _a)) }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "radio-icon" }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "radio-inner" })), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: disabled })));
     };
     Object.defineProperty(Radio.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -122,7 +122,7 @@ var Radio = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(Radio, "style", {
-        get: function () { return ":host{display:inline-block;position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:2}:host(.radio-disabled){pointer-events:none}.radio-icon{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;contain:layout size style}.radio-icon,button{width:100%;height:100%}button{left:0;top:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;position:absolute;border:0;background:transparent;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}:host-context([dir=rtl]) button,[dir=rtl] button{left:unset;right:unset;right:0}button::-moz-focus-inner{border:0}.radio-icon,.radio-inner{-webkit-box-sizing:border-box;box-sizing:border-box}:host{--color-checked:var(--ion-color-primary,#3880ff);width:15px;height:24px}:host(.ion-color.radio-checked) .radio-inner{border-color:var(--ion-color-base)}.item-radio.item-ios ion-label{margin-left:0}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.item-radio.item-ios ion-label{margin-left:unset;-webkit-margin-start:0;margin-inline-start:0}}.radio-inner{width:33%;height:50%}:host(.radio-checked) .radio-inner{-webkit-transform:rotate(45deg);transform:rotate(45deg);border-width:2px;border-top-width:0;border-left-width:0;border-style:solid;border-color:var(--color-checked)}:host(.radio-disabled){opacity:.3}:host(.ion-focused) .radio-icon:after{border-radius:50%;left:-9px;top:-8px;display:block;position:absolute;width:36px;height:36px;background:var(--ion-color-primary-tint,#4c8dff);content:\"\";opacity:.2}:host-context([dir=rtl]).ion-focused .radio-icon:after,:host-context([dir=rtl]):host(.ion-focused) .radio-icon:after{left:unset;right:unset;right:-9px}:host(.in-item){margin-left:8px;margin-right:11px;margin-top:8px;margin-bottom:8px;display:block;position:static}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host(.in-item){margin-left:unset;margin-right:unset;-webkit-margin-start:8px;margin-inline-start:8px;-webkit-margin-end:11px;margin-inline-end:11px}}:host(.in-item[slot=start]){margin-left:3px;margin-right:21px;margin-top:8px;margin-bottom:8px}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host(.in-item[slot=start]){margin-left:unset;margin-right:unset;-webkit-margin-start:3px;margin-inline-start:3px;-webkit-margin-end:21px;margin-inline-end:21px}}"; },
+        get: function () { return ":host{display:inline-block;position:relative;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:2}:host(.radio-disabled){pointer-events:none}.radio-icon{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;contain:layout size style}.radio-icon,button{width:100%;height:100%}button{left:0;top:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;position:absolute;border:0;background:transparent;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}:host-context([dir=rtl]) button,[dir=rtl] button{left:unset;right:unset;right:0}button::-moz-focus-inner{border:0}.radio-icon,.radio-inner{-webkit-box-sizing:border-box;box-sizing:border-box}:host{--color:var(--ion-color-step-400,#999);--color-checked:var(--ion-color-primary,#3880ff);--border-width:2px;--border-style:solid;width:20px;height:20px}:host(.ion-color) .radio-inner{background:var(--ion-color-base)}:host(.ion-color.radio-checked) .radio-icon{border-color:var(--ion-color-base)}.radio-icon{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;border-radius:50%;border-width:var(--border-width);border-style:var(--border-style);border-color:var(--color)}.radio-inner{border-radius:50%;width:calc(50% + var(--border-width));height:calc(50% + var(--border-width));-webkit-transform:scale3d(0,0,0);transform:scale3d(0,0,0);-webkit-transition:-webkit-transform .28s cubic-bezier(.4,0,.2,1);transition:-webkit-transform .28s cubic-bezier(.4,0,.2,1);transition:transform .28s cubic-bezier(.4,0,.2,1);transition:transform .28s cubic-bezier(.4,0,.2,1),-webkit-transform .28s cubic-bezier(.4,0,.2,1);background:var(--color-checked)}:host(.radio-checked) .radio-icon{border-color:var(--color-checked)}:host(.radio-checked) .radio-inner{-webkit-transform:scaleX(1);transform:scaleX(1)}:host(.radio-disabled){opacity:.3}:host(.ion-focused) .radio-icon:after{border-radius:50%;left:-12px;top:-12px;display:block;position:absolute;width:36px;height:36px;background:var(--ion-color-primary-tint,#4c8dff);content:\"\";opacity:.2}:host-context([dir=rtl]).ion-focused .radio-icon:after,:host-context([dir=rtl]):host(.ion-focused) .radio-icon:after{left:unset;right:unset;right:-12px}:host(.in-item){margin-left:0;margin-right:0;margin-top:9px;margin-bottom:9px;display:block;position:static}:host(.in-item[slot=start]){margin-left:4px;margin-right:36px;margin-top:11px;margin-bottom:10px}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host(.in-item[slot=start]){margin-left:unset;margin-right:unset;-webkit-margin-start:4px;margin-inline-start:4px;-webkit-margin-end:36px;margin-inline-end:36px}}"; },
         enumerable: true,
         configurable: true
     });
@@ -131,7 +131,7 @@ var Radio = /** @class */ (function () {
 var radioButtonIds = 0;
 var RadioGroup = /** @class */ (function () {
     function RadioGroup(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
         this.inputId = "ion-rg-" + radioGroupIds++;
         this.labelId = this.inputId + "-lbl";
         this.radios = [];
@@ -143,7 +143,7 @@ var RadioGroup = /** @class */ (function () {
          * The name of the control, which is submitted with the form data.
          */
         this.name = this.inputId;
-        this.ionChange = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionChange", 7);
+        this.ionChange = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this, "ionChange", 7);
     }
     RadioGroup.prototype.valueChanged = function (value) {
         this.updateRadios();
@@ -221,7 +221,7 @@ var RadioGroup = /** @class */ (function () {
     };
     RadioGroup.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this);
         return {
             'role': 'radiogroup',
             'aria-labelledby': this.labelId,
@@ -231,7 +231,7 @@ var RadioGroup = /** @class */ (function () {
         };
     };
     Object.defineProperty(RadioGroup.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -244,7 +244,7 @@ var RadioGroup = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    RadioGroup.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["H"], this.hostData()); };
+    RadioGroup.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_0__["H"], this.hostData()); };
     return RadioGroup;
 }());
 var radioGroupIds = 0;

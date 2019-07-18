@@ -1,374 +1,807 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-alert-md.entry.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-alert-md.entry.js ***!
-  \************************************************************************/
-/*! exports provided: ion_alert */
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-app_8-ios.entry.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-app_8-ios.entry.js ***!
+  \*************************************************************************/
+/*! exports provided: ion_app, ion_buttons, ion_content, ion_footer, ion_header, ion_router_outlet, ion_title, ion_toolbar */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_alert", function() { return Alert; });
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
-/* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-be34f14a.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-be34f14a.js");
-/* harmony import */ var _chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-9d21e8e5.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js");
-/* harmony import */ var _chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-cae2ca23.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-cae2ca23.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_app", function() { return App; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_buttons", function() { return Buttons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_content", function() { return Content; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_footer", function() { return Footer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_header", function() { return Header; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_router_outlet", function() { return RouterOutlet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_title", function() { return ToolbarTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_toolbar", function() { return Toolbar; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
+/* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
+/* harmony import */ var _chunk_94c4865f_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-94c4865f.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-94c4865f.js");
+/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js");
+/* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js");
+/* harmony import */ var _chunk_00265c49_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./chunk-00265c49.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-00265c49.js");
+/* harmony import */ var _chunk_638b009b_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./chunk-638b009b.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-638b009b.js");
 
 
 
 
 
-/**
- * iOS Alert Enter Animation
- */
-function iosEnterAnimation(AnimationC, baseEl) {
-    var baseAnimation = new AnimationC();
-    var backdropAnimation = new AnimationC();
-    backdropAnimation.addElement(baseEl.querySelector('ion-backdrop'));
-    var wrapperAnimation = new AnimationC();
-    wrapperAnimation.addElement(baseEl.querySelector('.alert-wrapper'));
-    backdropAnimation.fromTo('opacity', 0.01, 0.3);
-    wrapperAnimation.fromTo('opacity', 0.01, 1).fromTo('scale', 1.1, 1);
-    var ani = baseAnimation
-        .addElement(baseEl)
-        .easing('ease-in-out')
-        .duration(200)
-        .add(backdropAnimation)
-        .add(wrapperAnimation);
-    return Promise.resolve(ani);
-}
-/**
- * iOS Alert Leave Animation
- */
-function iosLeaveAnimation(AnimationC, baseEl) {
-    var baseAnimation = new AnimationC();
-    var backdropAnimation = new AnimationC();
-    backdropAnimation.addElement(baseEl.querySelector('ion-backdrop'));
-    var wrapperAnimation = new AnimationC();
-    wrapperAnimation.addElement(baseEl.querySelector('.alert-wrapper'));
-    backdropAnimation.fromTo('opacity', 0.3, 0);
-    wrapperAnimation.fromTo('opacity', 0.99, 0).fromTo('scale', 1, 0.9);
-    var ani = baseAnimation
-        .addElement(baseEl)
-        .easing('ease-in-out')
-        .duration(200)
-        .add(backdropAnimation)
-        .add(wrapperAnimation);
-    return Promise.resolve(ani);
-}
-/**
- * Md Alert Enter Animation
- */
-function mdEnterAnimation(AnimationC, baseEl) {
-    var baseAnimation = new AnimationC();
-    var backdropAnimation = new AnimationC();
-    backdropAnimation.addElement(baseEl.querySelector('ion-backdrop'));
-    var wrapperAnimation = new AnimationC();
-    wrapperAnimation.addElement(baseEl.querySelector('.alert-wrapper'));
-    backdropAnimation.fromTo('opacity', 0.01, 0.32);
-    wrapperAnimation.fromTo('opacity', 0.01, 1).fromTo('scale', 0.9, 1);
-    return Promise.resolve(baseAnimation
-        .addElement(baseEl)
-        .easing('ease-in-out')
-        .duration(150)
-        .add(backdropAnimation)
-        .add(wrapperAnimation));
-}
-/**
- * Md Alert Leave Animation
- */
-function mdLeaveAnimation(AnimationC, baseEl) {
-    var baseAnimation = new AnimationC();
-    var backdropAnimation = new AnimationC();
-    backdropAnimation.addElement(baseEl.querySelector('ion-backdrop'));
-    var wrapperAnimation = new AnimationC();
-    wrapperAnimation.addElement(baseEl.querySelector('.alert-wrapper'));
-    backdropAnimation.fromTo('opacity', 0.32, 0);
-    wrapperAnimation.fromTo('opacity', 0.99, 0);
-    return Promise.resolve(baseAnimation
-        .addElement(baseEl)
-        .easing('ease-in-out')
-        .duration(150)
-        .add(backdropAnimation)
-        .add(wrapperAnimation));
-}
-/**
- * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
- */
-var Alert = /** @class */ (function () {
-    function Alert(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
-        this.processedInputs = [];
-        this.processedButtons = [];
-        this.presented = false;
-        this.mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
-        /**
-         * If `true`, the keyboard will be automatically dismissed when the overlay is presented.
-         */
-        this.keyboardClose = true;
-        /**
-         * Array of buttons to be added to the alert.
-         */
-        this.buttons = [];
-        /**
-         * Array of input to show in the alert.
-         */
-        this.inputs = [];
-        /**
-         * If `true`, the alert will be dismissed when the backdrop is clicked.
-         */
-        this.backdropDismiss = true;
-        /**
-         * If `true`, the alert will be translucent.
-         */
-        this.translucent = false;
-        /**
-         * If `true`, the alert will animate.
-         */
-        this.animated = true;
-        this.didPresent = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionAlertDidPresent", 7);
-        this.willPresent = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionAlertWillPresent", 7);
-        this.willDismiss = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionAlertWillDismiss", 7);
-        this.didDismiss = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["c"])(this, "ionAlertDidDismiss", 7);
+
+
+
+var App = /** @class */ (function () {
+    function App(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
     }
-    Alert.prototype.buttonsChanged = function () {
-        var buttons = this.buttons;
-        this.processedButtons = buttons.map(function (btn) {
-            return (typeof btn === 'string')
-                ? { text: btn, role: btn.toLowerCase() === 'cancel' ? 'cancel' : undefined }
-                : btn;
+    App.prototype.componentDidLoad = function () {
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["a"])(function () {
+            if (!_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].getBoolean('_testing')) {
+                __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ./tap-click-c672ad5e.js */ "./node_modules/@ionic/core/dist/esm/legacy/tap-click-c672ad5e.js")).then(function (module) { return module.startTapClick(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"]); });
+            }
+            if (_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].getBoolean('statusTap', Object(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["i"])(window, 'hybrid'))) {
+                __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ./status-tap-a777fe7a.js */ "./node_modules/@ionic/core/dist/esm/legacy/status-tap-a777fe7a.js")).then(function (module) { return module.startStatusTap(); });
+            }
+            if (_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].getBoolean('inputShims', needInputShims())) {
+                __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./input-shims-09d70723.js */ "./node_modules/@ionic/core/dist/esm/legacy/input-shims-09d70723.js")).then(function (module) { return module.startInputShims(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"]); });
+            }
+            __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./focus-visible-70161a50.js */ "./node_modules/@ionic/core/dist/esm/legacy/focus-visible-70161a50.js")).then(function (module) { return module.startFocusVisible(); });
         });
     };
-    Alert.prototype.inputsChanged = function () {
-        var _this = this;
-        var inputs = this.inputs;
-        // An alert can be created with several different inputs. Radios,
-        // checkboxes and inputs are all accepted, but they cannot be mixed.
-        var inputTypes = new Set(inputs.map(function (i) { return i.type; }));
-        if (inputTypes.has('checkbox') && inputTypes.has('radio')) {
-            console.warn("Alert cannot mix input types: " + (Array.from(inputTypes.values()).join('/')) + ". Please see alert docs for more info.");
-        }
-        this.inputType = inputTypes.values().next().value;
-        this.processedInputs = inputs.map(function (i, index) { return ({
-            type: i.type || 'text',
-            name: i.name || "" + index,
-            placeholder: i.placeholder || '',
-            value: i.value,
-            label: i.label,
-            checked: !!i.checked,
-            disabled: !!i.disabled,
-            id: i.id || "alert-input-" + _this.overlayIndex + "-" + index,
-            handler: i.handler,
-            min: i.min,
-            max: i.max
-        }); });
-    };
-    Alert.prototype.componentWillLoad = function () {
-        this.inputsChanged();
-        this.buttonsChanged();
-    };
-    Alert.prototype.onBackdropTap = function () {
-        this.dismiss(undefined, _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["B"]);
-    };
-    Alert.prototype.dispatchCancelHandler = function (ev) {
-        var role = ev.detail.role;
-        if (Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["i"])(role)) {
-            var cancelButton = this.processedButtons.find(function (b) { return b.role === 'cancel'; });
-            this.callButtonHandler(cancelButton);
-        }
-    };
-    /**
-     * Present the alert overlay after it has been created.
-     */
-    Alert.prototype.present = function () {
-        return Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["d"])(this, 'alertEnter', iosEnterAnimation, mdEnterAnimation);
-    };
-    /**
-     * Dismiss the alert overlay after it has been presented.
-     *
-     * @param data Any data to emit in the dismiss events.
-     * @param role The role of the element that is dismissing the alert.
-     * This can be useful in a button handler for determining which button was
-     * clicked to dismiss the alert.
-     * Some examples include: ``"cancel"`, `"destructive"`, "selected"`, and `"backdrop"`.
-     */
-    Alert.prototype.dismiss = function (data, role) {
-        return Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["e"])(this, data, role, 'alertLeave', iosLeaveAnimation, mdLeaveAnimation);
-    };
-    /**
-     * Returns a promise that resolves when the alert did dismiss.
-     */
-    Alert.prototype.onDidDismiss = function () {
-        return Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["f"])(this.el, 'ionAlertDidDismiss');
-    };
-    /**
-     * Returns a promise that resolves when the alert will dismiss.
-     */
-    Alert.prototype.onWillDismiss = function () {
-        return Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["f"])(this.el, 'ionAlertWillDismiss');
-    };
-    Alert.prototype.rbClick = function (selectedInput) {
-        for (var _i = 0, _a = this.processedInputs; _i < _a.length; _i++) {
-            var input = _a[_i];
-            input.checked = input === selectedInput;
-        }
-        this.activeId = selectedInput.id;
-        Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["s"])(selectedInput.handler, selectedInput);
-        this.el.forceUpdate();
-    };
-    Alert.prototype.cbClick = function (selectedInput) {
-        selectedInput.checked = !selectedInput.checked;
-        Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["s"])(selectedInput.handler, selectedInput);
-        this.el.forceUpdate();
-    };
-    Alert.prototype.buttonClick = function (button) {
-        var role = button.role;
-        var values = this.getValues();
-        if (Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["i"])(role)) {
-            return this.dismiss({ values: values }, role);
-        }
-        var returnData = this.callButtonHandler(button, values);
-        if (returnData !== false) {
-            return this.dismiss(Object.assign({ values: values }, returnData), button.role);
-        }
-        return Promise.resolve(false);
-    };
-    Alert.prototype.callButtonHandler = function (button, data) {
-        if (button && button.handler) {
-            // a handler has been provided, execute it
-            // pass the handler the values from the inputs
-            var returnData = Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_2__["s"])(button.handler, data);
-            if (returnData === false) {
-                // if the return value of the handler is false then do not dismiss
-                return false;
-            }
-            if (typeof returnData === 'object') {
-                return returnData;
-            }
-        }
-        return {};
-    };
-    Alert.prototype.getValues = function () {
-        if (this.processedInputs.length === 0) {
-            // this is an alert without any options/inputs at all
-            return undefined;
-        }
-        if (this.inputType === 'radio') {
-            // this is an alert with radio buttons (single value select)
-            // return the one value which is checked, otherwise undefined
-            var checkedInput = this.processedInputs.find(function (i) { return !!i.checked; });
-            return checkedInput ? checkedInput.value : undefined;
-        }
-        if (this.inputType === 'checkbox') {
-            // this is an alert with checkboxes (multiple value select)
-            // return an array of all the checked values
-            return this.processedInputs.filter(function (i) { return i.checked; }).map(function (i) { return i.value; });
-        }
-        // this is an alert with text inputs
-        // return an object of all the values with the input name as the key
-        var values = {};
-        this.processedInputs.forEach(function (i) {
-            values[i.name] = i.value || '';
-        });
-        return values;
-    };
-    Alert.prototype.renderAlertInputs = function (labelledBy) {
-        switch (this.inputType) {
-            case 'checkbox': return this.renderCheckbox(labelledBy);
-            case 'radio': return this.renderRadio(labelledBy);
-            default: return this.renderInput(labelledBy);
-        }
-    };
-    Alert.prototype.renderCheckbox = function (labelledby) {
-        var _this = this;
-        var inputs = this.processedInputs;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
-        if (inputs.length === 0) {
-            return null;
-        }
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-group", "aria-labelledby": labelledby }, inputs.map(function (i) { return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: function () { return _this.cbClick(i); }, "aria-checked": "" + i.checked, id: i.id, disabled: i.disabled, tabIndex: 0, role: "checkbox", class: "alert-tappable alert-checkbox alert-checkbox-button ion-focusable" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-icon" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-inner" })), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-checkbox-label" }, i.label)), mode === 'md' && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null))); })));
-    };
-    Alert.prototype.renderRadio = function (labelledby) {
-        var _this = this;
-        var inputs = this.processedInputs;
-        if (inputs.length === 0) {
-            return null;
-        }
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-group", role: "radiogroup", "aria-labelledby": labelledby, "aria-activedescendant": this.activeId }, inputs.map(function (i) { return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", onClick: function () { return _this.rbClick(i); }, "aria-checked": "" + i.checked, disabled: i.disabled, id: i.id, tabIndex: 0, class: "alert-radio-button alert-tappable alert-radio ion-focusable", role: "radio" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-button-inner" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-icon" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-inner" })), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-radio-label" }, i.label)))); })));
-    };
-    Alert.prototype.renderInput = function (labelledby) {
-        var inputs = this.processedInputs;
-        if (inputs.length === 0) {
-            return null;
-        }
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-group", "aria-labelledby": labelledby }, inputs.map(function (i) { return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-input-wrapper" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("input", { placeholder: i.placeholder, value: i.value, type: i.type, min: i.min, max: i.max, onInput: function (e) { return i.value = e.target.value; }, id: i.id, disabled: i.disabled, tabIndex: 0, class: "alert-input" }))); })));
-    };
-    Alert.prototype.hostData = function () {
+    App.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         return {
-            'role': 'dialog',
-            'aria-modal': 'true',
-            style: {
-                zIndex: 20000 + this.overlayIndex,
-            },
-            class: Object.assign({}, Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_3__["g"])(this.cssClass), (_a = {}, _a[mode] = true, _a['alert-translucent'] = this.translucent, _a))
+            class: (_a = {},
+                _a[mode] = true,
+                _a['ion-page'] = true,
+                _a['force-statusbar-padding'] = _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].getBoolean('_forceStatusbarPadding'),
+                _a)
         };
     };
-    Alert.prototype.renderAlertButtons = function () {
-        var _this = this;
-        var buttons = this.processedButtons;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["d"])(this);
-        var alertButtonGroupClass = {
-            'alert-button-group': true,
-            'alert-button-group-vertical': buttons.length > 2
-        };
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: alertButtonGroupClass }, buttons.map(function (button) { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", { type: "button", class: buttonClass(button), tabIndex: 0, onClick: function () { return _this.buttonClick(button); } }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", { class: "alert-button-inner" }, button.text), mode === 'md' && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", null)); })));
-    };
-    Alert.prototype.__stencil_render = function () {
-        var hdrId = "alert-" + this.overlayIndex + "-hdr";
-        var subHdrId = "alert-" + this.overlayIndex + "-sub-hdr";
-        var msgId = "alert-" + this.overlayIndex + "-msg";
-        var labelledById;
-        if (this.header !== undefined) {
-            labelledById = hdrId;
-        }
-        else if (this.subHeader !== undefined) {
-            labelledById = subHdrId;
-        }
-        return [
-            Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-backdrop", { tappable: this.backdropDismiss }),
-            Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-wrapper" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { class: "alert-head" }, this.header && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: hdrId, class: "alert-title" }, this.header), this.subHeader && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("h2", { id: subHdrId, class: "alert-sub-title" }, this.subHeader)), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", { id: msgId, class: "alert-message", innerHTML: Object(_chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_4__["s"])(this.message) }), this.renderAlertInputs(labelledById), this.renderAlertButtons())
-        ];
-    };
-    Object.defineProperty(Alert.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["e"])(this); },
+    Object.defineProperty(App.prototype, "el", {
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(Alert, "watchers", {
+    App.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    Object.defineProperty(App, "style", {
+        get: function () { return "html.plt-mobile ion-app{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}ion-app.force-statusbar-padding{--ion-safe-area-top:20px}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return App;
+}());
+var needInputShims = function () {
+    return Object(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["i"])(window, 'ios') && Object(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["i"])(window, 'mobile');
+};
+var Buttons = /** @class */ (function () {
+    function Buttons(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+    }
+    Buttons.prototype.hostData = function () {
+        var _a;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        return {
+            class: (_a = {},
+                _a[mode] = true,
+                _a)
+        };
+    };
+    Buttons.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    Object.defineProperty(Buttons, "style", {
+        get: function () { return ".sc-ion-buttons-ios-h{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-webkit-transform:translateZ(0);transform:translateZ(0);z-index:99}.sc-ion-buttons-ios-s  ion-button {--padding-top:0;--padding-bottom:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;--padding-start:5px;--padding-end:5px;margin-left:2px;margin-right:2px;height:32px;font-size:17px;font-weight:400}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.sc-ion-buttons-ios-s  ion-button {margin-left:unset;margin-right:unset;-webkit-margin-start:2px;margin-inline-start:2px;-webkit-margin-end:2px;margin-inline-end:2px}}.sc-ion-buttons-ios-s  ion-button:not(.button-round) {--border-radius:4px}.sc-ion-buttons-ios-h.ion-color.sc-ion-buttons-ios-s  .button , .ion-color .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button {--color:initial;--border-color:initial;--background-focused:rgba(var(--ion-color-contrast-rgb),0.1)}.sc-ion-buttons-ios-h.ion-color.sc-ion-buttons-ios-s  .button-solid , .ion-color .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-solid {--background:var(--ion-color-contrast);--background-activated:rgba(var(--ion-color-contrast-rgb),0.8);--background-focused:rgba(var(--ion-color-contrast-rgb),0.6);--color:var(--ion-color-base);--color-focused:var(--ion-color-base)}.sc-ion-buttons-ios-h.ion-color.sc-ion-buttons-ios-s  .button-clear , .ion-color .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-clear {--background-focused:rgba(var(--ion-color-contrast-rgb),0.1);--color-activated:var(--ion-color-contrast);--color-focused:var(--ion-color-contrast)}.sc-ion-buttons-ios-h.ion-color.sc-ion-buttons-ios-s  .button-outline , .ion-color .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-outline {--background-activated:var(--ion-color-contrast);--background-focused:rgba(var(--ion-color-contrast-rgb),0.1);--color-activated:var(--ion-color-base);--color-focused:var(--ion-color-contrast)}.sc-ion-buttons-ios-hion-toolbar:not(.ion-color).sc-ion-buttons-ios-s  .button-clear , ion-toolbar:not(.ion-color) .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-clear {--color:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff));--color-activated:var(--ion-toolbar-color-activated,var(--ion-color-primary,#3880ff));--color-focused:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff))}.sc-ion-buttons-ios-hion-toolbar:not(.ion-color).sc-ion-buttons-ios-s  .button-outline , ion-toolbar:not(.ion-color) .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-outline {--color:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff));--color-activated:var(--ion-toolbar-background,var(--ion-color-primary-contrast,#fff));--color-focused:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff));--border-color:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff));--background-activated:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff))}.sc-ion-buttons-ios-hion-toolbar:not(.ion-color).sc-ion-buttons-ios-s  .button-solid , ion-toolbar:not(.ion-color) .sc-ion-buttons-ios-h.sc-ion-buttons-ios-s  .button-solid {--color:var(--ion-toolbar-background,var(--ion-color-step-50,#fff));--color-activated:var(--ion-toolbar-background,var(--ion-color-step-50,#fff));--color-focused:var(--ion-toolbar-background,var(--ion-color-step-50,#fff));--background:var(--ion-toolbar-color,var(--ion-color-primary,#3880ff));--background-activated:var(--ion-toolbar-color-activated,var(--ion-color-primary-shade,#3171e0));--background-focused:var(--ion-toolbar-color-activated,var(--ion-color-primary-shade,#3171e0))}.sc-ion-buttons-ios-s  ion-icon[slot=start] {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;margin-right:.3em;font-size:24px;line-height:.67}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.sc-ion-buttons-ios-s  ion-icon[slot=start] {margin-right:unset;-webkit-margin-end:.3em;margin-inline-end:.3em}}.sc-ion-buttons-ios-s  ion-icon[slot=end] {margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;margin-left:.4em;font-size:24px;line-height:.67}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.sc-ion-buttons-ios-s  ion-icon[slot=end] {margin-left:unset;-webkit-margin-start:.4em;margin-inline-start:.4em}}.sc-ion-buttons-ios-s  ion-icon[slot=icon-only] {padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;font-size:31px;line-height:.67}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Buttons;
+}());
+/**
+ * @slot - Content is placed in the scrollable area if provided without a slot.
+ * @slot fixed - Should be used for fixed content that should not scroll.
+ */
+var Content = /** @class */ (function () {
+    function Content(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        this.isScrolling = false;
+        this.lastScroll = 0;
+        this.queued = false;
+        this.cTop = -1;
+        this.cBottom = -1;
+        // Detail is used in a hot loop in the scroll event, by allocating it here
+        // V8 will be able to inline any read/write to it since it's a monomorphic class.
+        // https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html
+        this.detail = {
+            scrollTop: 0,
+            scrollLeft: 0,
+            type: 'scroll',
+            event: undefined,
+            startX: 0,
+            startY: 0,
+            startTimeStamp: 0,
+            currentX: 0,
+            currentY: 0,
+            velocityX: 0,
+            velocityY: 0,
+            deltaX: 0,
+            deltaY: 0,
+            timeStamp: 0,
+            data: undefined,
+            isScrolling: true,
+        };
+        /**
+         * If `true`, the content will scroll behind the headers
+         * and footers. This effect can easily be seen by setting the toolbar
+         * to transparent.
+         */
+        this.fullscreen = false;
+        /**
+         * If you want to enable the content scrolling in the X axis, set this property to `true`.
+         */
+        this.scrollX = false;
+        /**
+         * If you want to disable the content scrolling in the Y axis, set this property to `false`.
+         */
+        this.scrollY = true;
+        /**
+         * Because of performance reasons, ionScroll events are disabled by default, in order to enable them
+         * and start listening from (ionScroll), set this property to `true`.
+         */
+        this.scrollEvents = false;
+        this.ionScrollStart = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionScrollStart", 7);
+        this.ionScroll = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionScroll", 7);
+        this.ionScrollEnd = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionScrollEnd", 7);
+    }
+    Content.prototype.componentWillLoad = function () {
+        if (this.forceOverscroll === undefined) {
+            var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+            this.forceOverscroll = mode === 'ios' && Object(_chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["i"])(window, 'mobile');
+        }
+    };
+    Content.prototype.componentDidLoad = function () {
+        this.resize();
+    };
+    Content.prototype.componentDidUnload = function () {
+        this.onScrollEnd();
+    };
+    Content.prototype.onClick = function (ev) {
+        if (this.isScrolling) {
+            ev.preventDefault();
+            ev.stopPropagation();
+        }
+    };
+    Content.prototype.resize = function () {
+        if (this.fullscreen) {
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["f"])(this.readDimensions.bind(this));
+        }
+        else if (this.cTop !== 0 || this.cBottom !== 0) {
+            this.cTop = this.cBottom = 0;
+            this.el.forceUpdate();
+        }
+    };
+    Content.prototype.readDimensions = function () {
+        var page = getPageElement(this.el);
+        var top = Math.max(this.el.offsetTop, 0);
+        var bottom = Math.max(page.offsetHeight - top - this.el.offsetHeight, 0);
+        var dirty = top !== this.cTop || bottom !== this.cBottom;
+        if (dirty) {
+            this.cTop = top;
+            this.cBottom = bottom;
+            this.el.forceUpdate();
+        }
+    };
+    Content.prototype.onScroll = function (ev) {
+        var _this = this;
+        var timeStamp = Date.now();
+        var shouldStart = !this.isScrolling;
+        this.lastScroll = timeStamp;
+        if (shouldStart) {
+            this.onScrollStart();
+        }
+        if (!this.queued && this.scrollEvents) {
+            this.queued = true;
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["f"])(function (ts) {
+                _this.queued = false;
+                _this.detail.event = ev;
+                updateScrollDetail(_this.detail, _this.scrollEl, ts, shouldStart);
+                _this.ionScroll.emit(_this.detail);
+            });
+        }
+    };
+    /**
+     * Get the element where the actual scrolling takes place.
+     * This element can be used to subscribe to `scroll` events or manually modify
+     * `scrollTop`. However, it's recommended to use the API provided by `ion-content`:
+     *
+     * i.e. Using `ionScroll`, `ionScrollStart`, `ionScrollEnd` for scrolling events
+     * and `scrollToPoint()` to scroll the content into a certain point.
+     */
+    Content.prototype.getScrollElement = function () {
+        return Promise.resolve(this.scrollEl);
+    };
+    /**
+     * Scroll to the top of the component.
+     *
+     * @param duration The amount of time to take scrolling to the top. Defaults to `0`.
+     */
+    Content.prototype.scrollToTop = function (duration) {
+        if (duration === void 0) { duration = 0; }
+        return this.scrollToPoint(undefined, 0, duration);
+    };
+    /**
+     * Scroll to the bottom of the component.
+     *
+     * @param duration The amount of time to take scrolling to the bottom. Defaults to `0`.
+     */
+    Content.prototype.scrollToBottom = function (duration) {
+        if (duration === void 0) { duration = 0; }
+        var y = this.scrollEl.scrollHeight - this.scrollEl.clientHeight;
+        return this.scrollToPoint(undefined, y, duration);
+    };
+    /**
+     * Scroll by a specified X/Y distance in the component.
+     *
+     * @param x The amount to scroll by on the horizontal axis.
+     * @param y The amount to scroll by on the vertical axis.
+     * @param duration The amount of time to take scrolling by that amount.
+     */
+    Content.prototype.scrollByPoint = function (x, y, duration) {
+        return this.scrollToPoint(x + this.scrollEl.scrollLeft, y + this.scrollEl.scrollTop, duration);
+    };
+    /**
+     * Scroll to a specified X/Y location in the component.
+     *
+     * @param x The point to scroll to on the horizontal axis.
+     * @param y The point to scroll to on the vertical axis.
+     * @param duration The amount of time to take scrolling to that point. Defaults to `0`.
+     */
+    Content.prototype.scrollToPoint = function (x, y, duration) {
+        if (duration === void 0) { duration = 0; }
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var el, resolve, startTime, promise, fromY, fromX, deltaY, deltaX, step;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                el = this.scrollEl;
+                if (duration < 32) {
+                    if (y != null) {
+                        el.scrollTop = y;
+                    }
+                    if (x != null) {
+                        el.scrollLeft = x;
+                    }
+                    return [2 /*return*/];
+                }
+                startTime = 0;
+                promise = new Promise(function (r) { return resolve = r; });
+                fromY = el.scrollTop;
+                fromX = el.scrollLeft;
+                deltaY = y != null ? y - fromY : 0;
+                deltaX = x != null ? x - fromX : 0;
+                step = function (timeStamp) {
+                    var linearTime = Math.min(1, ((timeStamp - startTime) / duration)) - 1;
+                    var easedT = Math.pow(linearTime, 3) + 1;
+                    if (deltaY !== 0) {
+                        el.scrollTop = Math.floor((easedT * deltaY) + fromY);
+                    }
+                    if (deltaX !== 0) {
+                        el.scrollLeft = Math.floor((easedT * deltaX) + fromX);
+                    }
+                    if (easedT < 1) {
+                        // do not use DomController here
+                        // must use nativeRaf in order to fire in the next frame
+                        // TODO: remove as any
+                        requestAnimationFrame(step);
+                    }
+                    else {
+                        resolve();
+                    }
+                };
+                // chill out for a frame first
+                requestAnimationFrame(function (ts) {
+                    startTime = ts;
+                    step(ts);
+                });
+                return [2 /*return*/, promise];
+            });
+        });
+    };
+    Content.prototype.onScrollStart = function () {
+        var _this = this;
+        this.isScrolling = true;
+        this.ionScrollStart.emit({
+            isScrolling: true
+        });
+        if (this.watchDog) {
+            clearInterval(this.watchDog);
+        }
+        // watchdog
+        this.watchDog = setInterval(function () {
+            if (_this.lastScroll < Date.now() - 120) {
+                _this.onScrollEnd();
+            }
+        }, 100);
+    };
+    Content.prototype.onScrollEnd = function () {
+        clearInterval(this.watchDog);
+        this.watchDog = null;
+        if (this.isScrolling) {
+            this.isScrolling = false;
+            this.ionScrollEnd.emit({
+                isScrolling: false
+            });
+        }
+    };
+    Content.prototype.render = function () {
+        var _a;
+        var _this = this;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        var _b = this, scrollX = _b.scrollX, scrollY = _b.scrollY, forceOverscroll = _b.forceOverscroll;
+        this.resize();
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], { class: Object.assign({}, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__["c"])(this.color), (_a = {}, _a[mode] = true, _a['content-sizing'] = Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__["h"])('ion-popover', this.el), _a['overscroll'] = !!this.forceOverscroll, _a)), style: {
+                '--offset-top': this.cTop + "px",
+                '--offset-bottom': this.cBottom + "px",
+            } }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: {
+                'inner-scroll': true,
+                'scroll-x': scrollX,
+                'scroll-y': scrollY,
+                'overscroll': (scrollX || scrollY) && !!forceOverscroll
+            }, ref: function (el) { return _this.scrollEl = el; }, onScroll: function (ev) { return _this.onScroll(ev); } }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "fixed" })));
+    };
+    Object.defineProperty(Content.prototype, "el", {
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Content, "style", {
+        get: function () { return ":host{--background:var(--ion-background-color,#fff);--color:var(--ion-text-color,#000);--padding-top:0px;--padding-bottom:0px;--padding-start:0px;--padding-end:0px;--keyboard-offset:0px;--offset-top:0px;--offset-bottom:0px;--overflow:auto;display:block;position:relative;-ms-flex:1;flex:1;width:100%;height:100%;margin:0!important;padding:0!important;font-family:var(--ion-font-family,inherit);contain:size style}:host(.ion-color) .inner-scroll{background:var(--ion-color-base);color:var(--ion-color-contrast)}:host(.outer-content){--background:var(--ion-color-step-50,#f2f2f2)}.inner-scroll{left:0;right:0;top:calc(var(--offset-top) * -1);bottom:calc(var(--offset-bottom) * -1);padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:calc(var(--padding-top) + var(--offset-top));padding-bottom:calc(var(--padding-bottom) + var(--keyboard-offset) + var(--offset-bottom));position:absolute;background:var(--background);color:var(--color);-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.inner-scroll{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}.scroll-x,.scroll-y{-webkit-overflow-scrolling:touch;will-change:scroll-position;-ms-scroll-chaining:none;overscroll-behavior:contain}.scroll-y{-ms-touch-action:pan-y;touch-action:pan-y;overflow-y:var(--overflow)}.scroll-x{-ms-touch-action:pan-x;touch-action:pan-x;overflow-x:var(--overflow)}.scroll-x.scroll-y{-ms-touch-action:auto;touch-action:auto}.overscroll:after,.overscroll:before{position:absolute;width:1px;height:1px;content:\"\"}.overscroll:before{bottom:-1px}.overscroll:after{top:-1px}:host(.content-sizing){contain:none}:host(.content-sizing) .inner-scroll{position:relative}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Content;
+}());
+var getParentElement = function (el) {
+    if (el.parentElement) {
+        // normal element with a parent element
+        return el.parentElement;
+    }
+    if (el.parentNode && el.parentNode.host) {
+        // shadow dom's document fragment
+        return el.parentNode.host;
+    }
+    return null;
+};
+var getPageElement = function (el) {
+    var tabs = el.closest('ion-tabs');
+    if (tabs) {
+        return tabs;
+    }
+    var page = el.closest('ion-app,ion-page,.ion-page,page-inner');
+    if (page) {
+        return page;
+    }
+    return getParentElement(el);
+};
+// ******** DOM READ ****************
+var updateScrollDetail = function (detail, el, timestamp, shouldStart) {
+    var prevX = detail.currentX;
+    var prevY = detail.currentY;
+    var prevT = detail.timeStamp;
+    var currentX = el.scrollLeft;
+    var currentY = el.scrollTop;
+    if (shouldStart) {
+        // remember the start positions
+        detail.startTimeStamp = timestamp;
+        detail.startX = currentX;
+        detail.startY = currentY;
+        detail.velocityX = detail.velocityY = 0;
+    }
+    detail.timeStamp = timestamp;
+    detail.currentX = detail.scrollLeft = currentX;
+    detail.currentY = detail.scrollTop = currentY;
+    detail.deltaX = currentX - detail.startX;
+    detail.deltaY = currentY - detail.startY;
+    var timeDelta = timestamp - prevT;
+    if (timeDelta > 0 && timeDelta < 100) {
+        var velocityX = (currentX - prevX) / timeDelta;
+        var velocityY = (currentY - prevY) / timeDelta;
+        detail.velocityX = velocityX * 0.7 + detail.velocityX * 0.3;
+        detail.velocityY = velocityY * 0.7 + detail.velocityY * 0.3;
+    }
+};
+/**
+ * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ */
+var Footer = /** @class */ (function () {
+    function Footer(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        /**
+         * If `true`, the footer will be translucent. Only applies to `ios` mode.
+         * Note: In order to scroll content behind the footer, the `fullscreen`
+         * attribute needs to be set on the content.
+         */
+        this.translucent = false;
+    }
+    Footer.prototype.hostData = function () {
+        var _a;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        return {
+            class: (_a = {},
+                _a[mode] = true,
+                // Used internally for styling
+                _a["footer-" + mode] = true,
+                _a["footer-translucent"] = this.translucent,
+                _a["footer-translucent-" + mode] = this.translucent,
+                _a)
+        };
+    };
+    Footer.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    Object.defineProperty(Footer, "style", {
+        get: function () { return "ion-footer{display:block;position:relative;-ms-flex-order:1;order:1;width:100%;z-index:10}ion-footer ion-toolbar:last-child{padding-bottom:var(--ion-safe-area-bottom,0)}.footer-ios ion-toolbar:first-child{--border-width:0.55px 0 0}.footer-ios[no-border] ion-toolbar:first-child{--border-width:0}.footer-translucent-ios{-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}.footer-translucent-ios ion-toolbar{--opacity:.8;--backdrop-filter:saturate(180%) blur(20px)}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Footer;
+}());
+/**
+ * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ */
+var Header = /** @class */ (function () {
+    function Header(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        /**
+         * If `true`, the header will be translucent. Only applies to `ios` mode.
+         * Note: In order to scroll content behind the header, the `fullscreen`
+         * attribute needs to be set on the content.
+         */
+        this.translucent = false;
+    }
+    Header.prototype.hostData = function () {
+        var _a;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        return {
+            class: (_a = {},
+                _a[mode] = true,
+                // Used internally for styling
+                _a["header-" + mode] = true,
+                _a["header-translucent"] = this.translucent,
+                _a["header-translucent-" + mode] = this.translucent,
+                _a)
+        };
+    };
+    Header.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    Object.defineProperty(Header, "style", {
+        get: function () { return "ion-header{display:block;position:relative;-ms-flex-order:-1;order:-1;width:100%;z-index:10}ion-header ion-toolbar:first-child{padding-top:var(--ion-safe-area-top,0)}.header-ios ion-toolbar:last-child{--border-width:0 0 0.55px}.header-ios[no-border] ion-toolbar:last-child{--border-width:0}.header-translucent-ios{-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}.header-translucent-ios ion-toolbar{--opacity:.8;--backdrop-filter:saturate(180%) blur(20px)}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Header;
+}());
+var RouterOutlet = /** @class */ (function () {
+    function RouterOutlet(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        /**
+         * The mode determines which platform styles to use.
+         */
+        this.mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        /**
+         * If `true`, the router-outlet should animate the transition of components.
+         */
+        this.animated = true;
+        this.ionNavWillLoad = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionNavWillLoad", 7);
+        this.ionNavWillChange = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionNavWillChange", 3);
+        this.ionNavDidChange = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionNavDidChange", 3);
+    }
+    RouterOutlet.prototype.swipeHandlerChanged = function () {
+        if (this.gesture) {
+            this.gesture.setDisabled(this.swipeHandler === undefined);
+        }
+    };
+    RouterOutlet.prototype.componentWillLoad = function () {
+        this.ionNavWillLoad.emit();
+    };
+    RouterOutlet.prototype.componentDidLoad = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common"), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ./swipe-back-560f72e7.js */ "./node_modules/@ionic/core/dist/esm/legacy/swipe-back-560f72e7.js"))];
+                    case 1:
+                        _a.gesture = (_b.sent()).createSwipeBackGesture(this.el, function () { return !!_this.swipeHandler && _this.swipeHandler.canStart(); }, function () { return _this.swipeHandler && _this.swipeHandler.onStart(); }, function (step) { return _this.ani && _this.ani.progressStep(step); }, function (shouldComplete, step, dur) {
+                            if (_this.ani) {
+                                _this.ani.progressEnd(shouldComplete, step, dur);
+                            }
+                            if (_this.swipeHandler) {
+                                _this.swipeHandler.onEnd(shouldComplete);
+                            }
+                        });
+                        this.swipeHandlerChanged();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    RouterOutlet.prototype.componentDidUnload = function () {
+        this.activeEl = this.activeComponent = undefined;
+        if (this.gesture) {
+            this.gesture.destroy();
+            this.gesture = undefined;
+        }
+    };
+    /** @internal */
+    RouterOutlet.prototype.commit = function (enteringEl, leavingEl, opts) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var unlock, changed, e_1;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.lock()];
+                    case 1:
+                        unlock = _a.sent();
+                        changed = false;
+                        _a.label = 2;
+                    case 2:
+                        _a.trys.push([2, 4, , 5]);
+                        return [4 /*yield*/, this.transition(enteringEl, leavingEl, opts)];
+                    case 3:
+                        changed = _a.sent();
+                        return [3 /*break*/, 5];
+                    case 4:
+                        e_1 = _a.sent();
+                        console.error(e_1);
+                        return [3 /*break*/, 5];
+                    case 5:
+                        unlock();
+                        return [2 /*return*/, changed];
+                }
+            });
+        });
+    };
+    /** @internal */
+    RouterOutlet.prototype.setRouteId = function (id, params, direction) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var changed;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setRoot(id, params, {
+                            duration: direction === 'root' ? 0 : undefined,
+                            direction: direction === 'back' ? 'back' : 'forward',
+                        })];
+                    case 1:
+                        changed = _a.sent();
+                        return [2 /*return*/, {
+                                changed: changed,
+                                element: this.activeEl
+                            }];
+                }
+            });
+        });
+    };
+    /** @internal */
+    RouterOutlet.prototype.getRouteId = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var active;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                active = this.activeEl;
+                return [2 /*return*/, active ? {
+                        id: active.tagName,
+                        element: active,
+                    } : undefined];
+            });
+        });
+    };
+    RouterOutlet.prototype.setRoot = function (component, params, opts) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var leavingEl, enteringEl;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (this.activeComponent === component) {
+                            return [2 /*return*/, false];
+                        }
+                        leavingEl = this.activeEl;
+                        return [4 /*yield*/, Object(_chunk_00265c49_js__WEBPACK_IMPORTED_MODULE_6__["a"])(this.delegate, this.el, component, ['ion-page', 'ion-page-invisible'], params)];
+                    case 1:
+                        enteringEl = _a.sent();
+                        this.activeComponent = component;
+                        this.activeEl = enteringEl;
+                        // commit animation
+                        return [4 /*yield*/, this.commit(enteringEl, leavingEl, opts)];
+                    case 2:
+                        // commit animation
+                        _a.sent();
+                        return [4 /*yield*/, Object(_chunk_00265c49_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this.delegate, leavingEl)];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/, true];
+                }
+            });
+        });
+    };
+    RouterOutlet.prototype.transition = function (enteringEl, leavingEl, opts) {
+        if (opts === void 0) { opts = {}; }
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _a, el, mode, animated, animationBuilder;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (leavingEl === enteringEl) {
+                            return [2 /*return*/, false];
+                        }
+                        // emit nav will change event
+                        this.ionNavWillChange.emit();
+                        _a = this, el = _a.el, mode = _a.mode;
+                        animated = this.animated && _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].getBoolean('animated', true);
+                        animationBuilder = this.animation || opts.animationBuilder || _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].get('navAnimation');
+                        return [4 /*yield*/, Object(_chunk_638b009b_js__WEBPACK_IMPORTED_MODULE_7__["t"])(Object.assign({ mode: mode,
+                                animated: animated,
+                                animationBuilder: animationBuilder,
+                                enteringEl: enteringEl,
+                                leavingEl: leavingEl, baseEl: el, progressCallback: (opts.progressAnimation
+                                    ? function (ani) { return _this.ani = ani; }
+                                    : undefined) }, opts))];
+                    case 1:
+                        _b.sent();
+                        // emit nav changed event
+                        this.ionNavDidChange.emit();
+                        return [2 /*return*/, true];
+                }
+            });
+        });
+    };
+    RouterOutlet.prototype.lock = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var p, resolve;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        p = this.waitPromise;
+                        this.waitPromise = new Promise(function (r) { return resolve = r; });
+                        if (!(p !== undefined)) return [3 /*break*/, 2];
+                        return [4 /*yield*/, p];
+                    case 1:
+                        _a.sent();
+                        _a.label = 2;
+                    case 2: return [2 /*return*/, resolve];
+                }
+            });
+        });
+    };
+    RouterOutlet.prototype.render = function () {
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null));
+    };
+    Object.defineProperty(RouterOutlet.prototype, "el", {
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RouterOutlet, "watchers", {
         get: function () {
             return {
-                "buttons": ["buttonsChanged"],
-                "inputs": ["inputsChanged"]
+                "swipeHandler": ["swipeHandlerChanged"]
             };
         },
         enumerable: true,
         configurable: true
     });
-    Alert.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_0__["H"], this.hostData(), this.__stencil_render()); };
-    Object.defineProperty(Alert, "style", {
-        get: function () { return ".sc-ion-alert-md-h{--min-width:250px;--width:auto;--min-height:auto;--height:auto;--max-height:90%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;left:0;right:0;top:0;bottom:0;display:-ms-flexbox;display:flex;position:fixed;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;font-family:var(--ion-font-family,inherit);contain:strict;-ms-touch-action:none;touch-action:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:1000}.overlay-hidden.sc-ion-alert-md-h{display:none}.alert-top.sc-ion-alert-md-h{padding-top:50px;-ms-flex-align:start;align-items:flex-start}.alert-wrapper.sc-ion-alert-md{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:content;opacity:0;z-index:10}.alert-title.sc-ion-alert-md{margin-top:0}.alert-sub-title.sc-ion-alert-md, .alert-title.sc-ion-alert-md{margin-left:0;margin-right:0;margin-bottom:0;padding-left:0;padding-right:0;padding-top:0;padding-bottom:0}.alert-sub-title.sc-ion-alert-md{margin-top:5px;font-weight:400}.alert-message.sc-ion-alert-md{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-overflow-scrolling:touch;overflow-y:auto;overscroll-behavior-y:contain}.alert-checkbox-group.sc-ion-alert-md::-webkit-scrollbar, .alert-message.sc-ion-alert-md::-webkit-scrollbar, .alert-radio-group.sc-ion-alert-md::-webkit-scrollbar{display:none}.alert-input.sc-ion-alert-md{padding-left:0;padding-right:0;padding-top:10px;padding-bottom:10px;width:100%;border:0;background:inherit;font:inherit;-webkit-box-sizing:border-box;box-sizing:border-box}.alert-button-group.sc-ion-alert-md{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;width:100%}.alert-button-group-vertical.sc-ion-alert-md{-ms-flex-direction:column;flex-direction:column;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.alert-button.sc-ion-alert-md{margin-right:0;display:block;border:0;font-size:14px;line-height:20px;z-index:0}.alert-button.ion-focused.sc-ion-alert-md, .alert-tappable.ion-focused.sc-ion-alert-md{background:var(--ion-color-step-100,#e6e6e6)}.alert-button-inner.sc-ion-alert-md{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;height:100%}.alert-button-inner.sc-ion-alert-md, .alert-tappable.sc-ion-alert-md{display:-ms-flexbox;display:flex;width:100%}.alert-tappable.sc-ion-alert-md{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;border:0;background:transparent;font-size:inherit;line-height:normal;text-align:start;-webkit-appearance:none;-moz-appearance:none;appearance:none;contain:strict}.alert-button.sc-ion-alert-md, .alert-checkbox.sc-ion-alert-md, .alert-input.sc-ion-alert-md, .alert-radio.sc-ion-alert-md{outline:none}.alert-checkbox-icon.sc-ion-alert-md, .alert-checkbox-inner.sc-ion-alert-md, .alert-radio-icon.sc-ion-alert-md{-webkit-box-sizing:border-box;box-sizing:border-box}.sc-ion-alert-md-h{--background:var(--ion-overlay-background-color,#fff);--max-width:280px;font-size:14px}.alert-wrapper.sc-ion-alert-md{border-radius:4px;-webkit-box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12);box-shadow:0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12)}.alert-head.sc-ion-alert-md{padding-left:23px;padding-right:23px;padding-top:20px;padding-bottom:15px;text-align:start}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-head.sc-ion-alert-md{padding-left:unset;padding-right:unset;-webkit-padding-start:23px;padding-inline-start:23px;-webkit-padding-end:23px;padding-inline-end:23px}}.alert-title.sc-ion-alert-md{font-size:20px;font-weight:500}.alert-sub-title.sc-ion-alert-md, .alert-title.sc-ion-alert-md{color:var(--ion-text-color,#000)}.alert-sub-title.sc-ion-alert-md{font-size:16px}.alert-input-group.sc-ion-alert-md, .alert-message.sc-ion-alert-md{padding-left:24px;padding-right:24px;padding-top:20px;padding-bottom:20px;color:var(--ion-color-step-550,#737373)}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-input-group.sc-ion-alert-md, .alert-message.sc-ion-alert-md{padding-left:unset;padding-right:unset;-webkit-padding-start:24px;padding-inline-start:24px;-webkit-padding-end:24px;padding-inline-end:24px}}.alert-message.sc-ion-alert-md{max-height:240px;font-size:16px}.alert-message.sc-ion-alert-md:empty{padding-left:0;padding-right:0;padding-top:0;padding-bottom:0}.alert-head.sc-ion-alert-md + .alert-message.sc-ion-alert-md{padding-top:0}.alert-input.sc-ion-alert-md{margin-left:0;margin-right:0;margin-top:5px;margin-bottom:5px;border-bottom:1px solid var(--ion-color-step-150,#d9d9d9);color:var(--ion-text-color,#000)}.alert-input.sc-ion-alert-md::-webkit-input-placeholder{color:var(--ion-placeholder-color,var(--ion-color-step-400,#999));font-family:inherit;font-weight:inherit}.alert-input.sc-ion-alert-md::-moz-placeholder{color:var(--ion-placeholder-color,var(--ion-color-step-400,#999));font-family:inherit;font-weight:inherit}.alert-input.sc-ion-alert-md:-ms-input-placeholder{color:var(--ion-placeholder-color,var(--ion-color-step-400,#999));font-family:inherit;font-weight:inherit}.alert-input.sc-ion-alert-md::-ms-input-placeholder{color:var(--ion-placeholder-color,var(--ion-color-step-400,#999));font-family:inherit;font-weight:inherit}.alert-input.sc-ion-alert-md::placeholder{color:var(--ion-placeholder-color,var(--ion-color-step-400,#999));font-family:inherit;font-weight:inherit}.alert-input.sc-ion-alert-md::-ms-clear{display:none}.alert-input.sc-ion-alert-md:focus{margin-bottom:4px;border-bottom:2px solid var(--ion-color-primary,#3880ff)}.alert-checkbox-group.sc-ion-alert-md, .alert-radio-group.sc-ion-alert-md{position:relative;max-height:240px;border-top:1px solid var(--ion-color-step-150,#d9d9d9);border-bottom:1px solid var(--ion-color-step-150,#d9d9d9);overflow:auto}.alert-tappable.sc-ion-alert-md{position:relative;height:48px;overflow:hidden}.alert-radio-label.sc-ion-alert-md{padding-left:52px;padding-right:26px;padding-top:13px;padding-bottom:13px;-ms-flex:1;flex:1;color:var(--ion-color-step-850,#262626);font-size:16px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-radio-label.sc-ion-alert-md{padding-left:unset;padding-right:unset;-webkit-padding-start:52px;padding-inline-start:52px;-webkit-padding-end:26px;padding-inline-end:26px}}.alert-radio-icon.sc-ion-alert-md{left:26px;top:0;border-radius:50%;display:block;position:relative;width:20px;height:20px;border-width:2px;border-style:solid;border-color:var(--ion-color-step-550,#737373)}[dir=rtl].sc-ion-alert-md-h .alert-radio-icon.sc-ion-alert-md, [dir=rtl] .sc-ion-alert-md-h .alert-radio-icon.sc-ion-alert-md, [dir=rtl].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md{left:unset;right:unset;right:26px}.alert-radio-inner.sc-ion-alert-md{left:3px;top:3px;border-radius:50%;position:absolute;width:10px;height:10px;-webkit-transform:scale3d(0,0,0);transform:scale3d(0,0,0);-webkit-transition:-webkit-transform .28s cubic-bezier(.4,0,.2,1);transition:-webkit-transform .28s cubic-bezier(.4,0,.2,1);transition:transform .28s cubic-bezier(.4,0,.2,1);transition:transform .28s cubic-bezier(.4,0,.2,1),-webkit-transform .28s cubic-bezier(.4,0,.2,1);background-color:var(--ion-color-primary,#3880ff)}[dir=rtl].sc-ion-alert-md-h .alert-radio-inner.sc-ion-alert-md, [dir=rtl] .sc-ion-alert-md-h .alert-radio-inner.sc-ion-alert-md, [dir=rtl].sc-ion-alert-md .alert-radio-inner.sc-ion-alert-md{left:unset;right:unset;right:3px}[aria-checked=true].sc-ion-alert-md .alert-radio-label.sc-ion-alert-md{color:var(--ion-color-step-850,#262626)}[aria-checked=true].sc-ion-alert-md .alert-radio-icon.sc-ion-alert-md{border-color:var(--ion-color-primary,#3880ff)}[aria-checked=true].sc-ion-alert-md .alert-radio-inner.sc-ion-alert-md{-webkit-transform:scaleX(1);transform:scaleX(1)}.alert-checkbox-label.sc-ion-alert-md{padding-left:53px;padding-right:26px;padding-top:13px;padding-bottom:13px;-ms-flex:1;flex:1;color:var(--ion-color-step-850,#262626);font-size:16px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-checkbox-label.sc-ion-alert-md{padding-left:unset;padding-right:unset;-webkit-padding-start:53px;padding-inline-start:53px;-webkit-padding-end:26px;padding-inline-end:26px}}.alert-checkbox-icon.sc-ion-alert-md{left:26px;top:0;border-radius:2px;position:relative;width:16px;height:16px;border-width:2px;border-style:solid;border-color:var(--ion-color-step-550,#737373);contain:strict}[dir=rtl].sc-ion-alert-md-h .alert-checkbox-icon.sc-ion-alert-md, [dir=rtl] .sc-ion-alert-md-h .alert-checkbox-icon.sc-ion-alert-md, [dir=rtl].sc-ion-alert-md .alert-checkbox-icon.sc-ion-alert-md{left:unset;right:unset;right:26px}[aria-checked=true].sc-ion-alert-md .alert-checkbox-icon.sc-ion-alert-md{border-color:var(--ion-color-primary,#3880ff);background-color:var(--ion-color-primary,#3880ff)}[aria-checked=true].sc-ion-alert-md .alert-checkbox-inner.sc-ion-alert-md{left:3px;top:0;position:absolute;width:6px;height:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);border-width:2px;border-top-width:0;border-left-width:0;border-style:solid;border-color:var(--ion-color-primary-contrast,#fff)}[dir=rtl].sc-ion-alert-md-h [aria-checked=true].sc-ion-alert-md .alert-checkbox-inner.sc-ion-alert-md, [dir=rtl] .sc-ion-alert-md-h [aria-checked=true].sc-ion-alert-md .alert-checkbox-inner.sc-ion-alert-md, [dir=rtl].sc-ion-alert-md [aria-checked=true].sc-ion-alert-md .alert-checkbox-inner.sc-ion-alert-md{left:unset;right:unset;right:3px}.alert-button-group.sc-ion-alert-md{padding-left:8px;padding-right:8px;padding-top:8px;padding-bottom:8px;-webkit-box-sizing:border-box;box-sizing:border-box;-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse;-ms-flex-pack:end;justify-content:flex-end}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-button-group.sc-ion-alert-md{padding-left:unset;padding-right:unset;-webkit-padding-start:8px;padding-inline-start:8px;-webkit-padding-end:8px;padding-inline-end:8px}}.alert-button.sc-ion-alert-md{border-radius:2px;margin-left:0;margin-right:8px;margin-top:0;margin-bottom:0;padding-left:10px;padding-right:10px;padding-top:10px;padding-bottom:10px;position:relative;background-color:transparent;color:var(--ion-color-primary,#3880ff);font-weight:500;text-align:end;text-transform:uppercase;overflow:hidden}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.alert-button.sc-ion-alert-md{margin-left:unset;margin-right:unset;-webkit-margin-start:0;margin-inline-start:0;-webkit-margin-end:8px;margin-inline-end:8px;padding-left:unset;padding-right:unset;-webkit-padding-start:10px;padding-inline-start:10px;-webkit-padding-end:10px;padding-inline-end:10px}}.alert-button-inner.sc-ion-alert-md{-ms-flex-pack:end;justify-content:flex-end}"; },
+    Object.defineProperty(RouterOutlet, "style", {
+        get: function () { return ":host{left:0;right:0;top:0;bottom:0;position:absolute;contain:layout size style;overflow:hidden;z-index:0}"; },
         enumerable: true,
         configurable: true
     });
-    return Alert;
+    return RouterOutlet;
 }());
-function buttonClass(button) {
-    return Object.assign({ 'alert-button': true, 'ion-focusable': true, 'ion-activatable': true }, Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_3__["g"])(button.cssClass));
-}
+var ToolbarTitle = /** @class */ (function () {
+    function ToolbarTitle(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+    }
+    ToolbarTitle.prototype.getMode = function () {
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        var toolbar = this.el.closest('ion-toolbar');
+        return (toolbar && toolbar.mode) || mode;
+    };
+    ToolbarTitle.prototype.hostData = function () {
+        var _a;
+        var mode = this.getMode();
+        return {
+            class: Object.assign((_a = {}, _a[mode] = true, _a["title-" + mode] = true, _a), Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__["c"])(this.color))
+        };
+    };
+    ToolbarTitle.prototype.__stencil_render = function () {
+        return [
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "toolbar-title" }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null))
+        ];
+    };
+    Object.defineProperty(ToolbarTitle.prototype, "el", {
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        enumerable: true,
+        configurable: true
+    });
+    ToolbarTitle.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
+    Object.defineProperty(ToolbarTitle, "style", {
+        get: function () { return ":host{--color:initial;display:-ms-flexbox;display:flex;-ms-flex:1;flex:1;-ms-flex-align:center;align-items:center;color:var(--color)}:host,:host(.title-ios){-webkit-transform:translateZ(0);transform:translateZ(0)}:host(.title-ios){left:0;top:0;padding-left:90px;padding-right:90px;padding-top:0;padding-bottom:0;position:absolute;width:100%;height:100%;font-size:17px;font-weight:600;letter-spacing:-.03em;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;pointer-events:none}:host-context([dir=rtl]).title-ios,:host-context([dir=rtl]):host(.title-ios){left:unset;right:unset;right:0}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host(.title-ios){padding-left:unset;padding-right:unset;-webkit-padding-start:90px;padding-inline-start:90px;-webkit-padding-end:90px;padding-inline-end:90px}}:host(.title-md){padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;font-size:20px;font-weight:500;letter-spacing:.0125em}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host(.title-md){padding-left:unset;padding-right:unset;-webkit-padding-start:20px;padding-inline-start:20px;-webkit-padding-end:20px;padding-inline-end:20px}}:host(.ion-color){color:var(--ion-color-base)}.toolbar-title{display:block;width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;pointer-events:auto}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return ToolbarTitle;
+}());
+/**
+ * @virtualProp {"ios" | "md"} mode - The mode determines which platform styles to use.
+ *
+ * @slot - Content is placed between the named slots if provided without a slot.
+ * @slot start - Content is placed to the left of the toolbar text in LTR, and to the right in RTL.
+ * @slot secondary - Content is placed to the left of the toolbar text in `ios` mode, and directly to the right in `md` mode.
+ * @slot primary - Content is placed to the right of the toolbar text in `ios` mode, and to the far right in `md` mode.
+ * @slot end - Content is placed to the right of the toolbar text in LTR, and to the left in RTL.
+ */
+var Toolbar = /** @class */ (function () {
+    function Toolbar(hostRef) {
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        this.childrenStyles = new Map();
+    }
+    Toolbar.prototype.componentWillLoad = function () {
+        var buttons = Array.from(this.el.querySelectorAll('ion-buttons'));
+        var firstButtons = buttons.find(function (button) {
+            return button.slot === 'start';
+        });
+        if (firstButtons) {
+            firstButtons.classList.add('buttons-first-slot');
+        }
+        var buttonsReversed = buttons.reverse();
+        var lastButtons = buttonsReversed.find(function (button) { return button.slot === 'end'; }) ||
+            buttonsReversed.find(function (button) { return button.slot === 'primary'; }) ||
+            buttonsReversed.find(function (button) { return button.slot === 'secondary'; });
+        if (lastButtons) {
+            lastButtons.classList.add('buttons-last-slot');
+        }
+    };
+    Toolbar.prototype.childrenStyle = function (ev) {
+        ev.stopPropagation();
+        var tagName = ev.target.tagName;
+        var updatedStyles = ev.detail;
+        var newStyles = {};
+        var childStyles = this.childrenStyles.get(tagName) || {};
+        var hasStyleChange = false;
+        Object.keys(updatedStyles).forEach(function (key) {
+            var childKey = "toolbar-" + key;
+            var newValue = updatedStyles[key];
+            if (newValue !== childStyles[childKey]) {
+                hasStyleChange = true;
+            }
+            if (newValue) {
+                newStyles[childKey] = true;
+            }
+        });
+        if (hasStyleChange) {
+            this.childrenStyles.set(tagName, newStyles);
+            this.el.forceUpdate();
+        }
+    };
+    Toolbar.prototype.render = function () {
+        var _a;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
+        var childStyles = {};
+        this.childrenStyles.forEach(function (value) {
+            Object.assign(childStyles, value);
+        });
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], { class: Object.assign((_a = {}, _a[mode] = true, _a), childStyles, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__["c"])(this.color)) }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "toolbar-background" }), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "toolbar-container" }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "start" }), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "secondary" }), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "toolbar-content" }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "primary" }), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "end" }))));
+    };
+    Object.defineProperty(Toolbar.prototype, "el", {
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Toolbar, "style", {
+        get: function () { return ":host{--border-width:0;--border-style:solid;--opacity:1;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;padding-left:var(--ion-safe-area-left);padding-right:var(--ion-safe-area-right);display:block;position:relative;width:100%;color:var(--color);font-family:var(--ion-font-family,inherit);contain:content;z-index:10;-webkit-box-sizing:border-box;box-sizing:border-box}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--ion-safe-area-left);padding-inline-start:var(--ion-safe-area-left);-webkit-padding-end:var(--ion-safe-area-right);padding-inline-end:var(--ion-safe-area-right)}}:host(.ion-color){color:var(--ion-color-contrast)}:host(.ion-color) .toolbar-background{background:var(--ion-color-base)}.toolbar-container{padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);display:-ms-flexbox;display:flex;position:relative;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;width:100%;min-height:var(--min-height);contain:content;overflow:hidden;z-index:10;-webkit-box-sizing:border-box;box-sizing:border-box}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.toolbar-container{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}.toolbar-background{top:0;-webkit-transform:translateZ(0);transform:translateZ(0);border-width:var(--border-width);border-style:var(--border-style);border-color:var(--border-color);background:var(--background);contain:strict;opacity:var(--opacity);z-index:-1;pointer-events:none}.toolbar-background,::slotted(ion-progress-bar){left:0;right:0;bottom:0;position:absolute}:host{--background:var(--ion-toolbar-background,var(--ion-color-step-50,#fff));--color:var(--ion-toolbar-color,var(--ion-text-color,#000));--border-color:var(--ion-toolbar-border-color,var(--ion-border-color,var(--ion-color-step-150,rgba(0,0,0,0.2))));--padding-top:4px;--padding-bottom:4px;--padding-start:4px;--padding-end:4px;--min-height:44px}.toolbar-content{-ms-flex:1;flex:1;-ms-flex-order:4;order:4;min-width:0}:host(.toolbar-segment){--min-height:auto}::slotted([slot=start]){-ms-flex-order:2;order:2}::slotted([slot=secondary]){-ms-flex-order:3;order:3}::slotted([slot=primary]){-ms-flex-order:5;order:5;text-align:end}::slotted([slot=end]){-ms-flex-order:6;order:6;text-align:end}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Toolbar;
+}());
 
 
 

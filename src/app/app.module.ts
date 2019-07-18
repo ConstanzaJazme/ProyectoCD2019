@@ -1,21 +1,22 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicModule, IonicRouteStrategy, IonApp } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
 import { RouteReuseStrategy } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { MediaCapture } from '@ionic-native/media-capture/ngx';
 import { Media } from '@ionic-native/media/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+import { ApiRestService } from './services/api-rest.service';
 import { HttpClientModule } from '@angular/common/http';
-import { PostServiceProvider } from './post-service.service';
+
 
 @NgModule({
     declarations: [AppComponent],
@@ -33,8 +34,8 @@ import { PostServiceProvider } from './post-service.service';
         MediaCapture,
         Media,
         File,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-        PostServiceProvider,
+        ApiRestService,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]
 })

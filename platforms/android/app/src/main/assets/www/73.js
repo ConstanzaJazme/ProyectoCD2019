@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[73],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-ios.entry.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-ios.entry.js ***!
-  \****************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-md.entry.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-md.entry.js ***!
+  \***************************************************************************/
 /*! exports provided: ion_select, ion_select_option, ion_select_popover */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -13,11 +13,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_select_option", function() { return SelectOption; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_select_popover", function() { return SelectPopover; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-be34f14a.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-be34f14a.js");
-/* harmony import */ var _chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-9d21e8e5.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js");
-/* harmony import */ var _chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chunk-d102c9d1.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js");
+/* harmony import */ var _chunk_d83bfeae_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-d83bfeae.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d83bfeae.js");
+/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js");
+/* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js");
 
 
 
@@ -30,7 +30,7 @@ __webpack_require__.r(__webpack_exports__);
 var Select = /** @class */ (function () {
     function Select(hostRef) {
         var _this = this;
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.childOpts = [];
         this.inputId = "ion-sel-" + selectIds++;
         this.didInit = false;
@@ -77,11 +77,11 @@ var Select = /** @class */ (function () {
         this.onBlur = function () {
             _this.ionBlur.emit();
         };
-        this.ionChange = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionChange", 7);
-        this.ionCancel = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionCancel", 7);
-        this.ionFocus = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionFocus", 7);
-        this.ionBlur = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionBlur", 7);
-        this.ionStyle = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionStyle", 7);
+        this.ionChange = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionChange", 7);
+        this.ionCancel = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionCancel", 7);
+        this.ionFocus = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionFocus", 7);
+        this.ionBlur = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionBlur", 7);
+        this.ionStyle = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionStyle", 7);
     }
     Select.prototype.disabledChanged = function () {
         this.emitStyle();
@@ -276,7 +276,7 @@ var Select = /** @class */ (function () {
             var interfaceOptions, mode, popoverOpts;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 interfaceOptions = this.interfaceOptions;
-                mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+                mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
                 popoverOpts = Object.assign({ mode: mode }, interfaceOptions, { component: 'ion-select-popover', cssClass: ['select-popover', interfaceOptions.cssClass], event: ev, componentProps: {
                         header: interfaceOptions.header,
                         subHeader: interfaceOptions.subHeader,
@@ -284,7 +284,7 @@ var Select = /** @class */ (function () {
                         value: this.value,
                         options: this.createPopoverOptions(this.childOpts)
                     } });
-                return [2 /*return*/, _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_3__["c"].create(popoverOpts)];
+                return [2 /*return*/, _chunk_d83bfeae_js__WEBPACK_IMPORTED_MODULE_3__["c"].create(popoverOpts)];
             });
         });
     };
@@ -292,10 +292,10 @@ var Select = /** @class */ (function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
             var mode, interfaceOptions, actionSheetOpts;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-                mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+                mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
                 interfaceOptions = this.interfaceOptions;
                 actionSheetOpts = Object.assign({ mode: mode }, interfaceOptions, { buttons: this.createActionSheetButtons(this.childOpts), cssClass: ['select-action-sheet', interfaceOptions.cssClass] });
-                return [2 /*return*/, _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_3__["b"].create(actionSheetOpts)];
+                return [2 /*return*/, _chunk_d83bfeae_js__WEBPACK_IMPORTED_MODULE_3__["b"].create(actionSheetOpts)];
             });
         });
     };
@@ -308,7 +308,7 @@ var Select = /** @class */ (function () {
                 labelText = (label) ? label.textContent : null;
                 interfaceOptions = this.interfaceOptions;
                 inputType = (this.multiple ? 'checkbox' : 'radio');
-                mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+                mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
                 alertOpts = Object.assign({ mode: mode }, interfaceOptions, { header: interfaceOptions.header ? interfaceOptions.header : labelText, inputs: this.createAlertInputs(this.childOpts, inputType), buttons: [
                         {
                             text: this.cancelText,
@@ -325,7 +325,7 @@ var Select = /** @class */ (function () {
                         }
                     ], cssClass: ['select-alert', interfaceOptions.cssClass,
                         (this.multiple ? 'multiple-select-alert' : 'single-select-alert')] });
-                return [2 /*return*/, _chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_3__["a"].create(alertOpts)];
+                return [2 /*return*/, _chunk_d83bfeae_js__WEBPACK_IMPORTED_MODULE_3__["a"].create(alertOpts)];
             });
         });
     };
@@ -369,7 +369,7 @@ var Select = /** @class */ (function () {
         }
     };
     Select.prototype.getLabel = function () {
-        return Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_5__["f"])(this.el);
+        return Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["f"])(this.el);
     };
     Select.prototype.hasValue = function () {
         return this.getText() !== '';
@@ -400,9 +400,9 @@ var Select = /** @class */ (function () {
         var _a;
         var _this = this;
         var _b = this, placeholder = _b.placeholder, name = _b.name, disabled = _b.disabled, isExpanded = _b.isExpanded, value = _b.value, el = _b.el;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         var labelId = this.inputId + '-lbl';
-        var label = Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_5__["f"])(el);
+        var label = Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["f"])(el);
         if (label) {
             label.id = labelId;
         }
@@ -412,19 +412,19 @@ var Select = /** @class */ (function () {
             selectText = placeholder;
             addPlaceholderClass = true;
         }
-        Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_5__["r"])(true, el, name, parseValue(value), disabled);
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["r"])(true, el, name, parseValue(value), disabled);
         var selectTextClasses = {
             'select-text': true,
             'select-placeholder': addPlaceholderClass
         };
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, role: "combobox", "aria-haspopup": "dialog", "aria-disabled": disabled ? 'true' : null, "aria-expanded": "" + isExpanded, "aria-labelledby": labelId, class: (_a = {},
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, role: "combobox", "aria-haspopup": "dialog", "aria-disabled": disabled ? 'true' : null, "aria-expanded": "" + isExpanded, "aria-labelledby": labelId, class: (_a = {},
                 _a[mode] = true,
-                _a['in-item'] = Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_4__["h"])('ion-item', el),
+                _a['in-item'] = Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_4__["h"])('ion-item', el),
                 _a['select-disabled'] = disabled,
-                _a) }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: selectTextClasses }, selectText), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "select-icon", role: "presentation" }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "select-icon-inner" })), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: disabled, ref: (function (btnEl) { return _this.buttonEl = btnEl; }) })));
+                _a) }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: selectTextClasses }, selectText), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "select-icon", role: "presentation" }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "select-icon-inner" })), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", { type: "button", onFocus: this.onFocus, onBlur: this.onBlur, disabled: disabled, ref: (function (btnEl) { return _this.buttonEl = btnEl; }) })));
     };
     Object.defineProperty(Select.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -439,13 +439,13 @@ var Select = /** @class */ (function () {
         configurable: true
     });
     Object.defineProperty(Select, "style", {
-        get: function () { return ":host{padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);display:-ms-flexbox;display:flex;position:relative;font-family:var(--ion-font-family,inherit);overflow:hidden;z-index:2}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}:host(.in-item){position:static;max-width:45%}:host(.select-disabled){opacity:.4;pointer-events:none}:host(.ion-focused) button{border:2px solid #5e9ed6}.select-placeholder{color:currentColor;opacity:.33}button{left:0;top:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;position:absolute;width:100%;height:100%;border:0;background:transparent;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}:host-context([dir=rtl]) button,[dir=rtl] button{left:unset;right:unset;right:0}button::-moz-focus-inner{border:0}.select-icon{position:relative}.select-text{-ms-flex:1;flex:1;min-width:16px;font-size:inherit;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.select-icon-inner{left:5px;top:50%;margin-top:-3px;position:absolute;width:0;height:0;border-top:5px solid;border-right:5px solid transparent;border-left:5px solid transparent;color:currentColor;opacity:.33;pointer-events:none}:host-context([dir=rtl]) .select-icon-inner,[dir=rtl] .select-icon-inner{left:unset;right:unset;right:5px}:host{--padding-top:10px;--padding-end:8px;--padding-bottom:10px;--padding-start:16px}.select-icon{width:12px;height:18px}"; },
+        get: function () { return ":host{padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);display:-ms-flexbox;display:flex;position:relative;font-family:var(--ion-font-family,inherit);overflow:hidden;z-index:2}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){:host{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}:host(.in-item){position:static;max-width:45%}:host(.select-disabled){opacity:.4;pointer-events:none}:host(.ion-focused) button{border:2px solid #5e9ed6}.select-placeholder{color:currentColor;opacity:.33}button{left:0;top:0;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;position:absolute;width:100%;height:100%;border:0;background:transparent;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}:host-context([dir=rtl]) button,[dir=rtl] button{left:unset;right:unset;right:0}button::-moz-focus-inner{border:0}.select-icon{position:relative}.select-text{-ms-flex:1;flex:1;min-width:16px;font-size:inherit;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.select-icon-inner{left:5px;top:50%;margin-top:-3px;position:absolute;width:0;height:0;border-top:5px solid;border-right:5px solid transparent;border-left:5px solid transparent;color:currentColor;opacity:.33;pointer-events:none}:host-context([dir=rtl]) .select-icon-inner,[dir=rtl] .select-icon-inner{left:unset;right:unset;right:5px}:host{--padding-top:10px;--padding-end:0;--padding-bottom:11px;--padding-start:16px}.select-icon{width:19px;height:19px}"; },
         enumerable: true,
         configurable: true
     });
     return Select;
 }());
-function parseValue(value) {
+var parseValue = function (value) {
     if (value == null) {
         return undefined;
     }
@@ -453,8 +453,8 @@ function parseValue(value) {
         return value.join(',');
     }
     return value.toString();
-}
-function isOptionSelected(currentValue, compareValue, compareWith) {
+};
+var isOptionSelected = function (currentValue, compareValue, compareWith) {
     if (currentValue === undefined) {
         return false;
     }
@@ -464,8 +464,8 @@ function isOptionSelected(currentValue, compareValue, compareWith) {
     else {
         return compareOptions(currentValue, compareValue, compareWith);
     }
-}
-function compareOptions(currentValue, compareValue, compareWith) {
+};
+var compareOptions = function (currentValue, compareValue, compareWith) {
     if (typeof compareWith === 'function') {
         return compareWith(currentValue, compareValue);
     }
@@ -475,8 +475,8 @@ function compareOptions(currentValue, compareValue, compareWith) {
     else {
         return currentValue === compareValue;
     }
-}
-function generateText(opts, value, compareWith) {
+};
+var generateText = function (opts, value, compareWith) {
     if (value === undefined) {
         return '';
     }
@@ -489,19 +489,19 @@ function generateText(opts, value, compareWith) {
     else {
         return textForValue(opts, value, compareWith) || '';
     }
-}
-function textForValue(opts, value, compareWith) {
+};
+var textForValue = function (opts, value, compareWith) {
     var selectOpt = opts.find(function (opt) {
         return compareOptions(opt.value, value, compareWith);
     });
     return selectOpt
         ? selectOpt.textContent
         : null;
-}
+};
 var selectIds = 0;
 var SelectOption = /** @class */ (function () {
     function SelectOption(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.inputId = "ion-selopt-" + selectOptionIds++;
         /**
          * If `true`, the user cannot interact with the select option.
@@ -511,8 +511,8 @@ var SelectOption = /** @class */ (function () {
          * If `true`, the element is selected.
          */
         this.selected = false;
-        this.ionSelectOptionDidLoad = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionSelectOptionDidLoad", 7);
-        this.ionSelectOptionDidUnload = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionSelectOptionDidUnload", 7);
+        this.ionSelectOptionDidLoad = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionSelectOptionDidLoad", 7);
+        this.ionSelectOptionDidUnload = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionSelectOptionDidUnload", 7);
     }
     SelectOption.prototype.componentWillLoad = function () {
         if (this.value === undefined) {
@@ -527,7 +527,7 @@ var SelectOption = /** @class */ (function () {
     };
     SelectOption.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         return {
             'role': 'option',
             'id': this.inputId,
@@ -537,11 +537,11 @@ var SelectOption = /** @class */ (function () {
         };
     };
     Object.defineProperty(SelectOption.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
-    SelectOption.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    SelectOption.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
     Object.defineProperty(SelectOption, "style", {
         get: function () { return ":host{display:none}"; },
         enumerable: true,
@@ -555,19 +555,19 @@ var selectOptionIds = 0;
  */
 var SelectPopover = /** @class */ (function () {
     function SelectPopover(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         /** Array of options for the popover */
         this.options = [];
     }
     SelectPopover.prototype.onSelect = function (ev) {
         var option = this.options.find(function (o) { return o.value === ev.target.value; });
         if (option) {
-            Object(_chunk_be34f14a_js__WEBPACK_IMPORTED_MODULE_3__["s"])(option.handler);
+            Object(_chunk_d83bfeae_js__WEBPACK_IMPORTED_MODULE_3__["s"])(option.handler);
         }
     };
     SelectPopover.prototype.hostData = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         return {
             class: (_a = {},
                 _a[mode] = true,
@@ -575,10 +575,10 @@ var SelectPopover = /** @class */ (function () {
         };
     };
     SelectPopover.prototype.__stencil_render = function () {
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-list", null, this.header !== undefined && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-list-header", null, this.header), (this.subHeader !== undefined || this.message !== undefined) &&
-            Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-item", null, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-label", { "text-wrap": true }, this.subHeader !== undefined && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("h3", null, this.subHeader), this.message !== undefined && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("p", null, this.message))), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-radio-group", null, this.options.map(function (option) { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-item", null, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-label", null, option.text), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-radio", { checked: option.checked, value: option.value, disabled: option.disabled })); }))));
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-list", null, this.header !== undefined && Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-list-header", null, this.header), (this.subHeader !== undefined || this.message !== undefined) &&
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-item", null, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-label", { "text-wrap": true }, this.subHeader !== undefined && Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("h3", null, this.subHeader), this.message !== undefined && Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("p", null, this.message))), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-radio-group", null, this.options.map(function (option) { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-item", null, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-label", null, option.text), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-radio", { checked: option.checked, value: option.value, disabled: option.disabled })); }))));
     };
-    SelectPopover.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
+    SelectPopover.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(SelectPopover, "style", {
         get: function () { return ".sc-ion-select-popover-h ion-list.sc-ion-select-popover{margin-left:0;margin-right:0;margin-top:-1px;margin-bottom:-1px}.sc-ion-select-popover-h ion-label.sc-ion-select-popover, .sc-ion-select-popover-h ion-list-header.sc-ion-select-popover{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0}"; },
         enumerable: true,

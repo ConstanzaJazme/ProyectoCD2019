@@ -52,7 +52,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\n\n      <ion-tab-bar slot=\"bottom\">\n            <ion-tab-button tab=\"tab1\">\n                  <ion-icon name=\"flash\"></ion-icon>\n                  <ion-label>Reconocimiento</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"tab2\">\n                  <ion-icon name=\"apps\"></ion-icon>\n                  <ion-label>Trabajando</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"tab3\">\n                  <ion-icon name=\"send\"></ion-icon>\n                  <ion-label>Resultado</ion-label>\n            </ion-tab-button>\n      </ion-tab-bar>\n\n</ion-tabs>"
+module.exports = "<ion-tabs>\n\n      <ion-tab-bar slot=\"bottom\">\n            <ion-tab-button tab=\"home\">\n                  <ion-icon name=\"flash\"></ion-icon>\n                  <ion-label>Tab One</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"work\">\n                  <ion-icon name=\"apps\"></ion-icon>\n                  <ion-label>Tab Two</ion-label>\n            </ion-tab-button>\n\n            <ion-tab-button tab=\"tab3\">\n                  <ion-icon name=\"send\"></ion-icon>\n                  <ion-label>Tab Three</ion-label>\n            </ion-tab-button>\n      </ion-tab-bar>\n\n</ion-tabs>"
 
 /***/ }),
 
@@ -123,42 +123,42 @@ var routes = [
         component: _tabs_page__WEBPACK_IMPORTED_MODULE_3__["TabsPage"],
         children: [
             {
-                path: 'tab1',
+                path: 'home',
                 children: [
                     {
                         path: '',
-                        loadChildren: '../tab1/tab1.module#Tab1PageModule'
+                        loadChildren: '../home/home.module#HomePageModule'
                     }
                 ]
             },
             {
-                path: 'tab2',
+                path: 'work',
                 children: [
                     {
                         path: '',
-                        loadChildren: '../tab2/tab2.module#Tab2PageModule'
+                        loadChildren: '../work/work.module#WorkPageModule'
                     }
                 ]
             },
             {
-                path: 'tab3',
+                path: 'resp',
                 children: [
                     {
                         path: '',
-                        loadChildren: '../tab3/tab3.module#Tab3PageModule'
+                        loadChildren: '../resp/resp.module#RespPageModule'
                     }
                 ]
             },
             {
                 path: '',
-                redirectTo: '/tabs/tab1',
+                redirectTo: '/home',
                 pathMatch: 'full'
             }
         ]
     },
     {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/home',
         pathMatch: 'full'
     }
 ];

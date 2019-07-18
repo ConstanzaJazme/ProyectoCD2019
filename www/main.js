@@ -11,397 +11,397 @@ var map = {
 	"./ion-action-sheet-controller_8.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-action-sheet-controller_8.entry.js",
 		"common",
-		13
+		12
 	],
 	"./ion-action-sheet-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-action-sheet-ios.entry.js",
 		"common",
-		14
+		13
 	],
 	"./ion-action-sheet-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-action-sheet-md.entry.js",
 		"common",
-		15
+		14
 	],
 	"./ion-alert-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-alert-ios.entry.js",
 		"common",
-		16
+		15
 	],
 	"./ion-alert-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-alert-md.entry.js",
 		"common",
-		17
+		16
 	],
 	"./ion-app_8-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-app_8-ios.entry.js",
 		1,
 		"common",
-		18
+		17
 	],
 	"./ion-app_8-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-app_8-md.entry.js",
 		1,
 		"common",
-		19
+		18
 	],
 	"./ion-avatar_3-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-avatar_3-ios.entry.js",
 		"common",
-		20
+		19
 	],
 	"./ion-avatar_3-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-avatar_3-md.entry.js",
 		"common",
-		21
+		20
 	],
 	"./ion-back-button-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-back-button-ios.entry.js",
 		"common",
-		22
+		21
 	],
 	"./ion-back-button-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-back-button-md.entry.js",
 		"common",
-		23
+		22
 	],
 	"./ion-backdrop-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-ios.entry.js",
 		0,
 		"common",
-		24
+		23
 	],
 	"./ion-backdrop-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-backdrop-md.entry.js",
 		0,
 		"common",
-		25
+		24
 	],
 	"./ion-button_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-button_2-ios.entry.js",
 		"common",
-		26
+		25
 	],
 	"./ion-button_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-button_2-md.entry.js",
 		"common",
-		27
+		26
 	],
 	"./ion-card_5-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-card_5-ios.entry.js",
 		"common",
-		28
+		27
 	],
 	"./ion-card_5-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-card_5-md.entry.js",
 		"common",
-		29
+		28
 	],
 	"./ion-checkbox-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-checkbox-ios.entry.js",
 		"common",
-		30
+		29
 	],
 	"./ion-checkbox-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-checkbox-md.entry.js",
 		"common",
-		31
+		30
 	],
 	"./ion-chip-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-chip-ios.entry.js",
 		"common",
-		32
+		31
 	],
 	"./ion-chip-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-chip-md.entry.js",
 		"common",
-		33
+		32
 	],
 	"./ion-col_3.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-col_3.entry.js",
-		34
+		33
 	],
 	"./ion-datetime_3-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-datetime_3-ios.entry.js",
 		"common",
-		35
+		34
 	],
 	"./ion-datetime_3-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-datetime_3-md.entry.js",
 		"common",
-		36
+		35
 	],
 	"./ion-fab_3-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-fab_3-ios.entry.js",
 		"common",
-		37
+		36
 	],
 	"./ion-fab_3-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-fab_3-md.entry.js",
 		"common",
-		38
+		37
 	],
 	"./ion-img.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-img.entry.js",
-		39
+		38
 	],
 	"./ion-infinite-scroll_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-infinite-scroll_2-ios.entry.js",
 		"common",
-		40
+		39
 	],
 	"./ion-infinite-scroll_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-infinite-scroll_2-md.entry.js",
 		"common",
-		41
+		40
 	],
 	"./ion-input-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-input-ios.entry.js",
 		"common",
-		42
+		41
 	],
 	"./ion-input-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-input-md.entry.js",
 		"common",
-		43
+		42
 	],
 	"./ion-item-option_3-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-item-option_3-ios.entry.js",
 		"common",
-		44
+		43
 	],
 	"./ion-item-option_3-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-item-option_3-md.entry.js",
 		"common",
-		45
+		44
 	],
 	"./ion-item_8-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-item_8-ios.entry.js",
 		"common",
-		46
+		45
 	],
 	"./ion-item_8-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-item_8-md.entry.js",
 		"common",
-		47
+		46
 	],
 	"./ion-loading-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-loading-ios.entry.js",
 		"common",
-		48
+		47
 	],
 	"./ion-loading-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-loading-md.entry.js",
 		"common",
-		49
+		48
 	],
 	"./ion-menu_4-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-ios.entry.js",
 		0,
 		"common",
-		50
+		49
 	],
 	"./ion-menu_4-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-md.entry.js",
 		0,
 		"common",
-		51
+		50
 	],
 	"./ion-modal-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-modal-ios.entry.js",
 		1,
 		"common",
-		52
+		51
 	],
 	"./ion-modal-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-modal-md.entry.js",
 		1,
 		"common",
-		53
+		52
 	],
 	"./ion-nav_4.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-nav_4.entry.js",
 		1,
 		"common",
-		54
+		53
 	],
 	"./ion-popover-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-popover-ios.entry.js",
 		1,
 		"common",
-		55
+		54
 	],
 	"./ion-popover-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-popover-md.entry.js",
 		1,
 		"common",
-		56
+		55
 	],
 	"./ion-progress-bar-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-progress-bar-ios.entry.js",
 		"common",
-		57
+		56
 	],
 	"./ion-progress-bar-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-progress-bar-md.entry.js",
 		"common",
-		58
+		57
 	],
 	"./ion-radio_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-ios.entry.js",
 		"common",
-		59
+		58
 	],
 	"./ion-radio_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-radio_2-md.entry.js",
 		"common",
-		60
+		59
 	],
 	"./ion-range-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-range-ios.entry.js",
 		"common",
-		61
+		60
 	],
 	"./ion-range-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-range-md.entry.js",
 		"common",
-		62
+		61
 	],
 	"./ion-refresher_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-refresher_2-ios.entry.js",
 		"common",
-		63
+		62
 	],
 	"./ion-refresher_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-refresher_2-md.entry.js",
 		"common",
-		64
+		63
 	],
 	"./ion-reorder_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-ios.entry.js",
 		"common",
-		65
+		64
 	],
 	"./ion-reorder_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-reorder_2-md.entry.js",
 		"common",
-		66
+		65
 	],
 	"./ion-ripple-effect.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-ripple-effect.entry.js",
-		67
+		66
 	],
 	"./ion-route_4.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-route_4.entry.js",
 		"common",
-		68
+		67
 	],
 	"./ion-searchbar-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-searchbar-ios.entry.js",
 		"common",
-		69
+		68
 	],
 	"./ion-searchbar-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-searchbar-md.entry.js",
 		"common",
-		70
+		69
 	],
 	"./ion-segment_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-segment_2-ios.entry.js",
 		"common",
-		71
+		70
 	],
 	"./ion-segment_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-segment_2-md.entry.js",
 		"common",
-		72
+		71
 	],
 	"./ion-select_3-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-ios.entry.js",
 		"common",
-		73
+		72
 	],
 	"./ion-select_3-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-select_3-md.entry.js",
 		"common",
-		74
+		73
 	],
 	"./ion-slide_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-slide_2-ios.entry.js",
 		"common",
-		75
+		74
 	],
 	"./ion-slide_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-slide_2-md.entry.js",
 		"common",
-		76
+		75
 	],
 	"./ion-spinner.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-spinner.entry.js",
 		"common",
-		77
+		76
 	],
 	"./ion-split-pane-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-split-pane-ios.entry.js",
-		78
+		77
 	],
 	"./ion-split-pane-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-split-pane-md.entry.js",
-		79
+		78
 	],
 	"./ion-tab-bar_2-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-tab-bar_2-ios.entry.js",
 		"common",
-		80
+		79
 	],
 	"./ion-tab-bar_2-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-tab-bar_2-md.entry.js",
 		"common",
-		81
+		80
 	],
 	"./ion-tab_2.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-tab_2.entry.js",
 		"common",
-		10
+		9
 	],
 	"./ion-text.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-text.entry.js",
 		"common",
-		82
+		81
 	],
 	"./ion-textarea-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-textarea-ios.entry.js",
 		"common",
-		83
+		82
 	],
 	"./ion-textarea-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-textarea-md.entry.js",
 		"common",
-		84
+		83
 	],
 	"./ion-toast-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-toast-ios.entry.js",
 		"common",
-		85
+		84
 	],
 	"./ion-toast-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-toast-md.entry.js",
 		"common",
-		86
+		85
 	],
 	"./ion-toggle-ios.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-toggle-ios.entry.js",
 		"common",
-		87
+		86
 	],
 	"./ion-toggle-md.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-toggle-md.entry.js",
 		"common",
-		88
+		87
 	],
 	"./ion-virtual-scroll.entry.js": [
 		"./node_modules/@ionic/core/dist/esm/legacy/ion-virtual-scroll.entry.js",
-		89
+		88
 	]
 };
 function webpackAsyncContext(req) {
@@ -434,21 +434,33 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../tab1/tab1.module": [
-		"./src/app/tab1/tab1.module.ts",
-		"tab1-tab1-module"
+	"../home/home.module": [
+		"./src/app/home/home.module.ts",
+		"home-home-module"
 	],
-	"../tab2/tab2.module": [
-		"./src/app/tab2/tab2.module.ts",
-		"tab2-tab2-module"
+	"../resp/resp.module": [
+		"./src/app/resp/resp.module.ts",
+		"resp-resp-module"
 	],
-	"../tab3/tab3.module": [
-		"./src/app/tab3/tab3.module.ts",
-		"tab3-tab3-module"
+	"../work/work.module": [
+		"./src/app/work/work.module.ts",
+		"work-work-module"
+	],
+	"./home/home.module": [
+		"./src/app/home/home.module.ts",
+		"home-home-module"
+	],
+	"./resp/resp.module": [
+		"./src/app/resp/resp.module.ts",
+		"resp-resp-module"
 	],
 	"./tabs/tabs.module": [
 		"./src/app/tabs/tabs.module.ts",
 		"tabs-tabs-module"
+	],
+	"./work/work.module": [
+		"./src/app/work/work.module.ts",
+		"work-work-module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -490,7 +502,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+    { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+    { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+    { path: 'work/:consulta', loadChildren: './work/work.module#WorkPageModule' },
+    { path: 'resp/:title/:id/:userId/:completed', loadChildren: './resp/resp.module#RespPageModule' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -582,20 +597,20 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/ngx/index.js");
-/* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _post_service_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./post-service.service */ "./src/app/post-service.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/ngx/index.js");
+/* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
+/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _services_api_rest_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/api-rest.service */ "./src/app/services/api-rest.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
@@ -615,26 +630,26 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
             entryComponents: [],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
-                _ionic_storage__WEBPACK_IMPORTED_MODULE_12__["IonicStorageModule"].forRoot(),
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot(),
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_14__["HttpClientModule"]
             ],
             providers: [
-                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"],
-                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_4__["SplashScreen"],
-                _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_9__["MediaCapture"],
-                _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_10__["Media"],
-                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_11__["File"],
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonicRouteStrategy"] },
-                _post_service_service__WEBPACK_IMPORTED_MODULE_14__["PostServiceProvider"],
+                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
+                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
+                _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_7__["MediaCapture"],
+                _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_8__["Media"],
+                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_9__["File"],
+                _services_api_rest_service__WEBPACK_IMPORTED_MODULE_13__["ApiRestService"],
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -644,42 +659,42 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/post-service.service.ts":
-/*!*****************************************!*\
-  !*** ./src/app/post-service.service.ts ***!
-  \*****************************************/
-/*! exports provided: PostServiceProvider */
+/***/ "./src/app/services/api-rest.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/api-rest.service.ts ***!
+  \**********************************************/
+/*! exports provided: ApiRestService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostServiceProvider", function() { return PostServiceProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApiRestService", function() { return ApiRestService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
-var PostServiceProvider = /** @class */ (function () {
-    function PostServiceProvider(http) {
+var ApiRestService = /** @class */ (function () {
+    function ApiRestService(http) {
         this.http = http;
         this.api = 'https://jsonplaceholder.typicode.com';
     }
-    PostServiceProvider.prototype.getAllTasks = function () {
+    ApiRestService.prototype.getAllTasks = function () {
         var path = this.api + "/todos/";
         return this.http.get(path);
     };
-    PostServiceProvider.prototype.getTask = function (id) {
+    ApiRestService.prototype.getTask = function (id) {
         var path = this.api + "/todos/" + id;
         return this.http.get(path);
     };
-    PostServiceProvider = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    ApiRestService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-    ], PostServiceProvider);
-    return PostServiceProvider;
+    ], ApiRestService);
+    return ApiRestService;
 }());
 
 
@@ -747,7 +762,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fabian/UTEM/ProyectoCD2019/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/fabian/UTEM/Proyect2/src/main.ts */"./src/main.ts");
 
 
 /***/ })

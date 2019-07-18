@@ -1,33 +1,33 @@
 {
-  "_from": "cordova-plugin-media@5.0.2",
-  "_id": "cordova-plugin-media@5.0.2",
+  "_from": "cordova-plugin-media@5.0.3",
+  "_id": "cordova-plugin-media@5.0.3",
   "_inBundle": false,
-  "_integrity": "sha1-M0V2nAfmpGpxyX4btDTazKXI2As=",
+  "_integrity": "sha512-UQPFlpk1zL4BY44zGi8RVmYCvcKBCN4Dyf8ovxqGYCC8zR1yhbTRWYDdO9vJdERwbfgWV7+z7FMWiSUfqWm9bQ==",
   "_location": "/cordova-plugin-media",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "cordova-plugin-media@5.0.2",
+    "raw": "cordova-plugin-media@5.0.3",
     "name": "cordova-plugin-media",
     "escapedName": "cordova-plugin-media",
-    "rawSpec": "5.0.2",
+    "rawSpec": "5.0.3",
     "saveSpec": null,
-    "fetchSpec": "5.0.2"
+    "fetchSpec": "5.0.3"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-5.0.2.tgz",
-  "_shasum": "3345769c07e6a46a71c97e1bb434dacca5c8d80b",
-  "_spec": "cordova-plugin-media@5.0.2",
-  "_where": "/home/fabian/Ionic4/Prueba",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-media/-/cordova-plugin-media-5.0.3.tgz",
+  "_shasum": "366188bd4f8472651c1e8304be649af6333b0e36",
+  "_spec": "cordova-plugin-media@5.0.3",
+  "_where": "/home/fabian/UTEM/Proyect2",
   "author": {
     "name": "Apache Software Foundation"
   },
   "bugs": {
-    "url": "https://issues.apache.org/jira/browse/CB"
+    "url": "https://github.com/apache/cordova-plugin-media/issues"
   },
   "bundleDependencies": false,
   "cordova": {
@@ -78,5 +78,5 @@
     "test": "npm run jshint"
   },
   "types": "./types/index.d.ts",
-  "version": "5.0.2"
+  "version": "5.0.3"
 }

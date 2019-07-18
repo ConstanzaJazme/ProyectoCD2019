@@ -1,7 +1,4 @@
-
-ion-img{
-  height: 60vh;
-  width: 70vw;
-  margin: auto;
-  display: block;
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
 }

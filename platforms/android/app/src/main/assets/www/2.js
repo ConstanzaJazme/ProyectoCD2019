@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/index-8ec7f6e0.js":
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/index-d9adb105.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/index-8ec7f6e0.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/index-d9adb105.js ***!
   \********************************************************************/
 /*! exports provided: create */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10,20 +10,20 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
-function transitionEnd(el, callback) {
+var transitionEnd = function (el, callback) {
     var unRegTrans;
     var opts = { passive: true };
-    function unregister() {
+    var unregister = function () {
         if (unRegTrans) {
             unRegTrans();
         }
-    }
-    function onTransitionEnd(ev) {
+    };
+    var onTransitionEnd = function (ev) {
         if (el === ev.target) {
             unregister();
             callback(ev);
         }
-    }
+    };
     if (el) {
         el.addEventListener('webkitTransitionEnd', onTransitionEnd, opts);
         el.addEventListener('transitionend', onTransitionEnd, opts);
@@ -33,7 +33,7 @@ function transitionEnd(el, callback) {
         };
     }
     return unregister;
-}
+};
 var CSS_VALUE_REGEX = /(^-?\d*\.?\d*)(.*)/;
 var DURATION_MIN = 32;
 var TRANSITION_END_FALLBACK_PADDING_MS = 400;
@@ -479,7 +479,7 @@ var Animator = /** @class */ (function () {
      */
     Animator.prototype._asyncEnd = function (dur, shouldComplete) {
         var self = this;
-        function onTransitionEnd() {
+        var onTransitionEnd = function () {
             // congrats! a successful transition completed!
             // ensure transition end events and timeouts have been cleared
             self._clearAsync();
@@ -487,8 +487,8 @@ var Animator = /** @class */ (function () {
             self._playEnd();
             // transition finished
             self._didFinishAll(shouldComplete, true, false);
-        }
-        function onTransitionFallback() {
+        };
+        var onTransitionFallback = function () {
             // oh noz! the transition end event didn't fire in time!
             // instead the fallback timer when first
             // if all goes well this fallback should never fire
@@ -500,7 +500,7 @@ var Animator = /** @class */ (function () {
             self._playEnd(shouldComplete ? 1 : 0);
             // transition finished
             self._didFinishAll(shouldComplete, true, false);
-        }
+        };
         // set the TRANSITION END event on one of the transition elements
         self._unregisterTrnsEnd = transitionEnd(self._transEl(), onTransitionEnd);
         // set a fallback timeout if the transition end event never fires, or is too slow
@@ -1158,12 +1158,12 @@ var Animator = /** @class */ (function () {
     };
     return Animator;
 }());
-function create(animationBuilder, baseEl, opts) {
+var create = function (animationBuilder, baseEl, opts) {
     if (animationBuilder) {
         return animationBuilder(Animator, baseEl, opts);
     }
     return Promise.resolve(new Animator());
-}
+};
 
 
 

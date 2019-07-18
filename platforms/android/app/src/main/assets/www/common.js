@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-6c3d2f60.js":
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-4e92c885.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-6c3d2f60.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-4e92c885.js ***!
   \********************************************************************/
 /*! exports provided: a, b, c, h */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -21,48 +21,48 @@ __webpack_require__.r(__webpack_exports__);
  * Trigger a selection changed haptic event. Good for one-time events
  * (not for gestures)
  */
-function hapticSelection() {
+var hapticSelection = function () {
     var engine = window.TapticEngine;
     if (engine) {
         engine.selection();
     }
-}
+};
 /**
  * Tell the haptic engine that a gesture for a selection change is starting.
  */
-function hapticSelectionStart() {
+var hapticSelectionStart = function () {
     var engine = window.TapticEngine;
     if (engine) {
         engine.gestureSelectionStart();
     }
-}
+};
 /**
  * Tell the haptic engine that a selection changed during a gesture.
  */
-function hapticSelectionChanged() {
+var hapticSelectionChanged = function () {
     var engine = window.TapticEngine;
     if (engine) {
         engine.gestureSelectionChanged();
     }
-}
+};
 /**
  * Tell the haptic engine we are done with a gesture. This needs to be
  * called lest resources are not properly recycled.
  */
-function hapticSelectionEnd() {
+var hapticSelectionEnd = function () {
     var engine = window.TapticEngine;
     if (engine) {
         engine.gestureSelectionEnd();
     }
-}
+};
 
 
 
 /***/ }),
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js":
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js":
 /*!********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js ***!
   \********************************************************************/
 /*! exports provided: c, g, h, o */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -74,22 +74,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return hostContext; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return openURL; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+var _this = undefined;
 
-function hostContext(selector, el) {
+var hostContext = function (selector, el) {
     return el.closest(selector) !== null;
-}
+};
 /**
  * Create the mode and color classes for the component based on the classes passed in
  */
-function createColorClasses(color) {
+var createColorClasses = function (color) {
     var _a;
     return (typeof color === 'string' && color.length > 0) ? (_a = {
             'ion-color': true
         },
         _a["ion-color-" + color] = true,
         _a) : undefined;
-}
-function getClassList(classes) {
+};
+var getClassList = function (classes) {
     if (classes !== undefined) {
         var array = Array.isArray(classes) ? classes : classes.split(' ');
         return array
@@ -98,34 +99,153 @@ function getClassList(classes) {
             .filter(function (c) { return c !== ''; });
     }
     return [];
-}
-function getClassMap(classes) {
+};
+var getClassMap = function (classes) {
     var map = {};
     getClassList(classes).forEach(function (c) { return map[c] = true; });
     return map;
-}
+};
 var SCHEME = /^[a-z][a-z0-9+\-.]*:/;
-function openURL(url, ev, direction) {
-    return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-        var router;
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    if (!(url != null && url[0] !== '#' && !SCHEME.test(url))) return [3 /*break*/, 2];
-                    router = document.querySelector('ion-router');
-                    if (!router) return [3 /*break*/, 2];
-                    if (ev != null) {
-                        ev.preventDefault();
-                    }
-                    return [4 /*yield*/, router.componentOnReady()];
-                case 1:
-                    _a.sent();
-                    return [2 /*return*/, router.push(url, direction)];
-                case 2: return [2 /*return*/, false];
-            }
-        });
+var openURL = function (url, ev, direction) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+    var router;
+    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                if (!(url != null && url[0] !== '#' && !SCHEME.test(url))) return [3 /*break*/, 2];
+                router = document.querySelector('ion-router');
+                if (!router) return [3 /*break*/, 2];
+                if (ev != null) {
+                    ev.preventDefault();
+                }
+                return [4 /*yield*/, router.componentOnReady()];
+            case 1:
+                _a.sent();
+                return [2 /*return*/, router.push(url, direction)];
+            case 2: return [2 /*return*/, false];
+        }
     });
-}
+}); };
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js ***!
+  \********************************************************************/
+/*! exports provided: a, b, c, d, e, f, h, i, n, p, r */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return rIC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return assert; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return clamp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return debounceEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return debounce; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return findItemLabel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return hasShadowDom; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return isEndSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return now; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return pointerCoord; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return renderHiddenInput; });
+var rIC = function (callback) {
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(callback);
+    }
+    else {
+        setTimeout(callback, 32);
+    }
+};
+var hasShadowDom = function (el) {
+    return !!el.shadowRoot && !!el.attachShadow;
+};
+var findItemLabel = function (componentEl) {
+    var itemEl = componentEl.closest('ion-item');
+    if (itemEl) {
+        return itemEl.querySelector('ion-label');
+    }
+    return null;
+};
+var renderHiddenInput = function (always, container, name, value, disabled) {
+    if (always || hasShadowDom(container)) {
+        var input = container.querySelector('input.aux-input');
+        if (!input) {
+            input = container.ownerDocument.createElement('input');
+            input.type = 'hidden';
+            input.classList.add('aux-input');
+            container.appendChild(input);
+        }
+        input.disabled = disabled;
+        input.name = name;
+        input.value = value || '';
+    }
+};
+var clamp = function (min, n, max) {
+    return Math.max(min, Math.min(n, max));
+};
+var assert = function (actual, reason) {
+    if (!actual) {
+        var message = 'ASSERT: ' + reason;
+        console.error(message);
+        debugger; // tslint:disable-line
+        throw new Error(message);
+    }
+};
+var now = function (ev) {
+    return ev.timeStamp || Date.now();
+};
+var pointerCoord = function (ev) {
+    // get X coordinates for either a mouse click
+    // or a touch depending on the given event
+    if (ev) {
+        var changedTouches = ev.changedTouches;
+        if (changedTouches && changedTouches.length > 0) {
+            var touch = changedTouches[0];
+            return { x: touch.clientX, y: touch.clientY };
+        }
+        if (ev.pageX !== undefined) {
+            return { x: ev.pageX, y: ev.pageY };
+        }
+    }
+    return { x: 0, y: 0 };
+};
+/**
+ * @hidden
+ * Given a side, return if it should be on the end
+ * based on the value of dir
+ * @param side the side
+ * @param isRTL whether the application dir is rtl
+ */
+var isEndSide = function (side) {
+    var isRTL = document.dir === 'rtl';
+    switch (side) {
+        case 'start': return isRTL;
+        case 'end': return !isRTL;
+        default:
+            throw new Error("\"" + side + "\" is not a valid value for [side]. Use \"start\" or \"end\" instead.");
+    }
+};
+var debounceEvent = function (event, wait) {
+    var original = event._original || event;
+    return {
+        _original: event,
+        emit: debounce(original.emit.bind(original), wait)
+    };
+};
+var debounce = function (func, wait) {
+    if (wait === void 0) { wait = 0; }
+    var timer;
+    return function () {
+        var args = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            args[_i] = arguments[_i];
+        }
+        clearTimeout(timer);
+        timer = setTimeout.apply(void 0, [func, wait].concat(args));
+    };
+};
 
 
 
@@ -251,127 +371,6 @@ var getElementChildren = function (element) {
 };
 var allowedAttributes = ['class', 'id', 'href', 'src', 'name', 'slot'];
 var blockedTags = ['script', 'style', 'iframe', 'meta', 'link', 'object', 'embed'];
-
-
-
-/***/ }),
-
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js ***!
-  \********************************************************************/
-/*! exports provided: a, b, c, d, e, f, h, i, n, p, r */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return rIC; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return assert; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return clamp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return debounceEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return debounce; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return findItemLabel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return hasShadowDom; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return isEndSide; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return now; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return pointerCoord; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return renderHiddenInput; });
-function rIC(callback) {
-    if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(callback);
-    }
-    else {
-        setTimeout(callback, 32);
-    }
-}
-function hasShadowDom(el) {
-    return !!el.shadowRoot && !!el.attachShadow;
-}
-function findItemLabel(componentEl) {
-    var itemEl = componentEl.closest('ion-item');
-    if (itemEl) {
-        return itemEl.querySelector('ion-label');
-    }
-    return null;
-}
-function renderHiddenInput(always, container, name, value, disabled) {
-    if (always || hasShadowDom(container)) {
-        var input = container.querySelector('input.aux-input');
-        if (!input) {
-            input = container.ownerDocument.createElement('input');
-            input.type = 'hidden';
-            input.classList.add('aux-input');
-            container.appendChild(input);
-        }
-        input.disabled = disabled;
-        input.name = name;
-        input.value = value || '';
-    }
-}
-function clamp(min, n, max) {
-    return Math.max(min, Math.min(n, max));
-}
-function assert(actual, reason) {
-    if (!actual) {
-        var message = 'ASSERT: ' + reason;
-        console.error(message);
-        debugger; // tslint:disable-line
-        throw new Error(message);
-    }
-}
-function now(ev) {
-    return ev.timeStamp || Date.now();
-}
-function pointerCoord(ev) {
-    // get X coordinates for either a mouse click
-    // or a touch depending on the given event
-    if (ev) {
-        var changedTouches = ev.changedTouches;
-        if (changedTouches && changedTouches.length > 0) {
-            var touch = changedTouches[0];
-            return { x: touch.clientX, y: touch.clientY };
-        }
-        if (ev.pageX !== undefined) {
-            return { x: ev.pageX, y: ev.pageY };
-        }
-    }
-    return { x: 0, y: 0 };
-}
-/**
- * @hidden
- * Given a side, return if it should be on the end
- * based on the value of dir
- * @param side the side
- * @param isRTL whether the application dir is rtl
- */
-function isEndSide(side) {
-    var isRTL = document.dir === 'rtl';
-    switch (side) {
-        case 'start': return isRTL;
-        case 'end': return !isRTL;
-        default:
-            throw new Error("\"" + side + "\" is not a valid value for [side]. Use \"start\" or \"end\" instead.");
-    }
-}
-function debounceEvent(event, wait) {
-    var original = event._original || event;
-    return {
-        _original: event,
-        emit: debounce(original.emit.bind(original), wait)
-    };
-}
-function debounce(func, wait) {
-    if (wait === void 0) { wait = 0; }
-    var timer;
-    return function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        clearTimeout(timer);
-        timer = setTimeout.apply(void 0, [func, wait].concat(args));
-    };
-}
 
 
 

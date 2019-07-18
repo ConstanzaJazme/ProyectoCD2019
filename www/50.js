@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[50],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-ios.entry.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-ios.entry.js ***!
-  \**************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-md.entry.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm/legacy/ion-menu_4-md.entry.js ***!
+  \*************************************************************************/
 /*! exports provided: ion_menu, ion_menu_button, ion_menu_controller, ion_menu_toggle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14,11 +14,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_menu_controller", function() { return MenuController; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_menu_toggle", function() { return MenuToggle; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-83ae3fca.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-83ae3fca.js");
+/* harmony import */ var _chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-09ec7fc0.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-09ec7fc0.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-1074393c.js");
-/* harmony import */ var _chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-9d21e8e5.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-9d21e8e5.js");
-/* harmony import */ var _chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-d102c9d1.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-d102c9d1.js");
-/* harmony import */ var _index_08fb19dc_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index-08fb19dc.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js");
+/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-ba834eff.js");
+/* harmony import */ var _index_3a9dcfed_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index-3a9dcfed.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js");
+/* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm/legacy/chunk-c90aaa66.js");
+var _this = undefined;
 
 
 
@@ -27,10 +28,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Menu = /** @class */ (function () {
     function Menu(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.lastOnEnd = 0;
-        this.blocker = _index_08fb19dc_js__WEBPACK_IMPORTED_MODULE_5__["GESTURE_CONTROLLER"].createBlocker({ disableScroll: true });
-        this.mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        this.blocker = _index_3a9dcfed_js__WEBPACK_IMPORTED_MODULE_4__["GESTURE_CONTROLLER"].createBlocker({ disableScroll: true });
+        this.mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         this.isAnimating = false;
         this._isOpen = false;
         this.isPaneVisible = false;
@@ -52,12 +53,12 @@ var Menu = /** @class */ (function () {
          * If a drag/swipe happens over this value, the menu is not triggered.
          */
         this.maxEdgeStart = 50;
-        this.ionWillOpen = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionWillOpen", 7);
-        this.ionWillClose = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionWillClose", 7);
-        this.ionDidOpen = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionDidOpen", 7);
-        this.ionDidClose = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionDidClose", 7);
-        this.ionMenuChange = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionMenuChange", 7);
-        this.lazyMenuCtrl = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["k"])(this, "ion-menu-controller");
+        this.ionWillOpen = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionWillOpen", 7);
+        this.ionWillClose = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionWillClose", 7);
+        this.ionDidOpen = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionDidOpen", 7);
+        this.ionDidClose = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionDidClose", 7);
+        this.ionMenuChange = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this, "ionMenuChange", 7);
+        this.lazyMenuCtrl = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["k"])(this, "ion-menu-controller");
     }
     Menu.prototype.typeChanged = function (type, oldType) {
         var contentEl = this.contentEl;
@@ -82,7 +83,7 @@ var Menu = /** @class */ (function () {
         });
     };
     Menu.prototype.sideChanged = function () {
-        this.isEndSide = Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["i"])(this.side);
+        this.isEndSide = Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["i"])(this.side);
     };
     Menu.prototype.swipeGestureChanged = function () {
         this.updateState();
@@ -119,7 +120,7 @@ var Menu = /** @class */ (function () {
                         // register this menu with the app's menu controller
                         menuCtrl._register(this);
                         _b = this;
-                        return [4 /*yield*/, Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./index-08fb19dc.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-08fb19dc.js"))];
+                        return [4 /*yield*/, Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./index-3a9dcfed.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-3a9dcfed.js"))];
                     case 2:
                         _b.gesture = (_c.sent()).createGesture({
                             el: document,
@@ -312,7 +313,7 @@ var Menu = /** @class */ (function () {
     };
     Menu.prototype.onStart = function () {
         if (!this.isAnimating || !this.animation) {
-            Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(false, 'isAnimating has to be true');
+            Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(false, 'isAnimating has to be true');
             return;
         }
         // the cloned animation should not use an easing curve during seek
@@ -320,7 +321,7 @@ var Menu = /** @class */ (function () {
     };
     Menu.prototype.onMove = function (detail) {
         if (!this.isAnimating || !this.animation) {
-            Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(false, 'isAnimating has to be true');
+            Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(false, 'isAnimating has to be true');
             return;
         }
         var delta = computeDelta(detail.deltaX, this._isOpen, this.isEndSide);
@@ -330,7 +331,7 @@ var Menu = /** @class */ (function () {
     Menu.prototype.onEnd = function (detail) {
         var _this = this;
         if (!this.isAnimating || !this.animation) {
-            Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(false, 'isAnimating has to be true');
+            Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(false, 'isAnimating has to be true');
             return;
         }
         var isOpen = this._isOpen;
@@ -365,7 +366,7 @@ var Menu = /** @class */ (function () {
             .progressEnd(shouldComplete, stepValue, realDur);
     };
     Menu.prototype.beforeAnimation = function (shouldOpen) {
-        Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(!this.isAnimating, '_before() should not be called while animating');
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(!this.isAnimating, '_before() should not be called while animating');
         // this places the menu into the correct location before it animates in
         // this css class doesn't actually kick off any animations
         this.el.classList.add(SHOW_MENU);
@@ -382,7 +383,7 @@ var Menu = /** @class */ (function () {
         }
     };
     Menu.prototype.afterAnimation = function (isOpen) {
-        Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(this.isAnimating, '_before() should be called while animating');
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(this.isAnimating, '_before() should be called while animating');
         // keep opening/closing the menu disabled for a touch more yet
         // only add listeners/css if it's enabled and isOpen
         // and only remove listeners/css if it's not open
@@ -426,10 +427,10 @@ var Menu = /** @class */ (function () {
         if (!this.disabled && this.menuCtrl) {
             this.menuCtrl._setActiveMenu(this);
         }
-        Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(!this.isAnimating, 'can not be animating');
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(!this.isAnimating, 'can not be animating');
     };
     Menu.prototype.forceClosing = function () {
-        Object(_chunk_d102c9d1_js__WEBPACK_IMPORTED_MODULE_4__["b"])(this._isOpen, 'menu cannot be closed');
+        Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_5__["b"])(this._isOpen, 'menu cannot be closed');
         this.isAnimating = true;
         var ani = this.animation.reverse(true);
         ani.playSync();
@@ -453,12 +454,12 @@ var Menu = /** @class */ (function () {
     Menu.prototype.__stencil_render = function () {
         var _this = this;
         return [
-            Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "menu-inner", ref: function (el) { return _this.menuInnerEl = el; } }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)),
-            Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-backdrop", { ref: function (el) { return _this.backdropEl = el; }, class: "menu-backdrop", tappable: false, stopPropagation: false })
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "menu-inner", ref: function (el) { return _this.menuInnerEl = el; } }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)),
+            Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-backdrop", { ref: function (el) { return _this.backdropEl = el; }, class: "menu-backdrop", tappable: false, stopPropagation: false })
         ];
     };
     Object.defineProperty(Menu.prototype, "el", {
-        get: function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -474,31 +475,88 @@ var Menu = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Menu.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
+    Menu.prototype.render = function () { return Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(Menu, "style", {
-        get: function () { return ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color,#fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,0,0);transform:translate3d(-9999px,0,0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}:host-context([dir=rtl]) .menu-inner,[dir=rtl] .menu-inner{left:unset;right:unset;left:auto;right:0;-webkit-transform:translate3d(calc(-1 * -9999px),0,0);transform:translate3d(calc(-1 * -9999px),0,0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto}ion-backdrop{display:none;opacity:.01;z-index:-1}\@media (max-width:340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translateZ(0);transform:translateZ(0)}:host(.menu-type-overlay){z-index:80}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none!important;transform:none!important;-webkit-box-shadow:none!important;box-shadow:none!important}:host(.menu-pane-visible) ion-backdrop{display:hidden!important}:host(.menu-type-push){z-index:80}:host(.menu-type-push) .show-backdrop{display:block}"; },
+        get: function () { return ":host{--width:304px;--min-width:auto;--max-width:auto;--height:100%;--min-height:auto;--max-height:auto;--background:var(--ion-background-color,#fff);left:0;right:0;top:0;bottom:0;display:none;position:absolute;contain:strict}:host(.show-menu){display:block}.menu-inner{left:0;right:auto;top:0;bottom:0;-webkit-transform:translate3d(-9999px,0,0);transform:translate3d(-9999px,0,0);display:-ms-flexbox;display:flex;position:absolute;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;width:var(--width);min-width:var(--min-width);max-width:var(--max-width);height:var(--height);min-height:var(--min-height);max-height:var(--max-height);background:var(--background);contain:strict}:host-context([dir=rtl]) .menu-inner,[dir=rtl] .menu-inner{left:unset;right:unset;left:auto;right:0;-webkit-transform:translate3d(calc(-1 * -9999px),0,0);transform:translate3d(calc(-1 * -9999px),0,0)}:host(.menu-side-start) .menu-inner{--ion-safe-area-right:0px;right:auto;left:0}:host(.menu-side-end) .menu-inner{--ion-safe-area-left:0px;right:0;left:auto}ion-backdrop{display:none;opacity:.01;z-index:-1}\@media (max-width:340px){.menu-inner{--width:264px}}:host(.menu-type-reveal){z-index:0}:host(.menu-type-reveal.show-menu) .menu-inner{-webkit-transform:translateZ(0);transform:translateZ(0)}:host(.menu-type-overlay){z-index:80}:host(.menu-type-overlay) .show-backdrop{display:block;cursor:pointer}:host(.menu-pane-visible) .menu-inner{left:0;right:0;width:auto;-webkit-transform:none!important;transform:none!important;-webkit-box-shadow:none!important;box-shadow:none!important}:host(.menu-pane-visible) ion-backdrop{display:hidden!important}:host(.menu-type-overlay) .menu-inner{-webkit-box-shadow:0 2px 22px 0 rgba(0,0,0,.09),4px 0 16px 0 rgba(0,0,0,.18);box-shadow:0 2px 22px 0 rgba(0,0,0,.09),4px 0 16px 0 rgba(0,0,0,.18)}"; },
         enumerable: true,
         configurable: true
     });
     return Menu;
 }());
-function computeDelta(deltaX, isOpen, isEndSide) {
+var computeDelta = function (deltaX, isOpen, isEndSide) {
     return Math.max(0, isOpen !== isEndSide ? -deltaX : deltaX);
-}
-function checkEdgeSide(win, posX, isEndSide, maxEdgeStart) {
+};
+var checkEdgeSide = function (win, posX, isEndSide, maxEdgeStart) {
     if (isEndSide) {
         return posX >= win.innerWidth - maxEdgeStart;
     }
     else {
         return posX <= maxEdgeStart;
     }
-}
+};
 var SHOW_MENU = 'show-menu';
 var SHOW_BACKDROP = 'show-backdrop';
 var MENU_CONTENT_OPEN = 'menu-content-open';
+// Get the menu controller element
+var getMenuController = function (doc) {
+    var menuControllerElement = doc.querySelector('ion-menu-controller');
+    if (!menuControllerElement) {
+        return Promise.resolve(undefined);
+    }
+    return menuControllerElement.componentOnReady();
+};
+// Given a menu, toggle it
+var toggleMenu = function (menu) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+    var menuCtrl, menuEl;
+    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, getMenuController(document)];
+            case 1:
+                menuCtrl = _a.sent();
+                if (!menuCtrl) return [3 /*break*/, 3];
+                return [4 /*yield*/, menuCtrl.get(menu)];
+            case 2:
+                menuEl = _a.sent();
+                if (menuEl) {
+                    menuCtrl.toggle(menu);
+                }
+                _a.label = 3;
+            case 3: return [2 /*return*/];
+        }
+    });
+}); };
+// Given a menu, return whether or not the menu toggle should be visible
+var updateVisibility = function (menu) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+    var menuCtrl, menuEl, _a;
+    return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+        switch (_b.label) {
+            case 0: return [4 /*yield*/, getMenuController(document)];
+            case 1:
+                menuCtrl = _b.sent();
+                if (!menuCtrl) return [3 /*break*/, 5];
+                return [4 /*yield*/, menuCtrl.get(menu)];
+            case 2:
+                menuEl = _b.sent();
+                _a = menuEl;
+                if (!_a) return [3 /*break*/, 4];
+                return [4 /*yield*/, menuEl.isActive()];
+            case 3:
+                _a = (_b.sent());
+                _b.label = 4;
+            case 4:
+                if (_a) {
+                    return [2 /*return*/, true];
+                }
+                _b.label = 5;
+            case 5: return [2 /*return*/, false];
+        }
+    });
+}); };
 var MenuButton = /** @class */ (function () {
     function MenuButton(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        var _this = this;
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        this.visible = false;
         /**
          * If `true`, the user cannot interact with the menu button.
          */
@@ -511,27 +569,67 @@ var MenuButton = /** @class */ (function () {
          * The type of the button.
          */
         this.type = 'button';
+        this.setVisibility = function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, updateVisibility(this.menu)];
+                    case 1:
+                        _a.visible = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); };
+        this.onClick = function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, toggleMenu(this.menu)];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); };
     }
-    MenuButton.prototype.hostData = function () {
-        var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
-        var _b = this, color = _b.color, disabled = _b.disabled;
-        return {
-            'aria-disabled': disabled ? 'true' : null,
-            class: Object.assign({}, Object(_chunk_9d21e8e5_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color), (_a = {}, _a[mode] = true, _a['button'] = true, _a['menu-button-disabled'] = disabled, _a['ion-activatable'] = true, _a['ion-focusable'] = true, _a))
-        };
+    MenuButton.prototype.componentDidLoad = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setVisibility()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
-    MenuButton.prototype.__stencil_render = function () {
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+    MenuButton.prototype.visibilityChanged = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setVisibility()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MenuButton.prototype.render = function () {
+        var _a;
+        var _b = this, color = _b.color, disabled = _b.disabled;
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         var menuIcon = _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].get('menuIcon', 'menu');
+        var hidden = this.autoHide && !this.visible;
         var attrs = {
             type: this.type
         };
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-menu-toggle", { menu: this.menu, autoHide: this.autoHide }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", Object.assign({}, attrs, { disabled: this.disabled, class: "button-native" }), Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: menuIcon, mode: mode, lazy: false })), mode === 'md' && Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", { type: "unbounded" }))));
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, "aria-disabled": disabled ? 'true' : null, "aria-hidden": hidden ? 'true' : null, class: Object.assign((_a = {}, _a[mode] = true, _a), Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color), { 'button': true, 'menu-button-hidden': hidden, 'menu-button-disabled': disabled, 'ion-activatable': true, 'ion-focusable': true }) }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", Object.assign({}, attrs, { disabled: this.disabled, class: "button-native" }), Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: menuIcon, mode: mode, lazy: false })), mode === 'md' && Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", { type: "unbounded" }))));
     };
-    MenuButton.prototype.render = function () { return Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(MenuButton, "style", {
-        get: function () { return ":host{--background:transparent;--color-focused:var(--color);--border-radius:initial;--padding-top:0;--padding-bottom:0;color:var(--color);text-align:center;text-decoration:none;text-overflow:ellipsis;text-transform:none;white-space:nowrap;-webkit-font-kerning:none;font-kerning:none}.button-native{border-radius:var(--border-radius);font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;text-decoration:inherit;text-overflow:inherit;text-transform:inherit;text-align:inherit;white-space:inherit;color:inherit;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:-ms-flexbox;display:flex;position:relative;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;height:100%;border:0;outline:none;background:var(--background);line-height:1;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.button-native{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}ion-icon{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;pointer-events:none}:host(.menu-button-disabled){cursor:default;opacity:.5;pointer-events:none}\@media (any-hover:hover){:host(:hover) .button-native{background:var(--background-hover);color:var(--color-hover)}}:host(.ion-focused) .button-native{background:var(--background-focused);color:var(--color-focused)}:host(.ion-color) .button-native{color:var(--ion-color-base)}:host-context(ion-toolbar:not(.ion-color)){color:var(--ion-toolbar-color,var(--color))}:host{--background-focused:rgba(var(--ion-color-primary-rgb,56,128,255),0.1);--border-radius:4px;--color:var(--ion-color-primary,#3880ff);--padding-start:5px;--padding-end:5px;height:32px}:host(.activated){opacity:.4}\@media (any-hover:hover){:host(:hover){opacity:.6}}ion-icon{font-size:31px}:host(.ion-color.ion-focused) .button-native{background:rgba(var(--ion-color-base-rgb),.1)}"; },
+        get: function () { return ":host{--background:transparent;--color-focused:var(--color);--border-radius:initial;--padding-top:0;--padding-bottom:0;color:var(--color);text-align:center;text-decoration:none;text-overflow:ellipsis;text-transform:none;white-space:nowrap;-webkit-font-kerning:none;font-kerning:none}.button-native{border-radius:var(--border-radius);font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;text-decoration:inherit;text-overflow:inherit;text-transform:inherit;text-align:inherit;white-space:inherit;color:inherit;margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:-ms-flexbox;display:flex;position:relative;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-negative:0;flex-shrink:0;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;height:100%;border:0;outline:none;background:var(--background);line-height:1;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.button-native{padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}ion-icon{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;pointer-events:none}:host(.menu-button-hidden){display:none}:host(.menu-button-disabled){cursor:default;opacity:.5;pointer-events:none}\@media (any-hover:hover){:host(:hover) .button-native{background:var(--background-hover);color:var(--color-hover)}}:host(.ion-focused) .button-native{background:var(--background-focused);color:var(--color-focused)}:host(.ion-color) .button-native{color:var(--ion-color-base)}:host-context(ion-toolbar:not(.ion-color)){color:var(--ion-toolbar-color,var(--color))}:host{--background-focused:rgba(66,66,66,0.24);--background-hover:rgba(66,66,66,0.08);--border-radius:50%;--color:initial;--padding-start:8px;--padding-end:8px;width:48px;height:48px;font-size:24px}\@media (any-hover:hover){:host(.ion-color:hover) .button-native{background:rgba(var(--ion-color-base-rgb),.08)}}:host(.ion-color.ion-focused) .button-native{background:rgba(var(--ion-color-base-rgb),.24);color:var(--ion-color-base)}"; },
         enumerable: true,
         configurable: true
     });
@@ -543,7 +641,7 @@ var MenuButton = /** @class */ (function () {
  * type will provide their own animations for open and close
  * and registers itself with Menu.
  */
-function baseAnimation(AnimationC) {
+var baseAnimation = function (AnimationC) {
     // https://material.io/guidelines/motion/movement.html#movement-movement-in-out-of-screen-bounds
     // https://material.io/guidelines/motion/duration-easing.html#duration-easing-natural-easing-curves
     // "Apply the sharp curve to items temporarily leaving the screen that may return
@@ -553,14 +651,14 @@ function baseAnimation(AnimationC) {
         .easing('cubic-bezier(0.0, 0.0, 0.2, 1)') // Deceleration curve (Entering the screen)
         .easingReverse('cubic-bezier(0.4, 0.0, 0.6, 1)') // Sharp curve (Temporarily leaving the screen)
         .duration(300));
-}
+};
 var BOX_SHADOW_WIDTH = 8;
 /**
  * Menu Overlay Type
  * The menu slides over the content. The content
  * itself, which is under the menu, does not move.
  */
-function menuOverlayAnimation(AnimationC, _, menu) {
+var menuOverlayAnimation = function (AnimationC, _, menu) {
     var closedX;
     var openedX;
     var width = menu.width + BOX_SHADOW_WIDTH;
@@ -584,13 +682,13 @@ function menuOverlayAnimation(AnimationC, _, menu) {
         return animation.add(menuAnimation)
             .add(backdropAnimation);
     });
-}
+};
 /**
  * Menu Push Type
  * The content slides over to reveal the menu underneath.
  * The menu itself also slides over to reveal its bad self.
  */
-function menuPushAnimation(AnimationC, _, menu) {
+var menuPushAnimation = function (AnimationC, _, menu) {
     var contentOpenedX;
     var menuClosedX;
     var width = menu.width;
@@ -616,13 +714,13 @@ function menuPushAnimation(AnimationC, _, menu) {
             .add(backdropAnimation)
             .add(contentAnimation);
     });
-}
+};
 /**
  * Menu Reveal Type
  * The content slides over to reveal the menu underneath.
  * The menu itself, which is under the content, does not move.
  */
-function menuRevealAnimation(AnimationC, _, menu) {
+var menuRevealAnimation = function (AnimationC, _, menu) {
     var openedX = (menu.width * (menu.isEndSide ? -1 : 1)) + 'px';
     var contentOpen = new AnimationC()
         .addElement(menu.contentEl)
@@ -630,10 +728,10 @@ function menuRevealAnimation(AnimationC, _, menu) {
     return baseAnimation(AnimationC).then(function (animation) {
         return animation.add(contentOpen);
     });
-}
+};
 var MenuController = /** @class */ (function () {
     function MenuController(hostRef) {
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.menus = [];
         this.menuAnimations = new Map();
         this.registerAnimation('reveal', menuRevealAnimation);
@@ -972,7 +1070,7 @@ var MenuController = /** @class */ (function () {
                         if (!animationBuilder) {
                             throw new Error('animation not registered');
                         }
-                        return [4 /*yield*/, __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./index-8ec7f6e0.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-8ec7f6e0.js"))
+                        return [4 /*yield*/, __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./index-d9adb105.js */ "./node_modules/@ionic/core/dist/esm/legacy/index-d9adb105.js"))
                                 .then(function (mod) { return mod.create(animationBuilder, null, menuCmp); })];
                     case 1:
                         animation = _a.sent();
@@ -1014,7 +1112,7 @@ var MenuController = /** @class */ (function () {
 var MenuToggle = /** @class */ (function () {
     function MenuToggle(hostRef) {
         var _this = this;
-        Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.visible = false;
         /**
          * Automatically hides the content when the corresponding menu is not active.
@@ -1023,55 +1121,49 @@ var MenuToggle = /** @class */ (function () {
          * keep `ion-menu-toggle` always visible regardless the state of the menu.
          */
         this.autoHide = true;
+        this.setVisibility = function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+            var _a;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _a = this;
+                        return [4 /*yield*/, updateVisibility(this.menu)];
+                    case 1:
+                        _a.visible = _b.sent();
+                        return [2 /*return*/];
+                }
+            });
+        }); };
         this.onClick = function () { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
-            var menuCtrl, menu;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, getMenuController(document)];
+                    case 0: return [4 /*yield*/, toggleMenu(this.menu)];
                     case 1:
-                        menuCtrl = _a.sent();
-                        if (!menuCtrl) return [3 /*break*/, 3];
-                        return [4 /*yield*/, menuCtrl.get(this.menu)];
-                    case 2:
-                        menu = _a.sent();
-                        if (menu) {
-                            menuCtrl.toggle(this.menu);
-                        }
-                        _a.label = 3;
-                    case 3: return [2 /*return*/];
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         }); };
     }
     MenuToggle.prototype.componentDidLoad = function () {
-        return this.updateVisibility();
-    };
-    MenuToggle.prototype.updateVisibility = function () {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
-            var menuCtrl, menu, _a;
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
-                switch (_b.label) {
-                    case 0: return [4 /*yield*/, getMenuController(document)];
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setVisibility()];
                     case 1:
-                        menuCtrl = _b.sent();
-                        if (!menuCtrl) return [3 /*break*/, 5];
-                        return [4 /*yield*/, menuCtrl.get(this.menu)];
-                    case 2:
-                        menu = _b.sent();
-                        _a = menu;
-                        if (!_a) return [3 /*break*/, 4];
-                        return [4 /*yield*/, menu.isActive()];
-                    case 3:
-                        _a = (_b.sent());
-                        _b.label = 4;
-                    case 4:
-                        if (_a) {
-                            this.visible = true;
-                            return [2 /*return*/];
-                        }
-                        _b.label = 5;
-                    case 5:
-                        this.visible = false;
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    MenuToggle.prototype.visibilityChanged = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setVisibility()];
+                    case 1:
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });
@@ -1079,12 +1171,12 @@ var MenuToggle = /** @class */ (function () {
     };
     MenuToggle.prototype.render = function () {
         var _a;
-        var mode = Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this);
         var hidden = this.autoHide && !this.visible;
-        return (Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, "aria-hidden": hidden ? 'true' : null, class: (_a = {},
+        return (Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, "aria-hidden": hidden ? 'true' : null, class: (_a = {},
                 _a[mode] = true,
                 _a['menu-toggle-hidden'] = hidden,
-                _a) }, Object(_chunk_83ae3fca_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)));
+                _a) }, Object(_chunk_09ec7fc0_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)));
     };
     Object.defineProperty(MenuToggle, "style", {
         get: function () { return ":host(.menu-toggle-hidden){display:none}"; },
@@ -1093,13 +1185,6 @@ var MenuToggle = /** @class */ (function () {
     });
     return MenuToggle;
 }());
-function getMenuController(doc) {
-    var menuControllerElement = doc.querySelector('ion-menu-controller');
-    if (!menuControllerElement) {
-        return Promise.resolve(undefined);
-    }
-    return menuControllerElement.componentOnReady();
-}
 
 
 
