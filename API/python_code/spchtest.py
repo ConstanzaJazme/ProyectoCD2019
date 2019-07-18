@@ -41,32 +41,36 @@ def get_MFCC(sr,audio):
     features = preprocessing.scale(features)
     return features
 
-#path to testing data
-sourcepath = "API/algoritmo/pygender/test_data/AudioSet/ejemplo/"
-#path to saved models
-modelpath  = "API/algoritmo/pygender/"
+
+
 
 # myspsolution  = "pygender"
 
-#
-# gmm_files = [os.path.join(modelpath,fname) for fname in
-#               os.listdir(modelpath) if fname.endswith('.gmm')]
-# models    = [cPickle.load(open(fname,'rb')) for fname in gmm_files]
-# genders   = [fname.split("/")[-1].split(".gmm")[0] for fname
-#               in gmm_files]
-# files     = [os.path.join(sourcepath,f) for f in os.listdir(sourcepath)
-#               if f.endswith(".wav")]
-#
-# for f in files:
-#     sr, audio  = read(f)
-#     features   = get_MFCC(sr,audio)
-#     # myspf0med(myspsolution,f.split("/")[-1])
-#     scores     = None
-#     log_likelihood = np.zeros(len(models))
-#     for i in range(len(models)):
-#         gmm    = models[i]         #checking with each model one by one
-#         scores = np.array(gmm.score(features))
-#         log_likelihood[i] = scores.sum()
-#     winner = np.argmax(log_likelihood)
-#     print(f.split("/")[-1] + " es " + genders[winner])
-#     # print("\tdetected as - ", genders[winner],"\n\tscores:female ",log_likelihood[0],",male ", log_likelihood[1],"\n")
+def recognize_gender():
+    #path to saved models
+    modelpath  = "API/python_code/trained_models/"
+
+    #path to testing data
+    sourcepath = "API/python_code/testing_file/"
+
+    gmm_files = [os.path.join(modelpath,fname) for fname in
+                  os.listdir(modelpath) if fname.endswith('.gmm')]
+    models    = [cPickle.load(open(fname, 'rb'), encoding='latin1') for fname in gmm_files]
+    genders   = [fname.split("/")[-1].split(".gmm")[0] for fname
+                  in gmm_files]
+    files     = [os.path.join(sourcepath,f) for f in os.listdir(sourcepath)
+                  if f.endswith(".wav")]
+
+    for f in files:
+        sr, audio  = read(f)
+        features   = get_MFCC(sr,audio)
+        # myspf0med(myspsolution,f.split("/")[-1])
+        scores     = None
+        log_likelihood = np.zeros(len(models))
+        for i in range(len(models)):
+            gmm    = models[i]         #checking with each model one by one
+            scores = np.array(gmm.score(features))
+            log_likelihood[i] = scores.sum()
+        winner = np.argmax(log_likelihood)
+        return genders[winner]
+        # print("\tdetected as - ", genders[winner],"\n\tscores:female ",log_likelihood[0],",male ", log_likelihood[1],"\n")
