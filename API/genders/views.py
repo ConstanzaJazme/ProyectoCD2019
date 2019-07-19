@@ -1,9 +1,19 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import Http404,HttpResponse,HttpResponseRedirect, JsonResponse
+# import Requests
+from django.core.exceptions import ObjectDoesNotExist,MultipleObjectsReturned
+from rest_framework import viewsets
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
 
 from genders.models import Gender, Recording
 from genders.serializers import GenderSerializer
 from genders.forms import RecordingForm
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.conf import settings
 
 from python_code.spchtest import recognize_gender, myspf0med, get_age, convert_to_wav, direct_wav
 
@@ -22,7 +32,9 @@ class GendersList(generics.ListCreateAPIView):
     serializer_class= GenderSerializer
 
 def upload_recording(request):
+    response_data= {}
     form = RecordingForm(request.POST or None, request.FILES or None)
+
     if form.is_valid():
         recording = form.save(commit=False)
         recording.audio_file = request.FILES['audio_file']
@@ -35,38 +47,53 @@ def upload_recording(request):
             }
             return HttpResponse('<h1> Audio file must be WAV, MP3, or OGG </h1>')
         name=recording.audio_file.url.split('/')[-1]
+        recording.save()
 
 
-
-        recording.save()        #Se almacena el archivo
         if file_type!='wav':    #Se procesa
-            result= convert_to_wav(name)
+            value,result= convert_to_wav(name)
             # remove_audiofile(filepath)
         else:
-            result= direct_wav(name)
+            value,result= direct_wav(name)
 
         recording.delete()  #Se borra
 
-            # return render(request, 'music/detail.html', {'album': album})
-        return HttpResponse('<h1> GUARDE AUDIO '+ result +'</h1>')
+        if value!='0' and result!='0':
+            response_data={
+                'gender': value,
+                'age': result,
+                'error': 0,
+            }
+            return JsonResponse(response_data)
+
+        response_data={
+            'gender': value,
+            'age': result,
+            'error': 1,
+        }
+        return JsonResponse(response_data)
+
+
     context = {
         'form': form,
     }
     return render(request, 'genders/upload_audio.html', context)
-    # return HttpResponse('<h1> El formulario no es valido</h1>')
 
-
-
-# def delete_recording(request, audio_name):
-#     recording = Recording.objects.get(pk=song_id)
-#     recording.delete()
-#     return HttpResponse('<h1> GUARDE AUDIO</h1>')
-
-
-def prueba1(request):
-    value= recognize_gender('probando.wav')
-    p="probando" # Audio File title
-    c="API/media/" # Path to the Audio_File directory (Python 3.7)
-    hz=myspf0med(p,c)
-    result=get_age(hz,value)
-    return HttpResponse('<h1> El audio recibido es '+ result +'</h1>')
+#
+# def prueba1(request):
+#     value= recognize_gender('probando.wav')
+#     p="probando" # Audio File title
+#     c="API/media/" # Path to the Audio_File directory (Python 3.7)
+#     hz=myspf0med(p,c)
+#     result=get_age(hz,value)
+#     return HttpResponse('<h1> El audio recibido es '+ result +'</h1>')
+#
+#
+# class JSONResponse(HttpResponse):
+#     """
+#     An HttpResponse that renders its content into JSON.
+#     """
+#     def __init__(self, data, **kwargs):
+#         content = JSONRenderer().render(data)
+#         kwargs['content_type'] = 'application/json'
+#         super(JSONResponse, self).__init__(content, **kwargs)

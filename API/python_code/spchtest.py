@@ -17,18 +17,21 @@ warnings.filterwarnings("ignore")
 def convert_to_wav(filename):
     formats_to_convert = ['.m4a','.mp3','ogg']
     dirpath='API/media'
-    
+    ten_seconds = 10 * 1000     #El audio durará maximo 10 segundos
     if filename.endswith(tuple(formats_to_convert)):
 
         filepath = dirpath + '/' + filename
         (path, file_extension) = os.path.splitext(filepath)
         file_extension_final = file_extension.replace('.', '')
         try:
-            if file_extension_final=='ogg':
-                track = AudioSegment.from_ogg(filepath)
+            if file_extension_final=='ogg':     #Se carga el archivo
+                aux_track = AudioSegment.from_ogg(filepath)
+                track = aux_track[:ten_seconds]
             else:
-                track = AudioSegment.from_file(filepath,
+                aux_track = AudioSegment.from_file(filepath,
                         file_extension_final)
+                track = aux_track[:ten_seconds]
+
 
             #Se hace convierte el audio a wav
             wav_filename = filename.replace(file_extension_final, 'wav')
@@ -44,13 +47,13 @@ def convert_to_wav(filename):
             grid_name=filename.replace(file_extension_final, 'TextGrid')
             grid_path=dirpath + '/' + grid_name
             os.remove(grid_path)
-
             os.remove(wav_path)
 
-            return result
+            return value,result
         except:
             os.remove(filepath)
-            return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
+            return '0','0'
+
 
 def direct_wav(filename):
     formats_to_convert = ['.wav']
@@ -70,10 +73,10 @@ def direct_wav(filename):
 
             os.remove(filepath)
 
-            return result
+            return value,result
         except:
             os.remove(filepath)
-            return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
+            return '0','0'
 
 
 # Rename folder M4a_files as wav_files
@@ -97,14 +100,14 @@ def myspf0med(m,p):
 def get_age(hz,gender):
     if (gender=='mujer'):
         if (192<=hz<=275):
-            return 'Mujer entre 20 a 29 años'
+            return '20 a 29 años'
         else:
-            return 'Mujer sin especificar'
+            return 'Aún sin especificar'
     if (gender=='hombre'):
         if (85<=hz<=155):
-            return 'Niño 11 años aprox'
+            return '11 años aprox'
         else:
-            return 'Hombre sin especificar'
+            return 'Aún sin especificar'
 
 
 def get_MFCC(sr,audio):
