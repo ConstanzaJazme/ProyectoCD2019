@@ -40,10 +40,10 @@ def upload_recording(request):
 
         recording.save()        #Se almacena el archivo
         if file_type!='wav':    #Se procesa
-            result= convert_to_wav()
+            result= convert_to_wav(name)
             # remove_audiofile(filepath)
         else:
-            result= direct_wav()
+            result= direct_wav(name)
 
         recording.delete()  #Se borra
 

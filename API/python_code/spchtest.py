@@ -14,66 +14,66 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def convert_to_wav():
+def convert_to_wav(filename):
     formats_to_convert = ['.m4a','.mp3','ogg']
+    dirpath='API/media'
+    
+    if filename.endswith(tuple(formats_to_convert)):
 
-    for (dirpath, dirnames, filenames) in os.walk("API/media"):
-        for filename in filenames:
-            if filename.endswith(tuple(formats_to_convert)):
+        filepath = dirpath + '/' + filename
+        (path, file_extension) = os.path.splitext(filepath)
+        file_extension_final = file_extension.replace('.', '')
+        try:
+            if file_extension_final=='ogg':
+                track = AudioSegment.from_ogg(filepath)
+            else:
+                track = AudioSegment.from_file(filepath,
+                        file_extension_final)
 
-                filepath = dirpath + '/' + filename
-                (path, file_extension) = os.path.splitext(filepath)
-                file_extension_final = file_extension.replace('.', '')
-                try:
-                    if file_extension_final=='ogg':
-                        track = AudioSegment.from_ogg(filepath)
-                    else:
-                        track = AudioSegment.from_file(filepath,
-                                file_extension_final)
+            #Se hace convierte el audio a wav
+            wav_filename = filename.replace(file_extension_final, 'wav')
+            wav_path = dirpath + '/' + wav_filename
+            file_handle = track.export(wav_path, format='wav')
+            os.remove(filepath)
+            #Se procesa el audio
+            value= recognize_gender(wav_filename)
+            hz=myspf0med(wav_filename,dirpath)
+            result=get_age(hz,value)
 
-                    #Se hace convierte el audio
-                    wav_filename = filename.replace(file_extension_final, 'wav')
-                    wav_path = dirpath + '/' + wav_filename
-                    file_handle = track.export(wav_path, format='wav')
-                    os.remove(filepath)
+            #Se remueven todos los archivos generados
+            grid_name=filename.replace(file_extension_final, 'TextGrid')
+            grid_path=dirpath + '/' + grid_name
+            os.remove(grid_path)
 
-                    value= recognize_gender(wav_filename)
-                    hz=myspf0med(wav_filename,dirpath)
-                    result=get_age(hz,value)
+            os.remove(wav_path)
 
-                    grid_name=filename.replace(file_extension_final, 'TextGrid')
-                    grid_path=dirpath + '/' + grid_name
-                    os.remove(grid_path)
+            return result
+        except:
+            os.remove(filepath)
+            return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
 
-                    os.remove(wav_path)
-
-                    return result
-                except:
-                    os.remove(filepath)
-                    return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
-
-def direct_wav():
+def direct_wav(filename):
     formats_to_convert = ['.wav']
-    for (dirpath, dirnames, filenames) in os.walk("API/media"):
-        for filename in filenames:
-            if filename.endswith(tuple(formats_to_convert)):
-                filepath = dirpath + '/' + filename
-                (path, file_extension) = os.path.splitext(filepath)
-                file_extension_final = file_extension.replace('.', '')
-                try:
-                    value= recognize_gender(filename)
-                    hz=myspf0med(filename,dirpath)
-                    result=get_age(hz,value)
+    dirpath='API/media'
+    if filename.endswith(tuple(formats_to_convert)):
+        filepath = dirpath + '/' + filename
+        (path, file_extension) = os.path.splitext(filepath)
+        file_extension_final = file_extension.replace('.', '')
+        try:
+            value= recognize_gender(filename)
+            hz=myspf0med(filename,dirpath)
+            result=get_age(hz,value)
 
-                    grid_name=filename.replace(file_extension_final, 'TextGrid')
-                    grid_path=dirpath + '/' + grid_name
-                    os.remove(grid_path)
+            grid_name=filename.replace(file_extension_final, 'TextGrid')
+            grid_path=dirpath + '/' + grid_name
+            os.remove(grid_path)
 
-                    os.remove(filepath)
+            os.remove(filepath)
 
-                    return result
-                except:
-                     return filename
+            return result
+        except:
+            os.remove(filepath)
+            return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
 
 
 # Rename folder M4a_files as wav_files
