@@ -49,7 +49,8 @@ def convert_to_wav():
 
                     return result
                 except:
-                     return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
+                    os.remove(filepath)
+                    return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
 
 def direct_wav():
     formats_to_convert = ['.wav']

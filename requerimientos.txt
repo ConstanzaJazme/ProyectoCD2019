@@ -7,4 +7,5 @@ scikit-learn==0.21
 #django-audiotracks
 my-voice-analysis
 Django-uuidfield
-pydub
+#pydub
+pydub-ffmpeg-wav
