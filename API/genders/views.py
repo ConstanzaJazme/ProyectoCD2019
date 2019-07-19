@@ -66,4 +66,4 @@ def upload_recording(request):
 #     result=get_age(hz,value)
 
 
-    return HttpResponse('<h1> El audio recibido es '+ result +'</h1>')
+    # return HttpResponse('<h1> El audio recibido es '+ result +'</h1>')
