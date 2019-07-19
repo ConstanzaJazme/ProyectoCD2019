@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def myspf0med(m,p):
-    sound=p+"/"+m+".wav"
+    sound=p+"/"+m
     sourcerun=p+"/myspsolution.praat"
     path=p+"/"
     try:

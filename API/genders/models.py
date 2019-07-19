@@ -8,3 +8,6 @@ class Meta:
 
 class Recording(models.Model):
     audio_file = models.FileField(default='')
+    @property 
+    def filename(self):
+        return os.path.basename(self.file.name)
