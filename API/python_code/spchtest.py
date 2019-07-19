@@ -7,8 +7,75 @@ import python_speech_features as mfcc
 from sklearn import preprocessing
 import parselmouth
 from parselmouth.praat import call, run_file
+import argparse
+from pydub import AudioSegment
 import warnings
+
 warnings.filterwarnings("ignore")
+
+
+def convert_to_wav():
+    formats_to_convert = ['.m4a','.mp3','ogg']
+
+    for (dirpath, dirnames, filenames) in os.walk("API/media"):
+        for filename in filenames:
+            if filename.endswith(tuple(formats_to_convert)):
+
+                filepath = dirpath + '/' + filename
+                (path, file_extension) = os.path.splitext(filepath)
+                file_extension_final = file_extension.replace('.', '')
+                try:
+                    if file_extension_final=='ogg':
+                        track = AudioSegment.from_ogg(filepath)
+                    else:
+                        track = AudioSegment.from_file(filepath,
+                                file_extension_final)
+
+                    #Se hace convierte el audio
+                    wav_filename = filename.replace(file_extension_final, 'wav')
+                    wav_path = dirpath + '/' + wav_filename
+                    file_handle = track.export(wav_path, format='wav')
+                    os.remove(filepath)
+
+                    value= recognize_gender(wav_filename)
+                    hz=myspf0med(wav_filename,dirpath)
+                    result=get_age(hz,value)
+
+                    grid_name=filename.replace(file_extension_final, 'TextGrid')
+                    grid_path=dirpath + '/' + grid_name
+                    os.remove(grid_path)
+
+                    os.remove(wav_path)
+
+                    return result
+                except:
+                     return 'Archivo de audio incompatible, por favor ingrese un archivo mp3'
+
+def direct_wav():
+    formats_to_convert = ['.wav']
+    for (dirpath, dirnames, filenames) in os.walk("API/media"):
+        for filename in filenames:
+            if filename.endswith(tuple(formats_to_convert)):
+                filepath = dirpath + '/' + filename
+                (path, file_extension) = os.path.splitext(filepath)
+                file_extension_final = file_extension.replace('.', '')
+                try:
+                    value= recognize_gender(filename)
+                    hz=myspf0med(filename,dirpath)
+                    result=get_age(hz,value)
+
+                    grid_name=filename.replace(file_extension_final, 'TextGrid')
+                    grid_path=dirpath + '/' + grid_name
+                    os.remove(grid_path)
+
+                    os.remove(filepath)
+
+                    return result
+                except:
+                     return filename
+
+
+# Rename folder M4a_files as wav_files
 
 def myspf0med(m,p):
     sound=p+"/"+m

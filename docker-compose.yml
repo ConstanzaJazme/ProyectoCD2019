@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: python API/manage.py runserver 0.0.0.0:8000
+    command: bash -c "python API/manage.py makemigrations && python API/manage.py migrate && python API/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
