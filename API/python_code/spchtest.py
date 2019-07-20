@@ -111,7 +111,7 @@ def get_age(hz,gender):
         else:
             return 'Aún sin especificar'
     if (gender=='hombre'):
-        iif (110<=hz<=120):
+        if (110<=hz<=120):
             return '15 a 29 años'
         if (121<=hz<=550):
             return '0 a 14 años'
