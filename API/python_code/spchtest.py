@@ -78,7 +78,7 @@ def direct_wav(filename):
             os.remove(filepath)
             return '0','0'
 
-
+#Code: https://github.com/Shahabks/my-voice-analysis
 # Rename folder M4a_files as wav_files
 
 def myspf0med(m,p):
@@ -96,7 +96,8 @@ def myspf0med(m,p):
     except:
         return z4;
         # print ("Try again the sound of the audio was not clear")
-
+        
+#Code: https://github.com/AkashPatel1/Speech_Predict
 def get_age(hz,gender):
     if (gender=='mujer'):
         if (192<=hz<=275):
