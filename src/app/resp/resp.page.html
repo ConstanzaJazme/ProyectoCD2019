@@ -1,0 +1,17 @@
+<ion-header text-center>
+      <ion-toolbar>
+            <ion-title>
+                  Resultado
+            </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content text-center justify-content-center align-items-center style='height: 100%'>
+      <ion-img src="{{ ruta }}"></ion-img>
+      <h1>Sexo: {{ gender }}</h1>
+      <h3>Rango Etario: {{ age }}</h3>
+      <h3>Console: {{ error }}</h3>
+
+
+      <ion-button (click)="backHome()">Volver al Inicio</ion-button>
+</ion-content>
