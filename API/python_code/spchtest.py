@@ -100,13 +100,25 @@ def myspf0med(m,p):
 #Code: https://github.com/AkashPatel1/Speech_Predict
 def get_age(hz,gender):
     if (gender=='mujer'):
-        if (192<=hz<=275):
-            return '20 a 29 años'
+        if (100<=hz<=110):
+            return '15 a 29 años'
+        if (295<=hz<=500):
+            return '0 a 14 años'
+        if (111<=hz<=128):
+            return '30 a 59 años'
+        if (160<=hz<=180):
+            return '60 o más años'
         else:
             return 'Aún sin especificar'
     if (gender=='hombre'):
-        if (85<=hz<=155):
-            return '11 años aprox'
+        iif (110<=hz<=120):
+            return '15 a 29 años'
+        if (121<=hz<=550):
+            return '0 a 14 años'
+        if (111<=hz<=119):
+            return '30 a 59 años'
+        if (125<=hz<=147):
+            return '60 o más años'
         else:
             return 'Aún sin especificar'
 
