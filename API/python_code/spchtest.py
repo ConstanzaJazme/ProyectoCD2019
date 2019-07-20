@@ -17,7 +17,7 @@ warnings.filterwarnings("ignore")
 def convert_to_wav(filename):
     formats_to_convert = ['.m4a','.mp3','ogg']
     dirpath='API/media'
-    ten_seconds = 10 * 1000     #El audio durará maximo 10 segundos
+    ten_seconds = 12* 1000     #El audio durará maximo 10 segundos
     if filename.endswith(tuple(formats_to_convert)):
 
         filepath = dirpath + '/' + filename
