@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform, AlertController, ModalController } from '@ionic/angular';
 
 import { File } from '@ionic-native/file/ngx';
 import { Storage } from '@ionic/storage';
@@ -16,54 +16,116 @@ const MEDIA_FILES_KEY = 'mediaFiles';
     styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
-    mediaFiles = [];
-    @ViewChild('myvideo') myVideo: any;
 
-    constructor(
-        public navCtrl: NavController,
-        private mediaCapture: MediaCapture,
-        private storage: Storage,
-        private file: File,
+    recording: boolean = false;
+    playing: boolean = false;
+    filePath: string;
+    fileName: string;
+    audio: MediaObject;
+    audioList: any[] = [];
+    console: any;
+    storage: string = 'file:///storage/emulated/0/Android/data/io.ionic.starter/files/';
+
+    constructor(public navCtrl: NavController,
         private media: Media,
-        private router: Router
+        private file: File,
+        public platform: Platform,
+        private router: Router,
     ) { }
 
-    ionViewDidLoad() {
-        this.storage.get(MEDIA_FILES_KEY).then(res => {
-            this.mediaFiles = JSON.parse(res) || [];
-        })
+    ionViewWillEnter() {
+        this.getAudioList();
     }
 
-    captureAudio() {
-        this.mediaCapture.captureAudio().then(res => {
-            this.storeMediaFiles(res);
-        }, (err: CaptureError) => console.error(err));
-
-        this.router.navigate(['work', 1]);
-    }
-    play(myFile) {
-        if (myFile.name.indexOf('.wav') > -1) {
-            const audioFile: MediaObject = this.media.create(myFile.localURL);
-            audioFile.play();
-        } else {
-            let path = this.file.dataDirectory + myFile.name;
-            let url = path.replace(/^file:\/\//, '');
-            let video = this.myVideo.nativeElement;
-            video.src = url;
-            video.play();
+    getAudioList() {
+        if (localStorage.getItem("audiolist")) {
+            this.audioList = JSON.parse(localStorage.getItem("audiolist"));
+            console.log(this.audioList);
         }
     }
 
-    storeMediaFiles(files) {
-        this.storage.get(MEDIA_FILES_KEY).then(res => {
-            if (res) {
-                let arr = JSON.parse(res);
-                arr = arr.concat(files);
-                this.storage.set(MEDIA_FILES_KEY, JSON.stringify(arr));
-            } else {
-                this.storage.set(MEDIA_FILES_KEY, JSON.stringify(files))
-            }
-            this.mediaFiles = this.mediaFiles.concat(files);
-        })
+    startRecord() {
+        if (this.platform.is('ios')) {
+            this.fileName = 'record' + new Date().getDate() + new Date().getMonth() + new Date().getFullYear() + new Date().getHours() + new Date().getMinutes() + new Date().getSeconds() + '.wav';
+            this.filePath = this.file.documentsDirectory.replace(/file:\/\//g, '') + this.fileName;
+            this.audio = this.media.create(this.filePath);
+        } else if (this.platform.is('android')) {
+            this.fileName = 'record' + new Date().getDate() + new Date().getMonth() + new Date().getFullYear() + new Date().getHours() + new Date().getMinutes() + new Date().getSeconds() + '.wav';
+            this.filePath = this.file.externalDataDirectory.replace(/file:\/\//g, '') + this.fileName;
+            this.audio = this.media.create(this.filePath);
+        }
+        this.audio.startRecord();
+        this.recording = true;
     }
+
+    stopRecord() {
+        this.audio.stopRecord();
+        let data = { filename: this.fileName };
+        this.audioList.push(data);
+        localStorage.setItem("audiolist", JSON.stringify(this.audioList));
+        this.recording = false;
+        this.getAudioList();
+    }
+
+    playAudio(file, idx) {
+        // this.playing = true;
+        if (this.platform.is('ios')) {
+            this.filePath = this.file.documentsDirectory.replace(/file:\/\//g, '') + file;
+            this.audio = this.media.create(this.filePath);
+        } else if (this.platform.is('android')) {
+            this.filePath = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+            this.audio = this.media.create(this.filePath);
+        }
+        this.audio.play();
+        this.audio.setVolume(0.8);
+    }
+
+    stopAudio() {
+        this.audio.stop();
+    }
+
+    deleteFile(file) {
+
+        this.file = file;
+        this.file.removeFile(this.storage + file.filename, file.filename).then(data => {
+            console.log('file removed: ', this.file);
+            data.fileRemoved.getMetadata(function(metadata) {
+                let name = data.fileRemoved.name;
+                let size = metadata.size;
+                let fullPath = data.fileRemoved.fullPath;
+                console.log('Deleted file: ', name, size, fullPath);
+                console.log('Name: ' + name + ' / Size: ' + size);
+            });
+        }).catch(error => {
+            file.getMetadata(function(metadata) {
+                let name = file.name;
+                let size = metadata.size;
+                console.log('Error deleting file from cache folder: ', error);
+                console.log('Name: ' + name + ' / Size: ' + size);
+            });
+        });
+        this.getAudioList();
+    }
+
+    mandarInfo(file) {
+        this.router.navigate(['work', this.storage, file.filename]);
+        this.file.checkFile(this.storage, file.filename)
+            .then(res => {
+                this.console = "Encontrado";
+            })
+            .catch(error => {
+                this.console = "Nope";
+            });
+    }
+
+    mandarInfo2() {
+        this.router.navigate(['work', this.storage, 'Voz123.wav']);
+    }
+
+    resp() {
+        this.router.navigate(['resp', 'hombre', '20 a 29 años', '0']);
+
+    }
+
+
 }

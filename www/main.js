@@ -504,8 +504,8 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
     { path: 'home', loadChildren: './home/home.module#HomePageModule' },
-    { path: 'work/:consulta', loadChildren: './work/work.module#WorkPageModule' },
-    { path: 'resp/:title/:id/:userId/:completed', loadChildren: './resp/resp.module#RespPageModule' },
+    { path: 'work/:consulta/:name', loadChildren: './work/work.module#WorkPageModule' },
+    { path: 'resp/:gender/:age/:error', loadChildren: './resp/resp.module#RespPageModule' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -607,10 +607,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
 /* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _services_api_rest_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/api-rest.service */ "./src/app/services/api-rest.service.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _services_api_rest_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/api-rest.service */ "./src/app/services/api-rest.service.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 
@@ -631,14 +633,14 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]],
             entryComponents: [],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_12__["AppRoutingModule"],
                 _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot(),
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_14__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_15__["HttpClientModule"]
             ],
             providers: [
                 _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
@@ -646,10 +648,12 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_7__["MediaCapture"],
                 _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_8__["Media"],
                 _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_9__["File"],
-                _services_api_rest_service__WEBPACK_IMPORTED_MODULE_13__["ApiRestService"],
+                _services_api_rest_service__WEBPACK_IMPORTED_MODULE_14__["ApiRestService"],
+                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_11__["FileTransfer"],
+                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_11__["FileTransferObject"],
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_13__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -672,13 +676,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
+/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
+
+
 
 
 
 var ApiRestService = /** @class */ (function () {
-    function ApiRestService(http) {
+    function ApiRestService(http, transfer, file) {
         this.http = http;
+        this.transfer = transfer;
+        this.file = file;
         this.api = 'https://jsonplaceholder.typicode.com';
+        this.fileTransfer = this.transfer.create();
     }
     ApiRestService.prototype.getAllTasks = function () {
         var path = this.api + "/todos/";
@@ -688,11 +699,24 @@ var ApiRestService = /** @class */ (function () {
         var path = this.api + "/todos/" + id;
         return this.http.get(path);
     };
+    ApiRestService.prototype.upload = function (fileURL) {
+        var options = {
+            fileKey: 'file',
+            fileName: 'name.m4a',
+            headers: {}
+        };
+        this.fileTransfer.upload(fileURL, this.api, options)
+            .then(function (data) {
+            return data;
+        }, function (err) {
+            return err;
+        });
+    };
     ApiRestService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_4__["FileTransfer"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_3__["File"]])
     ], ApiRestService);
     return ApiRestService;
 }());
@@ -762,7 +786,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fabian/UTEM/Proyect2/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/fabian/UTEM/Proyect2_VersionFileTransfer/src/main.ts */"./src/main.ts");
 
 
 /***/ })

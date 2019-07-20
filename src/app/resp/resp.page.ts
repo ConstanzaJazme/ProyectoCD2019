@@ -10,11 +10,10 @@ import { Router } from '@angular/router';
 })
 export class RespPage implements OnInit {
 
-    title: any;
-    id: any;
-    userId: any;
-    completed: any;
-
+    gender: any;
+    age: any;
+    error: any;
+    ruta: string = 'assets/Img/'
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -26,10 +25,33 @@ export class RespPage implements OnInit {
 
 
     ngOnInit() {
-        this.title = this.activatedRoute.snapshot.paramMap.get('title');
-        this.id = this.activatedRoute.snapshot.paramMap.get('id');
-        this.userId = this.activatedRoute.snapshot.paramMap.get('userId');
-        this.completed = this.activatedRoute.snapshot.paramMap.get('completed');
+        this.gender = this.activatedRoute.snapshot.paramMap.get('gender');
+        this.age = this.activatedRoute.snapshot.paramMap.get('age');
+        this.error = this.activatedRoute.snapshot.paramMap.get('error');
+        this.mostrarResultados(this.gender, this.age, this.error);
+    }
+
+    mostrarResultados(gender, age, error) {
+        let seleccionImagen;
+        if (gender == 'mujer') {
+            this.gender = 'Mujer';
+            seleccionImagen = 'Mujeres/';
+            if (age == '20 a 29 años') {
+                seleccionImagen += 'adulta joven.png';
+            } else {
+                seleccionImagen += 'bebeM.png';
+            }
+        } else {
+            this.gender = 'Hombre';
+            seleccionImagen = 'Hombres/';
+            if (age == '20 a 29 años') {
+                seleccionImagen += 'adulto joven.png';
+            } else {
+                seleccionImagen += 'bebeM.png';
+            }
+        }
+
+        this.ruta += seleccionImagen;
 
     }
 

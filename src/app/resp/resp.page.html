@@ -7,14 +7,11 @@
 </ion-header>
 
 <ion-content text-center justify-content-center align-items-center style='height: 100%'>
-      <!-- <ion-img src="assets/Img/Mujeres/adulta joven.png"></ion-img>
-      <h1>Sexo: Hombre/Mujer</h1>
-      <h3>Rango Etario: Niño/Adolecente/Adulto/AdultoMayor</h3> -->
+      <ion-img src="{{ ruta }}"></ion-img>
+      <h1>Sexo: {{ gender }}</h1>
+      <h3>Rango Etario: {{ age }}</h3>
+      <h3>Console: {{ error }}</h3>
 
-      <h2>Titulo: {{title}}</h2>
-      <p>Usuario: {{userId}}</p>
-      <p>Id: {{id}}</p>
-      <p>Estado completo: {{completed}}</p>
 
       <ion-button (click)="backHome()">Volver al Inicio</ion-button>
 </ion-content>

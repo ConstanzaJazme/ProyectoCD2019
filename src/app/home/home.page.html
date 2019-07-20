@@ -6,17 +6,31 @@
       </ion-toolbar>
 </ion-header>
 
-<ion-content text-center>
+<ion-content padding>
+      <!-- <p>{{console}}</p> -->
       <ion-img src="assets/Img/mic.png"></ion-img>
-      <ion-button (click)="captureAudio()">Iniciar Reconocimiento</ion-button>
-      <!-- <p>{{ mediaFiles[mediaFiles.length - 1].name }}</p> -->
-      <!-- <p>{{lastAudio.name}}</p> -->
-
-      <!-- <ion-list>
-            <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
-                  {{ file.name }}
-                  <p> {{ file.size / 1000 / 1000 | number }} MB</p>
+      <ion-button color="danger" expand="block" (click)="stopRecord()" *ngIf="recording">
+            <ion-icon name="mic-off"></ion-icon>&nbsp;&nbsp;Parar Grabación
+      </ion-button>
+      <ion-button color="primary" expand="block" (click)="startRecord()" *ngIf="!recording">
+            <ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Comenzar Grabación
+      </ion-button>
+      <ion-button color="primary" expand="block" (click)="mandarInfo2()">
+            <ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Resp
+      </ion-button>
+      <ion-list>
+            <ion-item *ngFor="let audio of audioList; index as i;">
+                  <p>{{audio.filename}}&nbsp;</p>
+                  <ion-button color="medium" (click)="playAudio(audio.filename, i)">
+                        <ion-icon name="play" *ngIf="!playing"></ion-icon>
+                        <!-- <ion-icon name="square" *ngIf="playing"></ion-icon> -->
+                  </ion-button>&nbsp;
+                  <ion-button color="danger" (click)="deleteFile(audio)">
+                        <ion-icon name="trash" is-active="false"></ion-icon>
+                  </ion-button>&nbsp;
+                  <ion-button color="success" (click)="mandarInfo(audio)">
+                        <ion-icon name="send"></ion-icon>
+                  </ion-button>
             </ion-item>
-      </ion-list> -->
-
+      </ion-list>
 </ion-content>

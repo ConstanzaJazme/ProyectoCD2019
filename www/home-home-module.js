@@ -58,7 +58,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Reconocimiento\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content text-center>\n      <ion-img src=\"assets/Img/mic.png\"></ion-img>\n      <ion-button (click)=\"captureAudio()\">Iniciar Reconocimiento</ion-button>\n      <!-- <p>{{ mediaFiles[mediaFiles.length - 1].name }}</p> -->\n      <!-- <p>{{lastAudio.name}}</p> -->\n\n      <!-- <ion-list>\n            <ion-item *ngFor=\"let file of mediaFiles\" tappable (click)=\"play(file)\" text-wrap>\n                  {{ file.name }}\n                  <p> {{ file.size / 1000 / 1000 | number }} MB</p>\n            </ion-item>\n      </ion-list> -->\n\n</ion-content>"
+module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Reconocimiento\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n      <!-- <p>{{console}}</p> -->\n      <ion-img src=\"assets/Img/mic.png\"></ion-img>\n      <ion-button color=\"danger\" expand=\"block\" (click)=\"stopRecord()\" *ngIf=\"recording\">\n            <ion-icon name=\"mic-off\"></ion-icon>&nbsp;&nbsp;Parar Grabación\n      </ion-button>\n      <ion-button color=\"primary\" expand=\"block\" (click)=\"startRecord()\" *ngIf=\"!recording\">\n            <ion-icon name=\"mic\"></ion-icon>&nbsp;&nbsp;Comenzar Grabación\n      </ion-button>\n      <ion-button color=\"primary\" expand=\"block\" (click)=\"resp()\">\n            <ion-icon name=\"mic\"></ion-icon>&nbsp;&nbsp;Resp\n      </ion-button>\n      <ion-list>\n            <ion-item *ngFor=\"let audio of audioList; index as i;\">\n                  <p>{{audio.filename}}&nbsp;</p>\n                  <ion-button color=\"medium\" (click)=\"playAudio(audio.filename, i)\">\n                        <ion-icon name=\"play\"></ion-icon>\n                  </ion-button>&nbsp;\n                  <ion-button color=\"danger\" (click)=\"deleteFile(audio)\">\n                        <ion-icon name=\"trash\" is-active=\"false\"></ion-icon>\n                  </ion-button>&nbsp;\n                  <ion-button color=\"success\" (click)=\"mandarInfo(audio)\">\n                        <ion-icon name=\"send\"></ion-icon>\n                  </ion-button>\n            </ion-item>\n      </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -69,7 +69,7 @@ module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <io
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-img {\n  height: 60vh;\n  width: 70vw;\n  margin: auto;\n  display: block; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9VVEVNL1Byb3llY3QyL3NyYy9hcHAvaG9tZS9ob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVk7RUFDWixXQUFXO0VBQ1gsWUFBWTtFQUNaLGNBQWMsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24taW1ne1xuICBoZWlnaHQ6IDYwdmg7XG4gIHdpZHRoOiA3MHZ3O1xuICBtYXJnaW46IGF1dG87XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuIl19 */"
+module.exports = "ion-img {\n  height: 50vh;\n  width: 60vw;\n  margin: auto; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9VVEVNL1Byb3llY3QyX1ZlcnNpb25GaWxlVHJhbnNmZXIvc3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWltZ3tcbiAgaGVpZ2h0OiA1MHZoO1xuICB3aWR0aDogNjB2dztcbiAgbWFyZ2luOiBhdXRvO1xuICAvLyBkaXNwbGF5OiBibG9jaztcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -87,12 +87,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/media-capture/ngx */ "./node_modules/@ionic-native/media-capture/ngx/index.js");
-/* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-
-
+/* harmony import */ var _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/media/ngx */ "./node_modules/@ionic-native/media/ngx/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 
 
@@ -101,59 +97,98 @@ __webpack_require__.r(__webpack_exports__);
 
 var MEDIA_FILES_KEY = 'mediaFiles';
 var HomePage = /** @class */ (function () {
-    function HomePage(navCtrl, mediaCapture, storage, file, media, router) {
+    function HomePage(navCtrl, media, file, platform, router) {
         this.navCtrl = navCtrl;
-        this.mediaCapture = mediaCapture;
-        this.storage = storage;
-        this.file = file;
         this.media = media;
+        this.file = file;
+        this.platform = platform;
         this.router = router;
-        this.mediaFiles = [];
+        this.recording = false;
+        this.audioList = [];
+        this.storage = 'file:///storage/emulated/0/Android/data/io.ionic.starter/files/';
     }
-    HomePage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.storage.get(MEDIA_FILES_KEY).then(function (res) {
-            _this.mediaFiles = JSON.parse(res) || [];
-        });
+    HomePage.prototype.ionViewWillEnter = function () {
+        this.getAudioList();
     };
-    HomePage.prototype.captureAudio = function () {
-        var _this = this;
-        this.mediaCapture.captureAudio().then(function (res) {
-            _this.storeMediaFiles(res);
-        }, function (err) { return console.error(err); });
-        this.router.navigate(['work', 1]);
-    };
-    HomePage.prototype.play = function (myFile) {
-        if (myFile.name.indexOf('.wav') > -1) {
-            var audioFile = this.media.create(myFile.localURL);
-            audioFile.play();
-        }
-        else {
-            var path = this.file.dataDirectory + myFile.name;
-            var url = path.replace(/^file:\/\//, '');
-            var video = this.myVideo.nativeElement;
-            video.src = url;
-            video.play();
+    HomePage.prototype.getAudioList = function () {
+        if (localStorage.getItem("audiolist")) {
+            this.audioList = JSON.parse(localStorage.getItem("audiolist"));
+            console.log(this.audioList);
         }
     };
-    HomePage.prototype.storeMediaFiles = function (files) {
+    HomePage.prototype.startRecord = function () {
+        if (this.platform.is('ios')) {
+            this.fileName = 'record' + new Date().getDate() + new Date().getMonth() + new Date().getFullYear() + new Date().getHours() + new Date().getMinutes() + new Date().getSeconds() + '.wav';
+            this.filePath = this.file.documentsDirectory.replace(/file:\/\//g, '') + this.fileName;
+            this.audio = this.media.create(this.filePath);
+        }
+        else if (this.platform.is('android')) {
+            this.fileName = 'record' + new Date().getDate() + new Date().getMonth() + new Date().getFullYear() + new Date().getHours() + new Date().getMinutes() + new Date().getSeconds() + '.wav';
+            this.filePath = this.file.externalDataDirectory.replace(/file:\/\//g, '') + this.fileName;
+            this.audio = this.media.create(this.filePath);
+        }
+        this.audio.startRecord();
+        this.recording = true;
+    };
+    HomePage.prototype.stopRecord = function () {
+        this.audio.stopRecord();
+        var data = { filename: this.fileName };
+        this.audioList.push(data);
+        localStorage.setItem("audiolist", JSON.stringify(this.audioList));
+        this.recording = false;
+        this.getAudioList();
+    };
+    HomePage.prototype.playAudio = function (file, idx) {
+        if (this.platform.is('ios')) {
+            this.filePath = this.file.documentsDirectory.replace(/file:\/\//g, '') + file;
+            this.audio = this.media.create(this.filePath);
+        }
+        else if (this.platform.is('android')) {
+            this.filePath = this.file.externalDataDirectory.replace(/file:\/\//g, '') + file;
+            this.audio = this.media.create(this.filePath);
+        }
+        this.audio.play();
+        this.audio.setVolume(0.8);
+    };
+    HomePage.prototype.stopAudio = function () {
+        this.audio.stop();
+    };
+    HomePage.prototype.deleteFile = function (file) {
         var _this = this;
-        this.storage.get(MEDIA_FILES_KEY).then(function (res) {
-            if (res) {
-                var arr = JSON.parse(res);
-                arr = arr.concat(files);
-                _this.storage.set(MEDIA_FILES_KEY, JSON.stringify(arr));
-            }
-            else {
-                _this.storage.set(MEDIA_FILES_KEY, JSON.stringify(files));
-            }
-            _this.mediaFiles = _this.mediaFiles.concat(files);
+        this.file = file;
+        this.file.removeFile(this.storage + file.filename, file.filename).then(function (data) {
+            console.log('file removed: ', _this.file);
+            data.fileRemoved.getMetadata(function (metadata) {
+                var name = data.fileRemoved.name;
+                var size = metadata.size;
+                var fullPath = data.fileRemoved.fullPath;
+                console.log('Deleted file: ', name, size, fullPath);
+                console.log('Name: ' + name + ' / Size: ' + size);
+            });
+        }).catch(function (error) {
+            file.getMetadata(function (metadata) {
+                var name = file.name;
+                var size = metadata.size;
+                console.log('Error deleting file from cache folder: ', error);
+                console.log('Name: ' + name + ' / Size: ' + size);
+            });
+        });
+        this.getAudioList();
+    };
+    HomePage.prototype.mandarInfo = function (file) {
+        var _this = this;
+        this.file.checkFile(this.storage, file.filename)
+            .then(function (res) {
+            _this.console = "Encontrado";
+            _this.router.navigate(['work', _this.storage, file.filename]);
+        })
+            .catch(function (error) {
+            _this.console = "Nope";
         });
     };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('myvideo'),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
-    ], HomePage.prototype, "myVideo", void 0);
+    HomePage.prototype.resp = function () {
+        this.router.navigate(['resp', 'hombre', '20 a 29 años', '0']);
+    };
     HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-home',
@@ -161,11 +196,10 @@ var HomePage = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"],
-            _ionic_native_media_capture_ngx__WEBPACK_IMPORTED_MODULE_5__["MediaCapture"],
-            _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"],
+            _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_4__["Media"],
             _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_3__["File"],
-            _ionic_native_media_ngx__WEBPACK_IMPORTED_MODULE_6__["Media"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"]])
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
     ], HomePage);
     return HomePage;
 }());

@@ -58,7 +58,7 @@ var RespPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Resultado\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content text-center justify-content-center align-items-center style='height: 100%'>\n      <!-- <ion-img src=\"assets/Img/Mujeres/adulta joven.png\"></ion-img>\n      <h1>Sexo: Hombre/Mujer</h1>\n      <h3>Rango Etario: Niño/Adolecente/Adulto/AdultoMayor</h3> -->\n\n      <h2>Titulo: {{title}}</h2>\n      <p>Usuario: {{userId}}</p>\n      <p>Id: {{id}}</p>\n      <p>Estado completo: {{completed}}</p>\n</ion-content>"
+module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <ion-title>\n                  Resultado\n            </ion-title>\n      </ion-toolbar>\n</ion-header>\n\n<ion-content text-center justify-content-center align-items-center style='height: 100%'>\n      <ion-img src=\"{{ ruta }}\"></ion-img>\n      <h1>Sexo: {{ gender }}</h1>\n      <h3>Rango Etario: {{ age }}</h3>\n      <h3>Console: {{ error }}</h3>\n\n\n      <ion-button (click)=\"backHome()\">Volver al Inicio</ion-button>\n</ion-content>"
 
 /***/ }),
 
@@ -69,7 +69,7 @@ module.exports = "<ion-header text-center>\n      <ion-toolbar>\n            <io
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jlc3AvcmVzcC5wYWdlLnNjc3MifQ== */"
+module.exports = "ion-img {\n  height: 30vh;\n  width: 40vw;\n  margin: auto;\n  margin-top: 3vh; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2ZhYmlhbi9VVEVNL1Byb3llY3QyX1ZlcnNpb25GaWxlVHJhbnNmZXIvc3JjL2FwcC9yZXNwL3Jlc3AucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxZQUFZO0VBQ1osZUFBZSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcmVzcC9yZXNwLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1pbWd7XG4gIGhlaWdodDogMzB2aDtcbiAgd2lkdGg6IDQwdnc7XG4gIG1hcmdpbjogYXV0bztcbiAgbWFyZ2luLXRvcDogM3ZoO1xuICAvLyBkaXNwbGF5OiBibG9jaztcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -93,18 +93,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var RespPage = /** @class */ (function () {
-    function RespPage(activatedRoute, toastCtrl, loadingCtrl, apiRestService) {
+    function RespPage(activatedRoute, toastCtrl, loadingCtrl, apiRestService, router) {
         this.activatedRoute = activatedRoute;
         this.toastCtrl = toastCtrl;
         this.loadingCtrl = loadingCtrl;
         this.apiRestService = apiRestService;
+        this.router = router;
+        this.ruta = 'assets/Img/';
     }
     RespPage.prototype.ngOnInit = function () {
-        this.title = this.activatedRoute.snapshot.paramMap.get('title');
-        this.id = this.activatedRoute.snapshot.paramMap.get('id');
-        this.userId = this.activatedRoute.snapshot.paramMap.get('userId');
-        this.completed = this.activatedRoute.snapshot.paramMap.get('completed');
+        this.gender = this.activatedRoute.snapshot.paramMap.get('gender');
+        this.age = this.activatedRoute.snapshot.paramMap.get('age');
+        this.error = this.activatedRoute.snapshot.paramMap.get('error');
+        this.mostrarResultados(this.gender, this.age, this.error);
+    };
+    RespPage.prototype.mostrarResultados = function (gender, age, error) {
+        var seleccionImagen;
+        if (gender == 'mujer') {
+            this.gender = 'Mujer';
+            seleccionImagen = 'Mujeres/';
+            if (age == '20 a 29 años') {
+                seleccionImagen += 'adulta joven.png';
+            }
+            else {
+                seleccionImagen += 'bebeM.png';
+            }
+        }
+        else {
+            this.gender = 'Hombre';
+            seleccionImagen = 'Hombres/';
+            if (age == '20 a 29 años') {
+                seleccionImagen += 'adulto joven.png';
+            }
+            else {
+                seleccionImagen += 'bebeM.png';
+            }
+        }
+        this.ruta += seleccionImagen;
+    };
+    RespPage.prototype.backHome = function () {
+        this.router.navigate(['home']);
     };
     RespPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -115,7 +145,8 @@ var RespPage = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ToastController"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"],
-            _services_api_rest_service__WEBPACK_IMPORTED_MODULE_4__["ApiRestService"]])
+            _services_api_rest_service__WEBPACK_IMPORTED_MODULE_4__["ApiRestService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], RespPage);
     return RespPage;
 }());
